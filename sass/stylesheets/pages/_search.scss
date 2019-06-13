@@ -1,0 +1,157 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the search page.
+// -----------------------------------------------------------------------------
+
+#search {
+
+    .search-container {
+
+        .search-button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+            input {
+                width: 300px;
+                background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%234ECDC4' viewBox='0 0 475.1 475.1' style='enable-background:new 0 0 475.1 475.1;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M464.5,412.8l-97.9-97.9c23.6-34.1,35.4-72,35.4-113.9c0-27.2-5.3-53.2-15.9-78.1c-10.6-24.8-24.8-46.3-42.8-64.2 s-39.4-32.3-64.2-42.8C254.2,5.3,228.2,0,201,0c-27.2,0-53.2,5.3-78.1,15.8C98.1,26.4,76.7,40.7,58.7,58.7 c-18,18-32.3,39.4-42.8,64.2C5.3,147.8,0,173.8,0,201c0,27.2,5.3,53.2,15.8,78.1c10.6,24.8,24.8,46.2,42.8,64.2 c18,18,39.4,32.3,64.2,42.8c24.8,10.6,50.9,15.8,78.1,15.8c41.9,0,79.9-11.8,113.9-35.4l97.9,97.6c6.9,7.2,15.4,10.8,25.7,10.8 c9.9,0,18.5-3.6,25.7-10.8c7.2-7.2,10.8-15.8,10.8-25.7C475.1,428.5,471.6,419.9,464.5,412.8z M291.4,291.4 c-25,25-55.1,37.5-90.4,37.5c-35.2,0-65.3-12.5-90.4-37.5c-25-25-37.5-55.1-37.5-90.4c0-35.2,12.5-65.3,37.5-90.4 c25-25,55.1-37.5,90.4-37.5c35.2,0,65.3,12.5,90.4,37.5c25,25,37.5,55.1,37.5,90.4C328.9,236.2,316.4,266.3,291.4,291.4z'/%3E%3C/g%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right; 
+                background-size: 18px auto;
+                transform: all 1s ease;
+                color: color(primary-color);
+
+                &:last-child {
+                    background-image:none;
+                }
+
+            }
+
+        }
+
+        .orderby-search {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+
+            .orderby-search-container {
+                display: flex;
+                /* top right bottom left */
+                margin: 0rem 2rem 0rem 0rem;
+            }
+
+            label {
+                font-family: $font-montserrat;
+                color: color(primary-color);
+                font-weight: bolder;
+                font-size: 0.8rem;
+            }
+
+            select {
+                display: block;
+                font-size: 0.8rem;
+                font-family: $font-lato; 
+                font-weight: lighter;
+                color: color(primary-color);
+                    /* top right bottom left */
+                padding: 0rem 1.4em 0.1rem .8em;
+                /* box-sizing: border-box; */
+                /* margin: 0; */
+                border: 0px;
+            
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: #fff;
+                background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+                background-repeat: no-repeat, repeat;
+                background-position: right .5em top 50%, 0 0;
+                background-size: .65em auto, 100%;
+
+                &::-ms-expand {
+                    display: none;
+                }
+            }
+        }
+
+        .search-results {
+
+            .search-results-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+                grid-gap: 0px;
+                width: 90%;
+                margin: auto;
+                margin-top: 2.5rem;
+
+                .result {
+                    position: relative;
+                    box-sizing: border-box;
+                    margin-bottom: 1.5rem;
+
+                    .document {
+                        position: absolute;
+                        top: 0; left: 0;
+                        height: 85%;
+                        width: 100%;
+                        background-image: url('../img/document.png');
+                        background-size: auto 98%;
+                        background-position: center;
+                        background-repeat: no-repeat, repeat;
+
+                        .document-container {
+                                    /* top right bottom left */
+                            padding: 8% 14% 8% 14%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            .date {
+                                font-family: 'Lato', sans-serif; 
+                                font-size: 1rem;
+                                margin-left: 8%;
+                                text-decoration: underline;
+                            }
+                            .title {
+                                text-align: center;
+                                font-family: 'Montserrat', sans-serif;
+                                font-weight: bold;
+                                margin-top: 12%;
+                            }
+                            .description {
+                                text-align: center;
+                                /* margin-top: 5%; */
+                                        /* top right bottom left */
+                                padding: 0% 10% 0% 10%;
+                                overflow: hidden;
+                                font-weight: lighter;
+                                font-size: 1rem;
+                            }
+
+                            .like-views {
+                                margin-top: 5%;
+                                /* top right bottom left */
+                                padding: 0% 10% 0% 10%;
+                                overflow: hidden;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: baseline;
+                            }
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        padding-top: 100%;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

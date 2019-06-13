@@ -1,0 +1,21 @@
+#search .search-container .search-results .search-results-container .result .more-info {
+    text-align: center;
+            /* top right bottom left */
+    padding: 1rem 10% 0% 10%;
+    transform: translateY(12%);
+}
+
+#search .search-container .search-results .search-results-container .result .more-info .author img {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.information {
+    justify-content: center;
+}
+
+.information .information-container {
+    width: 70%;
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+}
