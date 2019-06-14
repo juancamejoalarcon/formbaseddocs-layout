@@ -108,17 +108,50 @@
                             justify-content: space-between;
 
                             .date {
-                                font-family: 'Lato', sans-serif; 
+                                font-family: $font-lato;
                                 font-size: 1rem;
                                 margin-left: 8%;
                                 text-decoration: underline;
+                                
+                                @include breakpoint-1120 {
+                                    font-size: 0.9rem;
+                                    margin-left: 6%;
+                                    text-decoration: underline;
+                                }
+                                
+                                @include breakpoint-885 {
+                                    font-size: 0.8rem;
+                                    margin-left: 5%;
+                                }
+                                
+                                @include breakpoint-590 {
+                                    font-size: 1.2rem;
+                                    margin-left: 12%;
+                                    text-decoration: underline;
+                                }
+
+                                @include breakpoint-490 {
+                                    font-size: 0.9rem;
+                                    margin-left: 10%;
+                                }
                             }
+
                             .title {
                                 text-align: center;
-                                font-family: 'Montserrat', sans-serif;
+                                font-family: $font-montserrat;
                                 font-weight: bold;
                                 margin-top: 12%;
+                                
+                                @include breakpoint-590 {
+                                    font-size: 1.5rem;
+                                }
+
+                                @include breakpoint-490 {
+                                    font-size: 1.2rem;
+                                    /* margin-top: 12%; */
+                                } 
                             }
+
                             .description {
                                 text-align: center;
                                 /* margin-top: 5%; */
@@ -127,6 +160,39 @@
                                 overflow: hidden;
                                 font-weight: lighter;
                                 font-size: 1rem;
+
+                                @include breakpoint-1120 {
+                                    text-align: center;
+                                            /* top right bottom left */
+                                    padding: 0% 10% 0% 10%;
+                                    overflow: hidden;
+                                    font-weight: lighter;
+                                    font-size: 0.9rem;
+                                }
+                                
+                                @include breakpoint-885 {
+                                    font-size: 0.8rem;
+                                }
+                                
+                                @include breakpoint-590 {
+                                    text-align: center;
+                                    /* margin-top: 5%; */
+                                            /* top right bottom left */
+                                    padding: 0% 12% 0% 12%;
+                                    overflow: hidden;
+                                    font-weight: lighter;
+                                    font-size: 1.3rem;
+                                }
+
+                                @include breakpoint-490 {
+                                    text-align: center;
+                                    /* margin-top: 5%; */
+                                            /* top right bottom left */
+                                    padding: 0% 12% 0% 12%;
+                                    overflow: hidden;
+                                    font-weight: lighter;
+                                    font-size: 1rem;
+                                }
                             }
 
                             .like-views {
@@ -137,7 +203,118 @@
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: baseline;
+
+                                @include breakpoint-885 {
+                                    font-size: 0.9rem;
+                                }
+                                
+                                @include breakpoint-590 {
+                                    margin-top: 5%;
+                                            /* top right bottom left */
+                                    padding: 0% 12% 0% 12%;
+                                    font-size: 1.2rem;
+                                }
+
+                                @include breakpoint-490 {
+                                    margin-top: 5%;
+                                        /* top right bottom left */
+                                    padding: 0% 12% 0% 12%;
+                                    font-size: 1rem;
+                                }
+
                             }
+                        }
+                    }
+
+                    .more-info {
+                        text-align: center;
+                        /* top right bottom left */
+                        padding: 1rem 15% 0% 15%;
+                        transform: translateY(12%);
+
+                        .author {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            font-family: $font-montserrat;
+                            font-weight: bolder;
+
+                            img {
+                                width: 30px;
+                                padding-right: 5px;
+
+                                @include breakpoint-785 {
+                                    width: 25px;
+                                    padding-right: 5px;
+                                }
+
+                                @include breakpoint-590 {
+                                    width: 30px;
+                                    padding-right: 5px;
+                                }
+
+                                @include breakpoint-490 {
+                                    width: 25px;
+                                    padding-right: 5px;
+                                }
+                            }
+
+                            @include breakpoint-1120 {
+                                font-size: 0.9rem;
+                            }
+
+                            @include breakpoint-885 {
+                                font-size: 0.8rem;
+                            }
+
+                            @include breakpoint-785 {
+                                font-size: 0.8rem;
+                            }
+
+                            @include breakpoint-590 {
+                                font-size: 1rem;
+                            }
+
+                            @include breakpoint-490 {
+                                font-size: 0.9rem;
+                            }
+                        }
+
+                        .tags {
+                            font-weight: lighter;
+                            text-align: left;
+
+                            @include breakpoint-1120 {
+                                font-weight: lighter;
+                                font-size: 0.9rem;
+                            }
+
+                            @include breakpoint-885 {
+                                font-size: 0.8rem;
+                            }
+
+                            @include breakpoint-590 {
+                                font-size: 1rem;
+                            }
+
+                            @include breakpoint-490 {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        @include breakpoint-590 {
+                            /* top right bottom left */
+                            padding: 0rem 18% 0rem 18%;
+                            transform: translateY(0);
+                        }
+
+                        @include breakpoint-490 {
+                                /* top right bottom left */
+                            padding: 0rem 15% 0% 15%;
+                            transform: translateY(15%);
                         }
                     }
 
@@ -148,6 +325,34 @@
                     }
                 }
 
+                @include breakpoint-985 {
+                    font-size: 0.9rem;
+                    margin-left: 6%;
+                    text-decoration: underline;
+                }
+
+                @include breakpoint-768 {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+                    grid-gap: 0px;
+                    width: 90%;
+                    margin: auto;
+                    margin-top: 2.5rem;
+                }
+
+                @include breakpoint-590 {
+                    grid-template-columns: 1fr;
+                    grid-gap: 0px;
+                    width: 100%;
+                    margin-top: 2.5rem;
+                }
+
+                @include breakpoint-490 {
+                    grid-template-columns: 1fr;
+                    grid-gap: 0px;
+                    width: 100%;
+                    margin-top: 2rem;
+                }
             }
 
         }

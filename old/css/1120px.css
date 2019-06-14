@@ -1,13 +1,13 @@
 /***************/
 /*** SEARCH ***/
 /***************/
-
+/* incluido */
 #search .search-container .search-results .search-results-container .result .document .document-container .date {
     font-size: 0.9rem;
     margin-left: 6%;
     text-decoration: underline;
 }
-
+/* incluido */
 #search .search-container .search-results .search-results-container .result .document .document-container .description {
     text-align: center;
     /* margin-top: 5%; */
@@ -17,11 +17,11 @@
     font-weight: lighter;
     font-size: 0.9rem;
 }
-
+/* incluido */
 #search .search-container .search-results .search-results-container .result .more-info .author {
     font-size: 0.9rem;
 }
-
+/* incluido */
 #search .search-container .search-results .search-results-container .result .more-info .tags {
     font-weight: lighter;
     font-size: 0.9rem;

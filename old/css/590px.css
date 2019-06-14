@@ -20,6 +20,8 @@
     display: none;
 }
 
+/* incluido */
+
 #search .search-container .search-results .search-results-container {
     grid-template-columns: 1fr;
     grid-gap: 0px;
@@ -28,17 +30,20 @@
 }
 
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .document .document-container .date {
     font-size: 1.2rem;
     margin-left: 12%;
     text-decoration: underline;
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .document .document-container .title {
     font-size: 1.5rem;
     /* margin-top: 12%; */
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .document .document-container .description {
     text-align: center;
     /* margin-top: 5%; */
@@ -49,6 +54,7 @@
     font-size: 1.3rem;
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .document .document-container .likes-views {
     margin-top: 5%;
             /* top right bottom left */
@@ -56,25 +62,30 @@
     font-size: 1.2rem;
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .more-info {
             /* top right bottom left */
     padding: 0rem 18% 0rem 18%;
     transform: translateY(0);
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .more-info .author {
     font-size: 1rem;
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .more-info .author img {
     width: 30px;
     padding-right: 5px;
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .more-info .tags {
     font-size: 1rem;
 }
 
+/* incluido */
 #search .search-container .search-results .search-results-container .result .document .document-container .likes-views {
     font-size: 1.2rem;
 }

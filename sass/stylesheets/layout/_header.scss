@@ -52,17 +52,17 @@
                     }
                 }
 
+                @include breakpoint-768 {
+                            /* top right bottom left */
+                    padding: 0rem 1rem 0rem 1rem;
+                    font-size: 0.9rem;
+                }
+
                 @include breakpoint-450 {
                         /* top right bottom left */
                     padding-left: 0.8rem !important;
                     padding-right: 0.8rem !important;
                     font-size: 0.8rem !important;
-                }
-
-                @include breakpoint-768 {
-                            /* top right bottom left */
-                    padding: 0rem 1rem 0rem 1rem;
-                    font-size: 0.9rem;
                 }
             }
 
@@ -76,14 +76,10 @@
                 }
             }
 
-            @include breakpoint-450 {
-                padding-top: 0.5rem; 
-                padding-bottom: 0.5rem;
-            }
-
-            @include breakpoint-590 {
-                padding-top: 1rem; 
-                padding-bottom: 1rem; 
+            @include breakpoint-690 {
+                    /* top right bottom left */
+                padding: 0rem 1rem 0rem 1rem;
+                font-size: 0.9rem;
             }
 
             @include breakpoint-640 {
@@ -98,11 +94,20 @@
                 margin-top: 0.5rem;
             }
 
-            @include breakpoint-690 {
-                    /* top right bottom left */
-                padding: 0rem 1rem 0rem 1rem;
-                font-size: 0.9rem;
+            @include breakpoint-590 {
+                padding-top: 1rem; 
+                padding-bottom: 1rem; 
             }
+
+            @include breakpoint-450 {
+                padding-top: 0.5rem; 
+                padding-bottom: 0.5rem;
+            }
+
+        }
+
+        @include breakpoint-690 {
+            grid-template-columns: 2fr 4fr; 
         }
 
         @include breakpoint-640 {
@@ -118,16 +123,16 @@
         /* top right bottom left */
         padding: 0.5rem;
 
-        @include breakpoint-450 {
-            width: 60%;        
-            /* top right bottom left */
-            padding-top: 0.5rem; 
-        }
-
         @include breakpoint-640 {
             width: 50%;        
             /* top right bottom left */
             padding-top: 1rem; 
+        }
+
+        @include breakpoint-450 {
+            width: 60%;        
+            /* top right bottom left */
+            padding-top: 0.5rem; 
         }
     }
 }
