@@ -1,0 +1,92 @@
+
+.radio [type="radio"]:checked + label:before,
+.radio [type="radio"]:not(:checked) + label:before {
+    top: 3px;
+}
+.radio [type="radio"]:checked + label:after,
+.radio [type="radio"]:not(:checked) + label:after {
+    top: 8px;
+}
+
+.form-creator .form-creator-container .fields-area .fields-container .field .field-content .field-area .field-area-middle .field-area-radio-input [type="text"] {
+    width: 75%;
+            /* top right bottom left */
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+.form-creator .form-creator-container .fields-area .fields-container .field .field-content .field-area .field-area-middle .type-radio-b .modal-button .icon {
+    font-size: 1.2rem;
+}
+
+.form-creator .form-creator-container .fields-area .fields-container .field .field-content .field-area .field-area-middle .type-radio-b .remove-radio .icon {
+    font-size: 1.2rem;
+}
+
+/* for fill a form */
+.form-creator .form-creator-container .fields-area .fields-container .form-information-label .label-top .author-date .date  {
+    margin-top: -0.4rem;
+    font-weight: lighter;
+}
+
+.information {
+    margin-top: 3rem;
+}
+
+.information .information-container {
+    padding-bottom: 3rem;
+}
+
+.comments .comments-container .comment .comment-middle p {
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+
+.comments .comments-container .comment .comment-bottom .button {
+    height: 30px;
+    width: 80px;
+    font-size: 0.8rem;
+}
+
+.comments .comments-container .comment .comment-bottom .edit {
+    height: 30px;
+    width: 60px;
+    font-size: 0.7rem;
+}
+
+.comments .comments-container .comment .comment-bottom .responses-bottom {
+    font-size: 0.9rem;
+}
+
+.comments .comments-container .comment .comment-bottom .likes {
+    font-size: 0.9rem;
+}
+
+.comments .comments-container .comment .comment-responses {
+    margin-left: 10px;
+    padding-top: 2rem;
+}
+
+.comments .comments-container .comment .comment-top img {
+    margin-left: -20px;
+}
+
+.comments .comments-container .comment:first-child {
+    padding-top: 0rem;
+}
+
+.modal-top-indications {
+    padding-bottom: 1rem;
+}
+
+.modal-middle-indications {
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.modal-middle-indications p {
+    font-size: 1rem;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.modal-bottom-indications {
+    padding-top: 1rem;
+}

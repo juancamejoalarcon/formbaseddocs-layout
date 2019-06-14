@@ -1,0 +1,63 @@
+/***************/
+/*** SEARCH ***/
+/***************/
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .date {
+    font-size: 0.8rem;
+    margin-left: 5%;
+}
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .description {
+    font-size: 0.8rem;
+}
+/* incluido */
+#search .search-container .search-results .search-results-container .result .more-info .author {
+    font-size: 0.8rem;
+}
+/* incluido */
+#search .search-container .search-results .search-results-container .result .more-info .tags {
+    font-size: 0.8rem;
+}
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .likes-views {
+    font-size: 0.9rem;
+}
+
+.form-creator .form-creator-container {
+    /* flex-grow : 1; */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40vh 50vh;
+    /* height: 100%;
+    width: 100%; */
+}
+
+/* EDITOR */
+.form-creator .form-creator-container .text-area .ql-toolbar.ql-snow {
+    border-left: none;
+    border-top: 3px solid var(--primary-color);
+}
+
+.form-creator .form-creator-container .text-area .ql-container {
+    border: none;
+    border-left: none;
+}
+
+.form-creator .form-creator-container .fields-area .fields-container .field .field-content .field-area .field-area-middle .field-area-radio-input [type="text"] {
+    width: 80%;
+            /* top right bottom left */
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    /* margin-top: 1rem; */
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+}
+
+#expand-editor-button {
+    font-size: 1.5rem;
+    width: 100%;
+    padding-top: 0.45rem;
+}
+
+.comments .comments-container {
+    width: 80%;
+}

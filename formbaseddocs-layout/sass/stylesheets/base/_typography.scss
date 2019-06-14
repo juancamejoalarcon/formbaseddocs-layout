@@ -1,0 +1,13 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+    font-family: $font-lato;
+    line-height: 1.5;
+    color: color(primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-montserrat;
+    color: var(--primary-color);
+}

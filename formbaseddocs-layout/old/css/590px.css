@@ -1,0 +1,91 @@
+/* incluido */
+#nav .nav-container ul {
+    padding-top: 1rem; 
+    padding-bottom: 1rem; 
+}
+
+#sub-menu .sub-menu-container .sub-menu-nav li {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-size: 0.9rem;
+}
+
+#sub-menu .sub-menu-container-fill-form .sub-menu-nav li {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-size: 1rem;
+}
+
+#sub-menu .sub-menu-container .sub-menu-right-button .sub-menu-right-button {
+    display: none;
+}
+
+/* incluido */
+
+#search .search-container .search-results .search-results-container {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .date {
+    font-size: 1.2rem;
+    margin-left: 12%;
+    text-decoration: underline;
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .title {
+    font-size: 1.5rem;
+    /* margin-top: 12%; */
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .description {
+    text-align: center;
+    /* margin-top: 5%; */
+            /* top right bottom left */
+    padding: 0% 12% 0% 12%;
+    overflow: hidden;
+    font-weight: lighter;
+    font-size: 1.3rem;
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .likes-views {
+    margin-top: 5%;
+            /* top right bottom left */
+    padding: 0% 12% 0% 12%;
+    font-size: 1.2rem;
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .more-info {
+            /* top right bottom left */
+    padding: 0rem 18% 0rem 18%;
+    transform: translateY(0);
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .more-info .author {
+    font-size: 1rem;
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .more-info .author img {
+    width: 30px;
+    padding-right: 5px;
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .more-info .tags {
+    font-size: 1rem;
+}
+
+/* incluido */
+#search .search-container .search-results .search-results-container .result .document .document-container .likes-views {
+    font-size: 1.2rem;
+}

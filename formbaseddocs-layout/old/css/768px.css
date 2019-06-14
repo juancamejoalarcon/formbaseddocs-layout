@@ -1,0 +1,52 @@
+/* Incluido */
+#nav .nav-container ul li {
+        /* top right bottom left */
+    padding: 0rem 1rem 0rem 1rem;
+    font-size: 0.9rem;
+}
+/* Incluido */
+#search .search-container .search-results .search-results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-gap: 0px;
+    width: 90%;
+    margin: auto;
+    margin-top: 2.5rem;
+}
+
+#profile .profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#profile .profile-container .img-profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+}
+
+#profile .profile-container .img-profile-container img {
+    width: 60%;
+}
+
+#profile .profile-container .profile-info-container {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/* for fill a form */
+#sub-menu .sub-menu-container-fill-form {
+    justify-content: flex-start;
+}
+
+.modal-content-indications {
+    width: 90%;
+    height: 90%;
+}
