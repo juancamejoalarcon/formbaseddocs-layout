@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+    <!-- IMPORTS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo" class="nav-logo">
+            <ul class="nav-menu">
+                <li><a href="search.html" class="nav-menu-button">Search</a></li>
+                <li class="current"><a href="create-form.html" class="nav-menu-button">Create form</a></li>
+                <li><a href="my-forms.html" class="nav-menu-button">My forms</a></li>
+                <li><a href="settings.html" class="nav-menu-button">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="sub-menu">
+        <div class="sub-menu-container">
+            <div class="sub-menu-left-button">
+                <button class="button">Guide</button>
+            </div>
+            <ul class="sub-menu-nav">
+                <li class="current"><a href="form-creator" class="sub-menu-button">Form</a></li>
+                <li ><a href="information" class="sub-menu-button">Information</a></li>
+                <li><a href="comments" class="sub-menu-button">Comments</a></li>
+            </ul>
+            <div class="sub-menu-right-button">
+                <span class="sub-menu-right-button">Preview</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-creator content" id="form-creator">
+            <div class="form-creator-container">
+                <div class="fields-area">
+                        <div class="fields-container" id="listWithHandle">
+                            <!-- Texto -->
+                            <div class="field">
+                                <div class="field-content">
+                                    <div class="field-area">
+                                        <div class="field-area-top">
+                                            <div class="label">
+                                                <span>Text</span>
+                                            </div>
+                                            <div class="dragAndDropBotton">
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                            </div>
+                                            <div class="identifier">
+                                                <span class="identifier-label">
+                                                    Id:
+                                                </span>
+                                                <span class="identifier-id">
+                                                    <input type="text" value="izd5rdh">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="field-area-middle">
+                                            <input type="text" placeholder="Question">
+                                        </div>
+                                        <div class="field-area-bottom">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="switch-label">Obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="right-button" id="right-button">
+                                        <div class="tooltip">
+                                            <span class="icon icon-ellipsis-v-solid" id="right-button-menu"></span>
+                                            <span class="right-button-menu">
+                                                <div class="group">
+                                                    <span>Indicactions for this field</span>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="remove-button">
+                                    <span class="icon icon-trash-alt-regular"></span>
+                                </div>
+                            </div>
+                            <!-- Radio-a -->
+                            <div class="field">
+                                <div class="field-content">
+                                    <div class="field-area">
+                                        <div class="field-area-top">
+                                            <div class="label">
+                                                <span>Radio</span>
+                                            </div>
+                                            <div class="dragAndDropBotton">
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                            </div>
+                                            <div class="identifier">
+                                                <span class="identifier-label">
+                                                    Id:
+                                                </span>
+                                                <span class="identifier-id">
+                                                    izd5rdh
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="field-area-middle">
+                                            <input type="text" class="question-field" placeholder="Question">
+                                            <div class="field-area-radio-input radio">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="field-area-radio-input radio">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="add-another-radio-button">
+                                                <span class="icon icon-plus-circle-solid"></span>
+                                            </div>
+                                        </div>
+                                        <div class="field-area-bottom">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="switch-label">Obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="right-button">
+                                        <span class="icon icon-ellipsis-v-solid"></span>
+                                    </div>
+                                </div>
+                                <div class="remove-button">
+                                    <span class="icon icon-trash-alt-regular"></span>
+                                </div>
+                            </div>
+                            <!-- Radio-b -->
+                            <div class="field">
+                                <div class="field-content">
+                                    <div class="field-area">
+                                        <div class="field-area-top">
+                                            <div class="label">
+                                                <span>Radio</span>
+                                            </div>
+                                            <div class="dragAndDropBotton">
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                            </div>
+                                            <div class="identifier">
+                                                <span class="identifier-label">
+                                                    Id:
+                                                </span>
+                                                <span class="identifier-id">
+                                                    izd5rdh
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="field-area-middle">
+                                            <input type="text" class="question-field" placeholder="Question">
+                                            <div class="field-area-radio-input radio type-radio-b">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="modal-button trigger">
+                                                    <span class="icon icon-modal-icon"></span>
+                                                </div>
+                                                <div class="remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="field-area-radio-input radio type-radio-b">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="modal-button">
+                                                    <span class="icon icon-modal-icon"></span>
+                                                </div>
+                                                <div class="remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="add-another-radio-button">
+                                                <span class="icon icon-plus-circle-solid"></span>
+                                            </div>
+                                        </div>
+                                        <div class="field-area-bottom">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="switch-label">Obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="right-button">
+                                        <span class="icon icon-ellipsis-v-solid"></span>
+                                    </div>
+                                </div>
+                                <div class="remove-button">
+                                    <span class="icon icon-trash-alt-regular"></span>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-top">
+                                        <span class="close-button">×</span>
+                                        <h4>Opción</h4>
+                                    </div>
+                                    <div class="modal-middle">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <div class="modal-bottom">
+                                        <button class="button">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Radio-c -->
+                            <div class="field">
+                                <div class="field-content">
+                                    <div class="field-area">
+                                        <div class="field-area-top">
+                                            <div class="label">
+                                                <span>Radio</span>
+                                            </div>
+                                            <div class="dragAndDropBotton">
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                                <span class="icon icon-ellipsis-h-solid"></span>
+                                            </div>
+                                            <div class="identifier">
+                                                <span class="identifier-label">
+                                                    Id:
+                                                </span>
+                                                <span class="identifier-id">
+                                                    izd5rdh
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="field-area-middle">
+                                            <input type="text" class="question-field" placeholder="Question">
+                                            <div class="field-area-radio-input radio type-radio-b">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="modal-button trigger-coditional">
+                                                    <span class="icon icon-multiple-modal"></span>
+                                                </div>
+                                                <div class="remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="field-area-radio-input radio type-radio-b">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="modal-button">
+                                                    <span class="icon icon-multiple-modal"></span>
+                                                </div>
+                                                <div class="remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="add-another-radio-button">
+                                                <span class="icon icon-plus-circle-solid"></span>
+                                            </div>
+                                        </div>
+                                        <div class="field-area-bottom">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="switch-label">Obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="right-button">
+                                        <span class="icon icon-ellipsis-v-solid"></span>
+                                    </div>
+                                </div>
+                                <div class="remove-button">
+                                    <span class="icon icon-trash-alt-regular"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="add-question-button">
+                            <div class="tooltip">
+                                <span class="icon icon-plus-solid" id="add-question-button"></span>
+                                <span class="add-question-menu">
+                                    <span class="close-question-menu">
+                                        <span class="icon icon-times-solid"></span>
+                                    </span>
+                                    <div class="group">
+                                        <span>Text</span>
+                                        <div class="buttons-group">
+                                            <button>Text</button>
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <span>Radio</span>
+                                        <div class="buttons-group">
+                                            <button>Radio a</button>
+                                            <button>Radio b</button>
+                                            <button>Radio c</button>
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <span>Others</span>
+                                        <div class="buttons-group">
+                                            <button>Date</button>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="text-area">
+                    <div id="expand-editor-button">
+                        <span class="icon icon-expand-solid"></span>
+                    </div>
+                    <!-- Create the editor container -->
+                    <div id="editor-container">
+                        <div id="editor">
+                            <p>Hello World!</p>
+                            <p>Some initial <strong>bold</strong> text</p>
+                            <p><br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="information" class="content">
+            <div class="information">
+                <div class="information-container">
+                    <div class="section-left">
+                        <input type="text" placeholder="Título">
+                        <textarea name="description" id="description" cols="30" rows="6" placeholder="description"></textarea>
+                        <textarea name="indications" id="description" cols="30" rows="10" placeholder="indications"></textarea>
+                    </div>
+                    <div class="section-right">
+                        <div class="information-tags">
+                            <input type="text" placeholder="tags">
+                            <div class="tags-container">
+                                <span>tag</span>
+                                <span>tag de prueba</span>
+                            </div>
+                        </div>
+                        <div class="information-buttons">
+                            <div class="information-switch-button">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="information-switch-button-label">
+                                    Hacer el formulario privado
+                                </span>
+                            </div>
+                            <div class="information-switch-button">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="information-switch-button-label">
+                                    Desactivar comentarios
+                                </span>
+                            </div>
+                            <div class="information-switch-button">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="information-switch-button-label">
+                                    Mantener el formulario inactivo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="information-notifications">
+                            <span class="information-notifications-title">Activar notificaciones</span>
+                            <div class="information-notifications-checkboxes">
+                                <div class="form-group">
+                                    <input type="checkbox" name="notifications" id="notifications" value="Notifications" checked>
+                                    <label for="notifications">Desea que le enviemos notificaciones a su correo</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="rememberme" id="rememberme" value="Remember me" checked>
+                                    <label for="rememberme">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>
+                <span class="icon icon-save-regular"></span>
+            </button>
+        </div>
+        <div id="comments" class="content">
+            <div class="comments">
+                <div class="comments-container">
+                    <div class="new-comment">
+                        <textarea cols="70" rows="5"></textarea>
+                        <input type="submit" value="Comment">
+                    </div>
+                    <div class="orderby-comments">
+                        <div class="orderby-comments-container">
+                            <label for="orderby">Order by: </label>
+                            <select id="orderby" autofocus="true">
+                                <option value="Date">Date</option>
+                                <option value="Like">Likes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-top">
+                            <div class="author">
+                                <img src="img/avatar.jpg" alt="avatar">
+                                <h4>Juan Camejo Alarcón</h4>
+                            </div>
+                            <span class="date">15.05.2019</span>
+                        </div>
+                        <div class="comment-middle">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                natoque penatibus et magnis dis parturient montes, nascetur 
+                                ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                            </p>
+                            <span>Leer más</span>
+                        </div>
+                        <div class="comment-bottom">
+                            <div class="likes">
+                                <span class="icon icon-like-button"></span>
+                                <span>5.500</span>
+                            </div>
+                            <button class="button">Responder</button>
+                            <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-top">
+                            <div class="author">
+                                <img src="img/avatar.jpg" alt="avatar">
+                                <h4>Juan Camejo Alarcón</h4>
+                            </div>
+                            <span class="date">15.05.2019</span>
+                        </div>
+                        <div class="comment-middle">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                natoque penatibus et magnis dis parturient montes, nascetur 
+                                ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                            </p>
+                            <span>Leer más</span>
+                        </div>
+                        <div class="comment-bottom">
+                            <div class="likes">
+                                <span class="icon icon-like-button"></span>
+                                <span>5.500</span>
+                            </div>
+                            <button class="button">Responder</button>
+                            <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                        </div>
+                        <div class="comment-responses">
+                            <div class="comment-response-line"></div>
+                            <div class="comment-responses-container">
+                                <div class="comment-response">
+                                    <div class="comment-top">
+                                        <div class="author">
+                                            <img src="img/avatar.jpg" alt="avatar">
+                                            <h4>Juan Camejo Alarcón</h4>
+                                        </div>
+                                        <span class="date">15.05.2019</span>
+                                    </div>
+                                    <div class="comment-middle">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                            natoque penatibus et magnis dis parturient montes, nascetur 
+                                            ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                            Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                            scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                        </p>
+                                        <span>Leer más</span>
+                                    </div>
+                                </div>
+                                <div class="comment-response">
+                                    <div class="comment-top">
+                                        <div class="author">
+                                            <img src="img/avatar.jpg" alt="avatar">
+                                            <h4>Juan Camejo Alarcón</h4>
+                                        </div>
+                                        <span class="date">15.05.2019</span>
+                                    </div>
+                                    <div class="comment-middle">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                            natoque penatibus et magnis dis parturient montes, nascetur 
+                                            ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                            Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                            scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                        </p>
+                                        <span>Leer más</span>
+                                    </div>
+                                </div>
+                                <div class="new-comment">
+                                    <textarea cols="50" rows="5"></textarea>
+                                    <input type="submit" value="Respond">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-top">
+                            <div class="author">
+                                <img src="img/avatar.jpg" alt="avatar">
+                                <h4>Juan Camejo Alarcón</h4>
+                            </div>
+                            <span class="date">15.05.2019</span>
+                        </div>
+                        <div class="comment-middle">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                natoque penatibus et magnis dis parturient montes, nascetur 
+                                ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                            </p>
+                            <span>Leer más</span>
+                        </div>
+                        <div class="comment-bottom">
+                            <div class="likes">
+                                <span class="icon icon-like-button"></span>
+                                <span>5.500</span>
+                            </div>
+                            <button class="button edit">Editar</button>
+                            <button class="button edit">Eliminar</button>
+                            <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Modal -->
+    <div class="modal-conditional">
+        <div class="modal-conditional-content">
+            <div class="modal-conditional-top">
+                <span class="close-button-conditional">×</span>
+                <h4>Opción</h4>
+            </div>
+            <div class="modal-conditional-middle">
+                <div class="form-creator">
+                    <div class="form-creator-container">
+                        <div class="fields-area">
+                            <div class="fields-container">
+                                                        <!-- Texto -->
+                                <div class="field">
+                                    <div class="field-content">
+                                        <div class="field-area">
+                                            <div class="field-area-top">
+                                                <div class="label">
+                                                    <span>Text</span>
+                                                </div>
+                                                <div class="dragAndDropBotton">
+                                                    <span class="icon icon-ellipsis-h-solid"></span>
+                                                    <span class="icon icon-ellipsis-h-solid"></span>
+                                                </div>
+                                                <div class="identifier">
+                                                    <span class="identifier-label">
+                                                        Id:
+                                                    </span>
+                                                    <span class="identifier-id">
+                                                        izd5rdh
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="field-area-middle">
+                                                <input type="text" placeholder="Question">
+                                            </div>
+                                            <div class="field-area-bottom">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="switch-label">Obligatorio</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-button">
+                                            <span class="icon icon-ellipsis-v-solid"></span>
+                                        </div>
+                                    </div>
+                                    <div class="remove-button">
+                                        <span class="icon icon-trash-alt-regular"></span>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="field-content">
+                                        <div class="field-area">
+                                            <div class="field-area-top">
+                                                <div class="label">
+                                                    <span>Text</span>
+                                                </div>
+                                                <div class="dragAndDropBotton">
+                                                    <span class="icon icon-ellipsis-h-solid"></span>
+                                                    <span class="icon icon-ellipsis-h-solid"></span>
+                                                </div>
+                                                <div class="identifier">
+                                                    <span class="identifier-label">
+                                                        Id:
+                                                    </span>
+                                                    <span class="identifier-id">
+                                                        izd5rdh
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="field-area-middle">
+                                                <input type="text" placeholder="Question">
+                                            </div>
+                                            <div class="field-area-bottom">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="switch-label">Obligatorio</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-button">
+                                            <span class="icon icon-ellipsis-v-solid"></span>
+                                        </div>
+                                    </div>
+                                    <div class="remove-button">
+                                        <span class="icon icon-trash-alt-regular"></span>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="field-content">
+                                        <div class="field-area">
+                                            <div class="field-area-top">
+                                                <div class="label">
+                                                    <span>Text</span>
+                                                </div>
+                                                <div class="dragAndDropBotton">
+                                                    <span class="icon icon-ellipsis-h-solid"></span>
+                                                    <span class="icon icon-ellipsis-h-solid"></span>
+                                                </div>
+                                                <div class="identifier">
+                                                    <span class="identifier-label">
+                                                        Id:
+                                                    </span>
+                                                    <span class="identifier-id">
+                                                        izd5rdh
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="field-area-middle">
+                                                <input type="text" placeholder="Question">
+                                            </div>
+                                            <div class="field-area-bottom">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="switch-label">Obligatorio</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-button">
+                                            <span class="icon icon-ellipsis-v-solid"></span>
+                                        </div>
+                                    </div>
+                                    <div class="remove-button">
+                                        <span class="icon icon-trash-alt-regular"></span>
+                                    </div>
+                                </div>
+
+                                <div class="add-question-button add-question-button">
+                                    <div class="tooltip">
+                                        <span class="icon icon-plus-solid" id="add-question-button2"></span>
+                                        <span class="add-question-menu add-question-menu2">
+                                            <div class="group">
+                                                <span>Text</span>
+                                                <div class="buttons-group">
+                                                    <button>Text</button>
+                                                </div>
+                                            </div>
+                                            <div class="group">
+                                                <span>Radio</span>
+                                                <div class="buttons-group">
+                                                    <button>Radio a</button>
+                                                    <button>Radio b</button>
+                                                    <button>Radio c</button>
+                                                </div>
+                                            </div>
+                                            <div class="group">
+                                                <span>Others</span>
+                                                <div class="buttons-group">
+                                                    <button>Date</button>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="text-area">
+                            <!-- Create the editor container -->
+                            <div id="editor2">
+                                <p>Hello World!</p>
+                                <p>Some initial <strong>bold</strong> text</p>
+                                <p><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-conditional-bottom">
+                <button class="button">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Include the Quill library -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/4.2.0/screenfull.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

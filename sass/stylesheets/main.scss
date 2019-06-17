@@ -10,7 +10,8 @@
 
 // 2. Vendors
 @import
-  'vendors/normalize';
+  'vendors/normalize',
+  'vendors/quill';
 
 // 3. Base stuff
 @import
@@ -26,9 +27,13 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/buttons',
+  'components/elements',
+  'components/inputs',
+  'components/sub-menu';
 
 // 6. Page-specific styles
 @import
+  'pages/create-form',
   'pages/search';
 

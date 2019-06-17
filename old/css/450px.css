@@ -16,7 +16,7 @@
     padding-right: 0.8rem !important;
     font-size: 0.8rem !important;
 }
-
+/* incluido */
 #sub-menu .sub-menu-container .sub-menu-left-button .button {
     height: 28px;
     text-align: center;
@@ -24,14 +24,14 @@
     border-radius:40px;
     font-size: 0.8rem;
 }
-
+/* incluido */
 #sub-menu .sub-menu-container .sub-menu-nav li {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-size: 0.8rem;
 }
 
-
+/* incluido */
 /* Switch button */
 #sub-menu .sub-menu-container .sub-menu-right-button .switch {
     position: relative;
@@ -40,7 +40,7 @@
     height: 27px;
 }
   
-  
+/* incluido */
 #sub-menu .sub-menu-container .sub-menu-right-button .switch .slider:before {
     position: absolute;
     content: "";
@@ -53,7 +53,7 @@
     transition: .4s;
 }
   
-  
+ /* incluido */ 
 #sub-menu .sub-menu-container .sub-menu-right-button input:checked + .slider:before {
     -webkit-transform: translateX(24px);
     -ms-transform: translateX(24px);

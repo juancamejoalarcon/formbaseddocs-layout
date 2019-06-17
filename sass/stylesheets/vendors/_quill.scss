@@ -1,0 +1,72 @@
+/* quill.js */
+
+/* Set default font-family */
+#editor {
+    font-family: 'Lato', sans-serif;
+}
+  
+ /* Set droplist names - -item is the currently selected font, -label is the font's appearance in the droplist*/
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value='']::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value='']::before
+{
+  content: 'Font';
+  font-family: 'Lato', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value='times-new-roman']::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value='times-new-roman']::before
+{
+  content: 'Times';
+  font-family: 'Times New Roman';
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value='roboto']::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value='roboto']::before
+{
+  content: 'Roboto';
+  font-family: 'Roboto';
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value='arial']::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value='arial']::before
+{
+  content: 'Arial';
+  font-family: 'Arial';
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value='lato']::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value='lato']::before
+{
+  content: 'Lato';
+  font-family: 'Lato', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value='montserrat']::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value='montserrat']::before
+{
+  content: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
+}
+
+/****************************************************
+Set the font-family content used for the HTML content.
+*****************************************************/
+.ql-font-arial {
+  font-family: 'Arial';
+}
+
+.ql-font-times-new-roman {
+  font-family: 'Times New Roman';
+}
+
+.ql-font-roboto {
+  font-family: 'Roboto';
+}
+
+.ql-font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.ql-font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}

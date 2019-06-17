@@ -4,11 +4,6 @@
     padding-bottom: 1rem; 
 }
 
-#sub-menu .sub-menu-container .sub-menu-nav li {
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-    font-size: 0.9rem;
-}
 
 #sub-menu .sub-menu-container-fill-form .sub-menu-nav li {
     padding-left: 0.8rem;
@@ -16,6 +11,7 @@
     font-size: 1rem;
 }
 
+/* incluido */
 #sub-menu .sub-menu-container .sub-menu-right-button .sub-menu-right-button {
     display: none;
 }

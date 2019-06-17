@@ -38,6 +38,12 @@
                 &:hover {
                     border-top: 4px solid color(primary-color);
                 }
+                
+                @include breakpoint-768 {
+                            /* top right bottom left */
+                    padding: 0rem 1rem 0rem 1rem;
+                    font-size: 0.9rem;
+                }
 
                 @include breakpoint-640 {
                     padding-left: 1rem;
@@ -50,12 +56,6 @@
                         padding-left: 1rem;
                         padding-right: 1rem;
                     }
-                }
-
-                @include breakpoint-768 {
-                            /* top right bottom left */
-                    padding: 0rem 1rem 0rem 1rem;
-                    font-size: 0.9rem;
                 }
 
                 @include breakpoint-450 {
@@ -74,12 +74,6 @@
                 @include breakpoint-640 {
                     padding: 0.3rem 1rem 0.3rem 1rem;
                 }
-            }
-
-            @include breakpoint-690 {
-                    /* top right bottom left */
-                padding: 0rem 1rem 0rem 1rem;
-                font-size: 0.9rem;
             }
 
             @include breakpoint-640 {
