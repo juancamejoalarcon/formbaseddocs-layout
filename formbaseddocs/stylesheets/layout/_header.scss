@@ -1,0 +1,160 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.nav {
+    
+    &__container {
+        display: grid;
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        max-width: $max-width;
+        grid-template-columns: 1fr 3fr;
+
+        @include breakpoint-690 {
+            grid-template-columns: 2fr 4fr; 
+        }
+
+        @include breakpoint-640 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        justify-content: flex-end;
+        padding-right: 1rem;
+
+        @include breakpoint-690 {
+            padding-right: 0rem;
+
+        }
+        
+        @include breakpoint-640 {
+            padding-top: 1rem; 
+            padding-bottom: 1rem;
+            width: 100%;
+            justify-content: center;
+            -webkit-box-shadow: 0px 0px 13px -10px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 13px -10px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 13px -10px rgba(0,0,0,0.75);
+            margin-top: 0.5rem;
+        }
+
+        @include breakpoint-590 {
+            padding-top: 1rem; 
+            padding-bottom: 1rem; 
+        }
+
+        @include breakpoint-450 {
+            padding-top: 0.5rem; 
+            padding-bottom: 0.5rem;
+        }
+
+        &__button {
+            padding: 0rem 1.5rem 0rem 1.5rem; 
+            height: 100%;
+            transition: all ease-out;
+            transition-duration: 0.2s;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            
+            &:hover {
+                border-top: 4px solid color(primary-color);
+            }
+
+            @include breakpoint-768 {
+                padding: 0rem 1rem 0rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            @include breakpoint-640 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-size: 1rem;
+                padding-top: 0.3rem; 
+                padding-bottom: 0.3rem;
+
+                &:last-child {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+            }
+
+            @include breakpoint-450 {
+                padding-left: 0.8rem !important;
+                padding-right: 0.8rem !important;
+                font-size: 0.8rem !important;
+            }
+
+            a {
+                font-family: $font-montserrat;
+                color: color(primary-color);
+                font-weight: bolder;
+                transition: all ease-out;
+                transition-duration: 0.2s;
+                text-decoration: none; 
+            }
+
+            &--current {
+                border-top: 4px solid color(primary-color);
+                padding: 0rem 0.5rem 0rem 0.5rem;
+
+                @include breakpoint-640 {
+                    padding: 0.3rem 1rem 0.3rem 1rem;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        padding: 0.5rem;
+
+        @include breakpoint-640 {
+            width: 50%;        
+            padding-top: 1rem; 
+        }
+
+        @include breakpoint-450 {
+            width: 60%;        
+            padding-top: 0.5rem; 
+        }
+    }
+    // Modificación para la landing page
+    &--landing {
+        position: absolute;
+        z-index: 2;
+        
+        li {
+
+            &:hover {
+                border-top: 4px solid #ffffff;
+            }
+
+            a {
+                color: #ffffff;
+            }
+        }
+
+        .nav__logo {
+            visibility: hidden;
+        }
+
+        .nav__menu__button--current {
+            border-top: 4px solid #ffffff;
+        }
+    }
+    // Modificación para la página sign in
+    &--sign-in{
+        display: none;
+    }
+}

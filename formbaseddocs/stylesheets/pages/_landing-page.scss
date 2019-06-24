@@ -1,0 +1,22 @@
+.landing-top {
+    height: 85vh;
+    background-image: linear-gradient(to top right, color(secondaryC-color), color(primaryB-color));
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: flex-end;
+
+    &__text1 {
+        bottom: 25vh;
+        left: 10%;
+    }
+
+    &__document {
+
+        bottom: 0;
+        right: 7%;
+        width: 356px;
+        height: 252px;
+        background-color: blue;
+    }
+}

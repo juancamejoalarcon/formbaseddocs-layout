@@ -1,0 +1,104 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin breakpoint-450 {
+  @media only screen and (max-width: #{$breakpoint-450}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-490 {
+  @media only screen and (max-width: #{$breakpoint-490}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-540 {
+  @media only screen and (max-width: #{$breakpoint-540}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-590 {
+  @media only screen and (max-width: #{$breakpoint-590}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-640 {
+  @media only screen and (max-width: #{$breakpoint-640}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-690 {
+  @media only screen and (max-width: #{$breakpoint-690}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-768 {
+  @media only screen and (max-width: #{$breakpoint-768}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-785 {
+  @media only screen and (max-width: #{$breakpoint-785}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-885 {
+  @media only screen and (max-width: #{$breakpoint-885}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-985 {
+  @media only screen and (max-width: #{$breakpoint-985}) {
+      @content;
+  }
+}
+
+@mixin breakpoint-1120 {
+  @media only screen and (max-width: #{$breakpoint-1120}) {
+      @content;
+  }
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+

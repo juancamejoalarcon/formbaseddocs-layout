@@ -1,0 +1,112 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. General
+//  2. Colors
+//  3. Fonts and text
+//  4. Components
+
+
+
+// 1. General
+// ==========================================================================
+
+/// Container's maximum width
+$max-width: 1180px !default;
+
+/// Breakpoints
+$breakpoint-450: 450px;
+$breakpoint-490: 490px;
+$breakpoint-540: 540px;
+$breakpoint-590: 590px;
+$breakpoint-640: 640px;
+$breakpoint-690: 690px;
+$breakpoint-768: 768px;
+$breakpoint-785: 785px;
+$breakpoint-885: 885px;
+$breakpoint-985: 985px;
+$breakpoint-1120: 1120px;
+
+
+// 2. Colors
+// ==========================================================================
+
+$primary-color: #556270 !default;
+$primaryB-color: #4ECDC4!default;
+$secondary-color: #C44D58 !default;
+$secondaryB-color: #FF6B6B !default;
+$secondaryC-color: #C7F464 !default;
+
+$error-color: $secondary-color !default;
+$success-color: $secondaryB-color !default;
+
+// 3. Fonts and text
+// ==========================================================================
+
+$font-primary: 'Montserrat', sans-serif !default;
+$font-secondary: 'Lato', sans-serif !default;
+
+
+// 4. Components
+// ==========================================================================
+
+// Radio Buttons
+$radio-fill-color: $primary-color !default;
+$radio-empty-color: lighten($primary-color, 10%) !default;
+$radio-border: 2px solid $radio-fill-color !default;
+
+
+// Text Inputs + Textarea
+$input-height: 3rem !default;
+$input-border-color: color("grey", "base") !default;
+$input-border: 1px solid $input-border-color !default;
+$input-background: #fff !default;
+// $input-error-color: $error-color !default;
+// $input-success-color: $success-color !default;
+// $input-focus-color: $secondary-color !default;
+// $input-font-size: 16px !default;
+// $input-margin-bottom: 8px;
+// $input-margin: 0 0 $input-margin-bottom 0 !default;
+// $input-padding: 0 !default;
+$label-font-size: .8rem !default;
+$input-disabled-color: rgba(0,0,0, .42) !default;
+$input-disabled-solid-color: #949494 !default;
+// $input-disabled-border: 1px dotted $input-disabled-color !default;
+// $input-invalid-border: 1px solid $input-error-color !default;
+// $input-icon-size: 2rem;
+// $placeholder-text-color: lighten($input-border-color, 20%) !default;
+
+$input-disabled-color: rgba(0,0,0, .42) !default;
+$input-disabled-solid-color: #949494 !default;
+$input-disabled-border: 1px dotted $input-disabled-color !default;
+
+
+
+
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
