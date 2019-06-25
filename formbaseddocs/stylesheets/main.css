@@ -547,6 +547,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #556270;
 }
 
 img {
@@ -864,7 +865,6 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
   margin: auto;
   width: 100%;
-  max-width: 1180px;
   -ms-grid-columns: 1fr 3fr;
       grid-template-columns: 1fr 3fr;
 }
@@ -1016,6 +1016,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__logo {
   width: 100%;
+  max-width: 300px;
   padding: 0.5rem;
 }
 
@@ -2441,6 +2442,117 @@ input[type=checkbox] {
     width: 100%;
     margin-top: 2rem;
   }
+}
+
+.lawyer-forms__container {
+  width: 95%;
+  margin: auto;
+}
+
+.lawyer-forms__top-right-link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1rem;
+}
+
+.lawyer-forms__top-right-link a {
+  color: #556270;
+  -webkit-transition: all ease-out;
+  transition: all ease-out;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.lawyer-forms__top-right-link a:hover {
+  color: #4ECDC4;
+  text-decoration: underline;
+}
+
+.lawyer-forms__title {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.lawyer-forms__blocks-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.lawyer-forms__block {
+  margin-top: 2rem;
+  /* Tree copied from https://gist.github.com/dylancwood/7368914 */
+}
+
+.lawyer-forms__block__title {
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lawyer-forms__block__title span {
+  font-size: 2rem;
+  padding-right: 0.8rem;
+}
+
+.lawyer-forms__block .tree-container {
+  margin-left: 2.8rem;
+}
+
+.lawyer-forms__block .tree {
+  margin-right: 2rem;
+}
+
+.lawyer-forms__block ul.tree, .lawyer-forms__block ul.tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lawyer-forms__block ul.tree ul {
+  margin-left: 15px;
+}
+
+.lawyer-forms__block ul.tree li {
+  margin: 0;
+  padding: 0 7px;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  line-height: 40px;
+  color: #556270;
+  border-left: 1px solid #4ECDC4;
+}
+
+.lawyer-forms__block ul.tree li:last-child {
+  border-left: none;
+}
+
+.lawyer-forms__block ul.tree li:before {
+  position: relative;
+  top: -0.3em;
+  height: 1.3em;
+  width: 12px;
+  color: white;
+  border-bottom: 1px solid #4ECDC4;
+  content: "";
+  display: inline-block;
+  left: -7px;
+}
+
+.lawyer-forms__block ul.tree li:last-child:before {
+  border-left: 1px solid #4ECDC4;
 }
 
 .sign-in-search-button {
