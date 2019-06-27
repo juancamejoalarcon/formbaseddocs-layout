@@ -26,21 +26,31 @@
     <div class="sub-menu">
         <div class="sub-menu__container sub-menu__container--search-page">
             <ul class="sub-menu__nav sub-menu__nav--search-page">
-                <li class="sub-menu__nav__button sub-menu__nav__button--search-page sub-menu__nav__button--current"><a href="form-creator">Creados por abogados</a></li>
-                <li class="sub-menu__nav__button sub-menu__nav__button--search-page"><a href="information">Creados por otros usuarios</a></li>
+                <li class="sub-menu__nav__button sub-menu__nav__button--search-page sub-menu__nav__button--current" data-toogle="lawyer-forms">
+                    Creados por abogados
+                </li>
+                <li class="sub-menu__nav__button sub-menu__nav__button--search-page" data-toogle="user-forms">
+                    Creados por otros usuarios
+                </li>
             </ul>
         </div>
     </div>
-    <div class="lawyer-forms">
+    <div id="lawyer-forms" class="lawyer-forms sub-menu-target" >
         <div class="lawyer-forms__container">
-            <div class="lawyer-forms__top-right-link">
-                <a href="prueba.html">
-                    Create my own form
+            <div class="lawyer-forms__header">
+                <div class="lawyer-forms__top-right-link">
+                    <a href="prueba.html">
+                        Create my own form
+                    </a>
                     <span class="icon icon-link-solid"></span>
-                </a>
-            </div>
-            <div class="lawyer-forms__title">
-                <h1>Documentos creados por nuestros abogados</h1>
+                </div>
+                <div class="lawyer-forms__title">
+                    <h1>Documentos creados por nuestros abogados</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Hic, accusantium! Quo dolor explicabo nisi quis dolorum et, 
+                        deserunt accusamus id numquam vero vitae earum hic corporis illum molestiae velit.
+                        Accusamus?</p>
+                </div>
             </div>
             <div class="lawyer-forms__blocks-container">
                 <div class="lawyer-forms__block">
@@ -51,11 +61,21 @@
                     <!-- Tree copied from https://gist.github.com/dylancwood/7368914 -->
                     <div class="tree-container">
                         <ul class="tree">
-                            <li>Pacto de socios</li>
-                            <li>Prestación de servicios</li>
-                            <li>Compraventa mercantil</li>
-                            <li>Tratamiento de datos de carácter personal</li>
-                            <li class="last">Constitución de Sociedad Civil</li>
+                            <li>
+                                <a href="#">Pacto de socios</a>
+                            </li>
+                            <li>
+                                <a href="#">Prestación de servicios</a>
+                            </li>
+                            <li>
+                                <a href="#">Compraventa mercantil</a>
+                            </li>
+                            <li>
+                                <a href="#">Tratamiento de datos de carácter personal</a>
+                            </li>
+                            <li class="last">
+                                <a href="#">Constitución de Sociedad Civil</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -67,9 +87,15 @@
                     <!-- Tree copied from https://gist.github.com/dylancwood/7368914 -->
                     <div class="tree-container">
                         <ul class="tree">
-                            <li>Contrato para empleado doméstico</li>
-                            <li>Contrato de trabajo para comercial</li>
-                            <li class="last">Contrato de trabajo de alta dirección</li>
+                            <li>
+                                <a href="#">Contrato para empleado doméstico</a>
+                            </li>
+                            <li>
+                                <a href="#">Contrato de trabajo para comercial</a>
+                            </li>
+                            <li class="last">
+                                <a href="#">Contrato de trabajo de alta dirección</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -81,10 +107,18 @@
                     <!-- Tree copied from https://gist.github.com/dylancwood/7368914 -->
                     <div class="tree-container">
                         <ul class="tree">
-                            <li>Alquiler de vivienda de corta duración</li>
-                            <li>Alquiler de vivienda con opción a compra</li>
-                            <li>Alquiler de Habitación</li>
-                            <li class="last">Alquiler de plaza de garaje</li>
+                            <li>
+                                <a href="#">Alquiler de vivienda de corta duración</a>
+                            </li>
+                            <li>
+                                <a href="#">Alquiler de vivienda con opción a compra</a>
+                            </li>
+                            <li>
+                                <a href="#">Alquiler de Habitación</a>
+                            </li>
+                            <li class="last">
+                                <a href="#">Alquiler de plaza de garaje</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -96,7 +130,9 @@
                     <!-- Tree copied from https://gist.github.com/dylancwood/7368914 -->
                     <div class="tree-container">
                         <ul class="tree">
-                            <li class="last">Contrato de compraventa de vivienda</li>
+                            <li class="last">
+                                <a href="#">Contrato de compraventa de vivienda</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -108,15 +144,251 @@
                     <!-- Tree copied from https://gist.github.com/dylancwood/7368914 -->
                     <div class="tree-container">
                         <ul class="tree">
-                            <li>Condiciones de uso de Aplicación Móvil</li>
-                            <li>Política de cookies</li>
-                            <li>Condiciones de uso de Tienda Online</li>
-                            <li class="last">Condiciones de uso de Página Web</li>
+                            <li>
+                                <a href="#">Condiciones de uso de Aplicación Móvil</a>
+                            </li>
+                            <li>
+                                <a href="#">Política de cookies</a>
+                            </li>
+                            <li>
+                                <a href="#">Condiciones de uso de Tienda Online</a>
+                            </li>
+                            <li class="last">
+                                <a href="#">Condiciones de uso de Página Web</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="user-forms" class="search">
+        <div class="search__container">
+            <div class="search__button">
+                <input type="text">
+            </div>
+            <div class="search__orderby">
+                <div class="search__orderby__container">
+                    <label for="orderby">Order by: </label>
+                    <select id="orderby" autofocus="true">
+                        <option value="Date">Date</option>
+                        <option value="Like">Likes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search__results">
+                <div class="search__results__container">
+
+                    <div class="search__results__result">
+                        <div class="search__results__result__document">
+                            <div class="search__results__result__document__container">
+                                <div class="search__results__result__document__container__date">
+                                    <span>12 octubre de 2018</span>
+                                </div>
+                                <div class="search__results__result__document__container__title">
+                                    <span>Título</span>
+                                </div>
+                                <div class="search__results__result__document__container__description">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Suspendisse sed convallis libero. Duis scelerisque hendrerit arcu, 
+                                        id malesuada mi scelerisque nec. Fusce cursus auctor neque ac suscipit.</span>
+                                </div>
+                                <div class="search__results__result__document__container__likes-views">
+                                    <div class="search__results__result__document__container__likes-views__likes">
+                                        <span class="icon icon-like-button"></span>
+                                        <span>5.500</span>
+                                    </div>
+                                    <div class="search__results__result__document__container__likes-views__views">
+                                        <span class="icon icon-eye-solid"></span>
+                                        <span>2.000.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__results__result__more-info">
+                            <div class="search__results__result__more-info__author">
+                                <img src="img/avatar.jpg" alt="avatar">
+                                <span>Juan Camejo Alarcón</span>
+                            </div>
+                            <div class="search__results__result__more-info__tags">
+                                <span>tag, tag, tag, tag, tag, tag, tag, tag, 
+                                    tag, tag, tag, tag, tag, tag, tag, tag</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search__results__result">
+                        <div class="search__results__result__document">
+                            <div class="search__results__result__document__container">
+                                <div class="search__results__result__document__container__date">
+                                    <span>12 octubre de 2018</span>
+                                </div>
+                                <div class="search__results__result__document__container__title">
+                                    <span>Título</span>
+                                </div>
+                                <div class="search__results__result__document__container__description">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Suspendisse sed convallis libero. Duis scelerisque hendrerit arcu, 
+                                        id malesuada mi scelerisque nec. Fusce cursus auctor neque ac suscipit.</span>
+                                </div>
+                                <div class="search__results__result__document__container__likes-views">
+                                    <div class="search__results__result__document__container__likes-views__likes">
+                                        <span class="icon icon-like-button"></span>
+                                        <span>5.500</span>
+                                    </div>
+                                    <div class="search__results__result__document__container__likes-views__views">
+                                        <span class="icon icon-eye-solid"></span>
+                                        <span>2.000.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__results__result__more-info">
+                            <div class="search__results__result__more-info__author">
+                                <img src="img/avatar.jpg" alt="avatar">
+                                <span>Juan Camejo Alarcón</span>
+                            </div>
+                            <div class="search__results__result__more-info__tags">
+                                <span>tag, tag, tag, tag, tag, tag, tag, tag, 
+                                    tag, tag, tag, tag, tag, tag, tag, tag</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search__results__result">
+                        <div class="search__results__result__document">
+                            <div class="search__results__result__document__container">
+                                <div class="search__results__result__document__container__date">
+                                    <span>12 octubre de 2018</span>
+                                </div>
+                                <div class="search__results__result__document__container__title">
+                                    <span>Título</span>
+                                </div>
+                                <div class="search__results__result__document__container__description">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Suspendisse sed convallis libero. Duis scelerisque hendrerit arcu, 
+                                        id malesuada mi scelerisque nec. Fusce cursus auctor neque ac suscipit.</span>
+                                </div>
+                                <div class="search__results__result__document__container__likes-views">
+                                    <div class="search__results__result__document__container__likes-views__likes">
+                                        <span class="icon icon-like-button"></span>
+                                        <span>5.500</span>
+                                    </div>
+                                    <div class="search__results__result__document__container__likes-views__views">
+                                        <span class="icon icon-eye-solid"></span>
+                                        <span>2.000.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__results__result__more-info">
+                            <div class="search__results__result__more-info__author">
+                                <img src="img/avatar.jpg" alt="avatar">
+                                <span>Juan Camejo Alarcón</span>
+                            </div>
+                            <div class="search__results__result__more-info__tags">
+                                <span>tag, tag, tag, tag, tag, tag, tag, tag, 
+                                    tag, tag, tag, tag, tag, tag, tag, tag</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search__results__result">
+                        <div class="search__results__result__document">
+                            <div class="search__results__result__document__container">
+                                <div class="search__results__result__document__container__date">
+                                    <span>12 octubre de 2018</span>
+                                </div>
+                                <div class="search__results__result__document__container__title">
+                                    <span>Título</span>
+                                </div>
+                                <div class="search__results__result__document__container__description">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Suspendisse sed convallis libero. Duis scelerisque hendrerit arcu, 
+                                        id malesuada mi scelerisque nec. Fusce cursus auctor neque ac suscipit.</span>
+                                </div>
+                                <div class="search__results__result__document__container__likes-views">
+                                    <div class="search__results__result__document__container__likes-views__likes">
+                                        <span class="icon icon-like-button"></span>
+                                        <span>5.500</span>
+                                    </div>
+                                    <div class="search__results__result__document__container__likes-views__views">
+                                        <span class="icon icon-eye-solid"></span>
+                                        <span>2.000.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__results__result__more-info">
+                            <div class="search__results__result__more-info__author">
+                                <img src="img/avatar.jpg" alt="avatar">
+                                <span>Juan Camejo Alarcón</span>
+                            </div>
+                            <div class="search__results__result__more-info__tags">
+                                <span>tag, tag, tag, tag, tag, tag, tag, tag, 
+                                    tag, tag, tag, tag, tag, tag, tag, tag</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__social">
+                <ul class="footer__social__links">
+                    <li>
+                        <a href="www.google.com">
+                            <span class="icon icon-facebook-f-brands"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.google.com">
+                            <span class="icon icon-twitter-brands"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.google.com">
+                            <span class="icon icon-google-plus-g-brands"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__email">
+                <a href="">formbaseddocs@gmail</a>
+            </div>
+            <div class="footer__legal">
+                <ul class="footer__legal__links">
+                    <li>
+                        <a href="">Condiciones de uso</a>
+                    </li>
+                    <li>
+                        <a href="">Nota de privacidad</a>
+                    </li>
+                    <li>
+                        <span>© 2019 Camejo Alarcón abogados</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<script src="js/ui.js"></script>
+<script>
+    const ui = new UI();
+
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', ready)
+    } else {
+        ready()
+    }
+
+    // Event Listeners
+    function ready() {
+        const menu = document.querySelector('.sub-menu__nav');
+        menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+    }
+</script>
 </body>
 </html>

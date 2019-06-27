@@ -22,6 +22,7 @@ input {
 
         &:focus {
             border-bottom: 3px solid color(primaryB-color);
+            transition: 200ms linear;
         }
     }
 

@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all animations, if any.
+// -----------------------------------------------------------------------------
+
+.lateral-ease-intro {
+    animation-name: intro-animation;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+.lateral-ease-outro {
+    animation-name: outro-animation;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes intro-animation {
+    from {
+        transform: translate(-2000px);
+        display: none;
+    }
+
+    to {
+        transform: translate(0px);
+        display: flex;
+    }
+  }
+
+@keyframes outro-animation {
+    from {
+        transform: translate(0px);
+        display: block;
+    }
+
+    to {
+        transform: translate(2000px);
+        display: none;
+    }
+  }

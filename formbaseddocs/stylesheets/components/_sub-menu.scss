@@ -132,6 +132,13 @@
 
         &__button {
             padding: 0.8rem;
+            cursor: pointer;
+            transition: all ease-out;
+            transition-duration: 0.1s;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: lighter;
+            color: white;
 
 
             &:hover {
@@ -141,24 +148,17 @@
             @include breakpoint-590 {
                 padding-left: 0.7rem;
                 padding-right: 0.7rem;
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
 
             @include breakpoint-450 {
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
 
-            a {
-                transition: all ease-out;
-                transition-duration: 0.2s;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: lighter;
-                color: white;
-                padding-top: 0.8rem;
-                padding-bottom: 0.8rem;
+            @include breakpoint-380 {
+                font-size: 0.6rem;
             }
 
             &--current {
