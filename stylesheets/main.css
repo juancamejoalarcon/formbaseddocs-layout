@@ -1601,6 +1601,150 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+  z-index: 2;
+}
+
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.modal__content--privacy {
+  width: 90%;
+  height: 90%;
+  border-radius: 0rem;
+  padding: 0rem;
+}
+
+.modal__content__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.modal__content__top--privacy {
+  background-color: #4ECDC4;
+  width: 100%;
+  height: 80px;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
+}
+
+.modal__content__top__close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.modal__content__top__close-button:hover {
+  background-color: darkgray;
+}
+
+.modal__content__modal-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.modal__content__modal-middle textarea {
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 1rem;
+  border: 3px solid #556270;
+  font-weight: lighter;
+  width: 90%;
+  font-size: 0.8rem;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+.modal__content__modal-middle textarea:focus {
+  border: 3px solid #4ECDC4;
+}
+
+.modal__content__modal-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__content__modal-bottom button {
+  height: 40px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40px;
+  background: #4ECDC4;
+  border: 2px solid #4ECDC4;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  -webkit-transition: background, color;
+  transition: background, color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.modal__content__modal-bottom button:hover {
+  color: #4ECDC4;
+  background: #fff;
+  cursor: pointer;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
 .sub-menu {
   background-color: #4ECDC4;
 }
@@ -3302,6 +3446,14 @@ input[type=checkbox] {
     padding-left: 0.4rem;
     padding-bottom: 0.2rem;
   }
+}
+
+.sign-in__container__form__checkbox--signup a {
+  text-decoration: underline;
+}
+
+.sign-in__container__form__checkbox--signup a:hover {
+  color: #4ECDC4;
 }
 
 .sign-in__container__divider {

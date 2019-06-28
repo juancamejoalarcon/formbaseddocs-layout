@@ -110,6 +110,13 @@
                             padding-bottom: 0.2rem;
                         }
                     }
+
+                    a {
+                        text-decoration: underline;
+                        &:hover {
+                            color: color(primaryB-color);
+                        }
+                    }
                 }
             }
         }

@@ -56,7 +56,7 @@
                 <div class="sign-in__container__form__checkbox--signup">
                     <label for="privacy">
                         <input type="checkbox" class="filled-in" name="privacy" id="privacy" value="privacy" checked />
-                        <span>He leído y acepto el aviso legal y la <a class="trigger trigger-privacy">política de privacidad</a></span>
+                        <span>He leído y acepto el aviso legal y la <a class="trigger">política de privacidad</a></span>
                     </label>
                 </div>
                 <div class="sign-in__container__form__checkbox--signup">
@@ -100,5 +100,42 @@
             </div>
         </div>
     </div>
+
+    <div class="modal">
+        <div class="modal__content modal__content--privacy">
+            <div class="modal__content__top modal__content__top--privacy">
+                <!-- <span class="modal__content__top__close-button">×</span> -->
+                <h4>Opción</h4>
+            </div>
+            <div class="modal__content__modal-middle">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal__content__modal-bottom">
+                <button>Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+// Modal 
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".trigger");
+var closeButton = document.querySelector(".modal__content__top__close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+    </script>
 </body>
 </html>
