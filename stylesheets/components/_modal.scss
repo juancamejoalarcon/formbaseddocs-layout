@@ -12,7 +12,7 @@
     z-index: 2;
 
     &__content {
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -34,9 +34,15 @@
             flex-direction: row-reverse;
 
             &--privacy {
+                display: grid;
+                grid-auto-flow: column;
+                grid-column: 80% 20%;
+                align-items: center;
+                justify-content: center;
                 background-color: color(primaryB-color);
                 width: 100%;
                 height: 80px;
+                color: #fff;
                 -webkit-box-shadow: 0 4px 6px -6px #222;
                 -moz-box-shadow: 0 4px 6px -6px #222;
                 box-shadow: 0 4px 6px -6px #222;
@@ -58,11 +64,8 @@
         }
 
         &__modal-middle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 1rem;
-            padding-top: 1rem;
+            border-bottom: 3px solid color(primary-color);
+
 
             textarea {
                 margin: 0rem 0rem 0rem 0rem;
@@ -81,32 +84,24 @@
                     border: 3px solid color(primaryB-color);
                 }
             }
+
+            &__container {
+                overflow: hidden;
+            }
+
+            &--privacy {
+                overflow: scroll;
+                height: 75%;
+                padding: 1rem;
+            }
         }
 
         &__modal-bottom {
             display: flex;
             justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
 
-            button {
-                height: 40px;
-                text-align: center;
-                width: 100px;
-                border-radius:40px;
-                background: color(primaryB-color);
-                border: 2px solid color(primaryB-color);
-                color: #fff;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: bold;
-                font-size: 0.9rem;
-                transition: background, color;
-                transition-duration: 0.2s;
-
-                &:hover {
-                    color: color(primaryB-color);
-                    background: #fff;
-                    cursor: pointer;
-                }
-            }
         }
     }
 }

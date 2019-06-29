@@ -10,8 +10,6 @@
     <link rel=”canonical” href=”https://www.formbaseddocs.com” />
     <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
     <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
-    <!-- IMPORTS -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
     <nav class="nav nav--sign-in">
@@ -54,9 +52,9 @@
                 </div>
 
                 <div class="sign-in__container__form__checkbox--signup">
-                    <label for="privacy">
-                        <input type="checkbox" class="filled-in" name="privacy" id="privacy" value="privacy" checked />
-                        <span>He leído y acepto el aviso legal y la <a class="trigger">política de privacidad</a></span>
+                    <label for="privacy-checkbox" id="privacy-label">
+                        <input type="checkbox" class="filled-in" name="privacy" id="privacy-checkbox" value="privacy" disabled/>
+                        <span id="privacy-span">He leído y acepto el aviso legal y la <a class="trigger">política de privacidad</a></span>
                     </label>
                 </div>
                 <div class="sign-in__container__form__checkbox--signup">
@@ -104,24 +102,77 @@
     <div class="modal">
         <div class="modal__content modal__content--privacy">
             <div class="modal__content__top modal__content__top--privacy">
-                <!-- <span class="modal__content__top__close-button">×</span> -->
-                <h4>Opción</h4>
+                <h2>Políticas de privacidad</h2>
             </div>
-            <div class="modal__content__modal-middle">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="modal__content__modal-middle modal__content__modal-middle--privacy" id="modal-middle-privacy">
+                <div class="modal__content__modal-middle__container">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
+                    </p>
+                </div>
             </div>
             <div class="modal__content__modal-bottom">
-                <button>Guardar</button>
+                <button class="button-filled button-filled__disabled" id="modal-button">Entendido</button>
             </div>
         </div>
     </div>
 
     <script>
 
+    document.querySelector('#privacy-label').addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (e.target.tagName !== 'A' && document.querySelector('#privacy-checkbox').disabled === false) {
+            document.querySelector('#privacy-checkbox').checked = !document.querySelector('#privacy-checkbox').checked;
+        }
+    });
+
+    document.querySelector('#modal-middle-privacy').addEventListener('scroll', (e) => {
+        if (e.srcElement.scrollHeight - e.srcElement.scrollTop === e.srcElement.clientHeight) {
+            enablePrivacyButton();
+        }
+    });
+
+    document.querySelector('#modal-button').addEventListener('click', () => {
+
+        if (document.querySelector('#modal-button').classList.contains('button-filled__disabled')) {
+            alert('Debes leer todas las condiciones');
+        } else {
+            toggleModal();
+            document.querySelector('#privacy-checkbox').disabled = false;
+        }
+    });
+
+    function enablePrivacyButton() {
+        document.querySelector('#modal-button').classList.remove('button-filled__disabled');
+    }
+
+
+
 // Modal 
 var modal = document.querySelector(".modal");
 var trigger = document.querySelector(".trigger");
-var closeButton = document.querySelector(".modal__content__top__close-button");
 
 function toggleModal() {
     modal.classList.toggle("show-modal");
@@ -134,7 +185,6 @@ function windowOnClick(event) {
 }
 
 trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
     </script>
 </body>

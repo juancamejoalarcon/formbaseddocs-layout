@@ -60,3 +60,36 @@ input:focus + .slider {
     box-shadow: 0 0 1px color(secondaryC-color);
 }
 
+.button-filled {
+    height: 40px;
+    text-align: center;
+    width: 100px;
+    border-radius:40px;
+    background: color(primaryB-color);
+    border: 2px solid color(primaryB-color);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background, color;
+    transition-duration: 0.2s;
+
+    &:hover {
+        color: color(primaryB-color);
+        background: #fff;
+        cursor: pointer;
+    }
+
+    &__disabled {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+
+        &:hover {
+            color: #666666;
+            background-color: #cccccc;
+            border: 1px solid #999999;
+        }
+    }
+}
+
