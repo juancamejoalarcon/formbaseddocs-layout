@@ -2503,6 +2503,7 @@ input[type=checkbox] {
   transition: all ease-out;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  text-decoration: underline;
 }
 
 .search__results__result__document__container {
@@ -2679,6 +2680,15 @@ input[type=checkbox] {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
+  -webkit-transition: all ease-out;
+  transition: all ease-out;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.search__results__result__more-info__author:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .search__results__result__more-info__author img {

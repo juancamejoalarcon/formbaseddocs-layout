@@ -10,13 +10,14 @@ class UI {
                 const content = document.querySelector('#' + button.getAttribute('data-toogle'));
                 content.classList.add('lateral-ease-outro');
                 content.classList.remove('lateral-ease-intro');
-                setTimeout(function(){ content.style.display = 'none';}, 400);
+                setTimeout(function(){ content.style.display = 'none';}, 400); 
             }
             button.classList.remove('sub-menu__nav__button--current');
         });
 
         e.target.classList.add('sub-menu__nav__button--current');
         const content = document.querySelector('#' + e.target.getAttribute('data-toogle'));
+        window.location.href = '#' + e.target.getAttribute('data-toogle');
         content.classList.remove('lateral-ease-outro');
         content.classList.add('lateral-ease-intro');
         setTimeout(function(){ content.style.display = 'block';}, 400);

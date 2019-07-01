@@ -16,8 +16,8 @@
         <div class="nav__container">
             <img src="img/logo.png" alt="logo" class="nav__logo">
             <ul class="nav__menu">
-                <li class="nav__menu__button nav__menu__button--current"><a href="search.html">Documents</a></li>
-                <li class="nav__menu__button"><a href="create-form.html">Create form</a></li>
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
                 <li class="nav__menu__button"><a href="my-forms.html">My forms</a></li>
                 <li class="nav__menu__button"><a href="settings.html">settings</a></li>
             </ul>
@@ -39,7 +39,7 @@
         <div class="lawyer-forms__container">
             <div class="lawyer-forms__header">
                 <div class="lawyer-forms__top-right-link">
-                    <a href="prueba.html">
+                    <a href="7_create-form.html">
                         Create my own form
                     </a>
                     <span class="icon icon-link-solid"></span>
@@ -180,7 +180,7 @@
                 <div class="search__results__container">
 
                     <div class="search__results__result">
-                        <div class="search__results__result__document">
+                        <div class="search__results__result__document" onclick="openForm();">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -208,7 +208,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="img/avatar.jpg" alt="avatar">
-                                <span>Juan Camejo Alarcón</span>
+                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -218,7 +218,7 @@
                     </div>
 
                     <div class="search__results__result">
-                        <div class="search__results__result__document">
+                        <div class="search__results__result__document" onclick="openForm();">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -246,7 +246,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="img/avatar.jpg" alt="avatar">
-                                <span>Juan Camejo Alarcón</span>
+                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -256,7 +256,7 @@
                     </div>
 
                     <div class="search__results__result">
-                        <div class="search__results__result__document">
+                        <div class="search__results__result__document" onclick="openForm();">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -284,7 +284,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="img/avatar.jpg" alt="avatar">
-                                <span>Juan Camejo Alarcón</span>
+                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -293,8 +293,8 @@
                         </div>
                     </div>
 
-                    <div class="search__results__result">
-                        <div class="search__results__result__document">
+                    <div class="search__results__result" >
+                        <div class="search__results__result__document" onclick="openForm();">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -322,7 +322,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="img/avatar.jpg" alt="avatar">
-                                <span>Juan Camejo Alarcón</span>
+                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -388,6 +388,14 @@
     function ready() {
         const menu = document.querySelector('.sub-menu__nav');
         menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+    }
+
+    function openForm() {
+        window.location.href = '/7_create-form.html'; 
+    }
+
+    function openProfile() {
+        window.location.href = '/6_profile.html'; 
     }
 </script>
 </body>
