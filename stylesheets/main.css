@@ -1687,6 +1687,16 @@ input[type=checkbox] {
   height: 90%;
   border-radius: 0rem;
   padding: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal__content__top {
@@ -1777,6 +1787,11 @@ input[type=checkbox] {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 1rem;
+}
+
+.modal__content__modal-bottom--privacy {
+  margin-top: 0rem;
+  margin-bottom: 2vh;
 }
 
 .show-modal {
