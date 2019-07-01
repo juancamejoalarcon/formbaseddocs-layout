@@ -22,4 +22,11 @@ class UI {
         setTimeout(function(){ content.style.display = 'block';}, 400);
 
     }
+
+    setDivHeight() {
+        if (window.innerWidth > 885) {
+            const newHeight = window.innerHeight - document.getElementById('form-creator').offsetTop + 'px';
+            document.getElementById('form-creator').style.height = newHeight;
+        }
+    }
 }

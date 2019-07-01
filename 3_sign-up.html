@@ -151,6 +151,7 @@
     document.querySelector('#modal-middle-privacy').addEventListener('scroll', (e) => {
         if (e.srcElement.scrollHeight - e.srcElement.scrollTop === e.srcElement.clientHeight) {
             enablePrivacyButton();
+            document.querySelector('#privacy-checkbox').disabled = false;
         }
     });
 
@@ -160,7 +161,6 @@
             alert('Debes leer todas las condiciones');
         } else {
             toggleModal();
-            document.querySelector('#privacy-checkbox').disabled = false;
         }
     });
 

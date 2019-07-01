@@ -92,7 +92,10 @@
             &--privacy {
                 overflow: scroll;
                 height: 75%;
-                padding: 1rem;
+                padding: 2rem;
+                font-weight: lighter;
+                text-align: justify;
+
             }
         }
 
@@ -101,7 +104,6 @@
             justify-content: center;
             align-items: center;
             margin-top: 1rem;
-
         }
     }
 }
