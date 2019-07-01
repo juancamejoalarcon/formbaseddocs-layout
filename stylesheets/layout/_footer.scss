@@ -25,6 +25,9 @@
                 padding-right: 0.8rem;
                 font-size: 1.8rem;
 
+                &:first-child {
+                    padding-left: 1.3rem;
+                }
                 a {
                     color: #ffffff;
 
@@ -43,6 +46,12 @@
         border-bottom: 1px solid #ffffff;
         margin-top: 1rem;
         margin-bottom: 1rem;
+
+        @include breakpoint-450 {
+            margin-top: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
         a {
             color: #ffffff;
 

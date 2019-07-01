@@ -1179,6 +1179,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.8rem;
 }
 
+.footer__social__links li:first-child {
+  padding-left: 1.3rem;
+}
+
 .footer__social__links li a {
   color: #ffffff;
 }
@@ -1196,6 +1200,13 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #ffffff;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .footer__email {
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .footer__email a {

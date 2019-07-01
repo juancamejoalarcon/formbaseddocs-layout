@@ -146,6 +146,11 @@
         if (e.target.tagName !== 'A' && document.querySelector('#privacy-checkbox').disabled === false) {
             document.querySelector('#privacy-checkbox').checked = !document.querySelector('#privacy-checkbox').checked;
         }
+
+        if (document.querySelector('#modal-middle-privacy').scrollHeight === document.querySelector('#modal-middle-privacy').clientHeight) {
+            enablePrivacyButton();
+            document.querySelector('#privacy-checkbox').disabled = false;
+        }
     });
 
     document.querySelector('#modal-middle-privacy').addEventListener('scroll', (e) => {
