@@ -1266,6 +1266,158 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+.steps {
+  padding: 0;
+  overflow: hidden;
+}
+
+.steps li {
+  float: left;
+  margin-left: 0;
+  /* width: 180px; */
+  /* 100 / number of steps */
+  height: 35px;
+  /* total height */
+  line-height: 30px;
+  list-style-type: none;
+  padding: 5px 5px 5px 12px;
+  /* padding around text, last should include arrow width */
+  border-right: 3px solid white;
+  /* width: gap between arrows, color: background of document */
+  position: relative;
+  /* white arrow to the left to "erase" background (starting from the 2nd object) */
+}
+
+@media only screen and (max-width: 985px) {
+  .steps li {
+    padding: 3px 3px 3px 8px;
+    /* padding around text, last should include arrow width */
+  }
+}
+
+.steps li:nth-child(n+2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-left: 10px solid white;
+  /* width: arrow width, color: background of document */
+  border-top: 20px solid transparent;
+  /* width: half height */
+  border-bottom: 20px solid transparent;
+  /* width: half height */
+  width: 0;
+  height: 0;
+  content: " ";
+}
+
+.steps li:nth-child(n+2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-left: 10px solid white;
+  /* width: arrow width, color: background of document */
+  border-top: 20px solid transparent;
+  /* width: half height */
+  border-bottom: 20px solid transparent;
+  /* width: half height */
+  width: 0;
+  height: 0;
+  content: " ";
+}
+
+.steps li::after {
+  z-index: 1;
+  /* need to bring this above the next item */
+  position: absolute;
+  top: 0;
+  right: -10px;
+  /* arrow width (negated) */
+  display: block;
+  border-left: 10px solid #556270;
+  /* width: arrow width */
+  border-top: 20px solid transparent;
+  /* width: half height */
+  border-bottom: 20px solid transparent;
+  /* width: half height */
+  width: 0;
+  height: 0;
+  content: " ";
+}
+
+/* Setup colors (both the background and the arrow) */
+/* Completed */
+.steps li {
+  background-color: #4ECDC4;
+}
+
+.steps li:hover {
+  background-color: #4ECDC4;
+  cursor: pointer;
+}
+
+.steps li:hover::after {
+  border-left-color: #4ECDC4;
+  cursor: pointer;
+}
+
+.steps li::after {
+  border-left-color: #4ECDC4;
+}
+
+.steps li span.number {
+  display: none;
+}
+
+/* Current */
+.steps li.current {
+  background-color: #4ECDC4;
+}
+
+.steps li.current::after {
+  border-left-color: #4ECDC4;
+}
+
+.steps li.current span.number {
+  display: inline-block;
+}
+
+.steps li.current i.fa.fa-check {
+  display: none;
+}
+
+/* Following */
+.steps li.current ~ li {
+  background-color: #BBECE8;
+}
+
+.steps li.current ~ li:hover {
+  background-color: #4ECDC4;
+  cursor: pointer;
+}
+
+.steps li.current ~ li:hover::after {
+  border-left-color: #4ECDC4;
+  cursor: pointer;
+}
+
+.steps li.current ~ li::after {
+  border-left-color: #BBECE8;
+}
+
+.steps li.current ~ li a {
+  color: #4ECDC4;
+}
+
+.steps li.current ~ li span.number {
+  display: inline-block;
+}
+
+.steps li.current ~ li i.fa.fa-check {
+  display: none;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -2057,6 +2209,17 @@ input[type=checkbox] {
   box-shadow: 5px 5px 17px -9px rgba(0, 0, 0, 0.75);
 }
 
+.form-creator__fields-area__field__field-area--input-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 30vh;
+}
+
 .form-creator__fields-area__field__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2115,18 +2278,29 @@ input[type=checkbox] {
           align-items: center;
 }
 
+.form-creator__fields-area__field__bottom__trash {
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
+}
+
+.form-creator__fields-area__field__bottom__trash:hover {
+  color: #C44D58;
+  cursor: pointer;
+}
+
 .form-creator__fields-area__field__bottom__mandatory {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 
 .form-creator__fields-area__field__bottom__mandatory__switch-label {
   font-weight: lighter;
   font-size: 0.8rem;
-  padding: 0rem 0rem 0rem 0.4rem;
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
 }
 
 .form-creator__fields-area__field__bottom__mandatory .switch {
@@ -2154,7 +2328,9 @@ input[type=checkbox] {
 
 .form-creator__fields-area__field__bottom__menu {
   padding-right: 0.3rem;
-  font-size: 1.1rem;
+  padding-left: 0.5rem;
+  padding-top: 0.3rem;
+  font-size: 1.2rem;
 }
 
 .form-creator__text-area {

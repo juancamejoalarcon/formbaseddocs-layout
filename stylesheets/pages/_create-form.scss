@@ -621,6 +621,12 @@
                 -webkit-box-shadow: 5px 5px 17px -9px rgba(0,0,0,0.75);
                 -moz-box-shadow: 5px 5px 17px -9px rgba(0,0,0,0.75);
                 box-shadow: 5px 5px 17px -9px rgba(0,0,0,0.75);
+
+                &--input-text {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 30vh;
+                }
             }
             &__top {
                 display: flex;
@@ -665,15 +671,24 @@
                 justify-content: flex-end;
                 align-items: center;
 
+                &__trash {
+                    transition: all 0.2 ease;
+                    &:hover {
+                        color: color(secondary-color);
+                        cursor: pointer;
+                    }
+                }
+
                 &__mandatory {
                     display: flex;
-                    padding-left: 0.3rem;
-                    padding-right: 0.3rem;
+                    padding-left: 0.8rem;
+                    padding-right: 0.8rem;
 
                     &__switch-label {
                         font-weight: lighter;
                         font-size: 0.8rem;
-                        padding: 0rem 0rem 0rem 0.4rem;
+                        padding-left: 0.5rem;
+                        padding-right: 0.3rem;
                     }
                     .switch {
                         width: 34px;
@@ -704,7 +719,9 @@
 
                 &__menu {
                     padding-right: 0.3rem;
-                    font-size: 1.1rem;
+                    padding-left: 0.5rem;
+                    padding-top: 0.3rem;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -729,3 +746,4 @@
         }
     }
 }
+  
