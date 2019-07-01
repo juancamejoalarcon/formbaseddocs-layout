@@ -1790,7 +1790,7 @@ input[type=checkbox] {
 }
 
 .modal__content__modal-bottom--privacy {
-  margin-top: 0rem;
+  margin-top: 1vh;
   margin-bottom: 2vh;
 }
 
