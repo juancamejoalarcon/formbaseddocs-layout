@@ -1939,6 +1939,16 @@ input[type=checkbox] {
 .form-creator__fields-area__container {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .form-creator__fields-area__add-question {
@@ -2006,9 +2016,138 @@ input[type=checkbox] {
   color: #4ECDC4;
 }
 
+.form-creator__fields-area__field {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  width: 95%;
+  margin: auto;
+}
+
+.form-creator__fields-area__field__field-area {
+  background-color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 5px 5px 17px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 17px -9px rgba(0, 0, 0, 0.75);
+}
+
+.form-creator__fields-area__field__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form-creator__fields-area__field__top__identifier {
+  padding: 0.2rem 0.4rem 0rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-creator__fields-area__field__top__identifier__label {
+  color: #556270;
+  font-weight: lighter;
+}
+
+.form-creator__fields-area__field__top__identifier__id {
+  color: #4ECDC4;
+  font-weight: lighter;
+}
+
+.form-creator__fields-area__field__top__identifier__id input {
+  border-bottom: 2px solid #4ECDC4;
+  padding: 0.2rem;
+  font-size: 1rem;
+  color: #4ECDC4;
+  font-weight: lighter;
+  width: 80px;
+}
+
+.form-creator__fields-area__field__middle {
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0rem 3rem 0rem;
+}
+
+.form-creator__fields-area__field__bottom {
+  padding-left: 0.6rem;
+  padding-bottom: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-creator__fields-area__field__bottom__mandatory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.form-creator__fields-area__field__bottom__mandatory__switch-label {
+  font-weight: lighter;
+  font-size: 0.8rem;
+  padding: 0rem 0rem 0rem 0.4rem;
+}
+
+.form-creator__fields-area__field__bottom__mandatory .switch {
+  width: 34px;
+  height: 18px;
+}
+
+.form-creator__fields-area__field__bottom__mandatory .switch-label {
+  font-weight: lighter;
+  font-size: 0.8rem;
+  padding: 0rem 0rem 0rem 0.4rem;
+}
+
+.form-creator__fields-area__field__bottom__mandatory .slider:before {
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+}
+
+.form-creator__fields-area__field__bottom__mandatory input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.form-creator__fields-area__field__bottom__menu {
+  padding-right: 0.3rem;
+  font-size: 1.1rem;
+}
+
 .form-creator__text-area {
   height: 100%;
   width: 100%;
+}
+
+.form-creator__text-area__field {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  width: 95%;
+  margin: auto;
+}
+
+.form-creator__text-area__field__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 95% 5%;
+      grid-template-columns: 95% 5%;
+  grid-column-gap: 10px;
 }
 
 .landing-top {
@@ -2955,6 +3094,7 @@ input[type=checkbox] {
   .sign-in__container__top-image {
     width: 280px;
     margin-bottom: 0.6rem;
+    display: none;
   }
 }
 

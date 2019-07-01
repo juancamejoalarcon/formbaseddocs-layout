@@ -47,6 +47,7 @@
             @include breakpoint-450 {
                 width: 280px;
                 margin-bottom: 0.6rem;
+                display: none;
             }
 
             &--signup {
