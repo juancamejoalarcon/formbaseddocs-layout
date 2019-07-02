@@ -2331,7 +2331,7 @@ input[type=checkbox] {
 }
 
 .table {
-  /* width: 750px;  */
+  width: 95%;
   border-collapse: collapse;
   margin: 50px auto;
   /* Zebra striping */
@@ -2466,6 +2466,16 @@ input[type=checkbox] {
     color: #556270;
     font-family: 'Montserrat', 'sans-serif';
     font-weight: 800;
+  }
+}
+
+.table--filled-forms {
+  width: 80%;
+}
+
+@media only screen and (max-width: 885px) {
+  .table--filled-forms {
+    font-size: 90%;
   }
 }
 
