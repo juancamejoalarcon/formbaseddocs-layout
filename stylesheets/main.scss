@@ -35,12 +35,14 @@
   'components/inputs',
   'components/modal',
   'components/select',
-  'components/sub-menu';
+  'components/sub-menu',
+  'components/table';
 
 // 6. Page-specific styles
 @import
   'pages/create-form',
   'pages/landing-page',
+  'pages/my-forms',
   'pages/profile',
   'pages/recover-password',
   'pages/search',

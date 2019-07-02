@@ -1727,6 +1727,208 @@ input:focus + .slider {
   border-color: #949494;
 }
 
+.select-my-forms {
+  /* Indeterminate checkbox */
+}
+
+.select-my-forms [type="checkbox"]:not(:checked),
+.select-my-forms [type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.select-my-forms [type="checkbox"] {
+  /* checkbox aspect */
+}
+
+.select-my-forms [type="checkbox"] + span:not(.lever):not(.slider) {
+  position: relative;
+  padding-left: 22px;
+  padding-top: 1px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 20px;
+  font-size: 0.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.select-my-forms [type="checkbox"] + span:not(.lever):not(.slider):before,
+.select-my-forms [type="checkbox"]:not(.filled-in) + span:not(.lever):not(.slider):after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  z-index: 0;
+  border: 2px solid #5a5a5a;
+  border-radius: 1px;
+  margin-top: 4px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.select-my-forms [type="checkbox"]:not(.filled-in) + span:not(.lever):not(.slider):after {
+  border: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.select-my-forms [type="checkbox"]:not(:checked):disabled + span:not(.lever):not(.slider):before {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.select-my-forms [type="checkbox"].tabbed:focus + span:not(.lever):not(.slider):after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  border: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select-my-forms [type="checkbox"]:checked + span:not(.lever):not(.slider):before {
+  top: -4px;
+  left: -5px;
+  width: 12px;
+  height: 22px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #26a69a;
+  border-bottom: 2px solid #26a69a;
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.select-my-forms [type="checkbox"]:checked:disabled + span:before {
+  border-right: 2px solid rgba(0, 0, 0, 0.42);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+}
+
+.select-my-forms [type="checkbox"]:indeterminate + span:not(.lever):not(.slider):before {
+  top: -11px;
+  left: -12px;
+  width: 10px;
+  height: 22px;
+  border-top: none;
+  border-left: none;
+  border-right: 2px solid #26a69a;
+  border-bottom: none;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.select-my-forms [type="checkbox"]:indeterminate:disabled + span:not(.lever):not(.slider):before {
+  border-right: 2px solid rgba(0, 0, 0, 0.42);
+  background-color: transparent;
+}
+
+.select-my-forms [type="checkbox"].filled-in + span:not(.lever):not(.slider):after {
+  border-radius: 2px;
+}
+
+.select-my-forms [type="checkbox"].filled-in + span:not(.lever):not(.slider):before,
+.select-my-forms [type="checkbox"].filled-in + span:not(.lever):not(.slider):after {
+  content: '';
+  left: 0;
+  position: absolute;
+  /* .1s delay is for check animation */
+  -webkit-transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+  transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+  z-index: 1;
+}
+
+.select-my-forms [type="checkbox"].filled-in:not(:checked) + span:not(.lever):not(.slider):before {
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  left: 6px;
+  top: 10px;
+  -webkit-transform: rotateZ(37deg);
+  transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.select-my-forms [type="checkbox"].filled-in:not(:checked) + span:not(.lever):not(.slider):after {
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 2px solid #556270;
+  top: 4px;
+  z-index: 0;
+}
+
+.select-my-forms [type="checkbox"].filled-in:checked + span:not(.lever):not(.slider):before {
+  top: 3px;
+  left: 1px;
+  width: 6px;
+  height: 9px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotateZ(37deg);
+  transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.select-my-forms [type="checkbox"].filled-in:checked + span:not(.lever):not(.slider):after {
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #26a69a;
+  background-color: #26a69a;
+  z-index: 0;
+}
+
+.select-my-forms [type="checkbox"].filled-in.tabbed:focus + span:not(.lever):not(.slider):after {
+  border-radius: 2px;
+  border-color: #5a5a5a;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select-my-forms [type="checkbox"].filled-in.tabbed:checked:focus + span:not(.lever):not(.slider):after {
+  border-radius: 2px;
+  background-color: #26a69a;
+  border-color: #26a69a;
+}
+
+.select-my-forms [type="checkbox"].filled-in:disabled:not(:checked) + span:not(.lever):not(.slider):before {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.select-my-forms [type="checkbox"].filled-in:disabled:not(:checked) + span:not(.lever):not(.slider):after {
+  border-color: transparent;
+  background-color: #949494;
+}
+
+.select-my-forms [type="checkbox"].filled-in:disabled:checked + span:not(.lever):not(.slider):before {
+  background-color: transparent;
+}
+
+.select-my-forms [type="checkbox"].filled-in:disabled:checked + span:not(.lever):not(.slider):after {
+  background-color: #949494;
+  border-color: #949494;
+}
+
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2050,7 +2252,35 @@ input[type=checkbox] {
   text-align: center;
 }
 
+@media only screen and (max-width: 590px) {
+  .sub-menu__nav__button--my-forms {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .sub-menu__nav__button--my-forms {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .sub-menu__nav__button--my-forms {
+    font-size: 0.8rem;
+  }
+}
+
 .sub-menu__nav--form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sub-menu__nav--my-forms {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2097,6 +2327,145 @@ input[type=checkbox] {
   .sub-menu__right-button input:checked + .slider:before {
     -webkit-transform: translateX(24px);
     transform: translateX(24px);
+  }
+}
+
+.table {
+  /* width: 750px;  */
+  border-collapse: collapse;
+  margin: 50px auto;
+  /* Zebra striping */
+  /* 
+    Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically.
+    */
+}
+
+.table a {
+  text-decoration: none;
+  -webkit-transition: all ease-out;
+  transition: all ease-out;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.table a:hover {
+  text-decoration: underline;
+  color: #4ECDC4;
+}
+
+.table .delete {
+  -webkit-transition: all ease-out;
+  transition: all ease-out;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  font-size: 1rem;
+}
+
+.table .delete:hover {
+  color: #C44D58;
+  cursor: pointer;
+}
+
+.table tr:nth-of-type(odd) {
+  /* background: #eee;  */
+}
+
+.table th {
+  /* background: #3498db;  */
+  color: #556270;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border-left: 3px solid #4ECDC4;
+  border-right: 3px solid #4ECDC4;
+  padding: 8px;
+}
+
+.table th:first-child {
+  border-left: none;
+}
+
+.table th:last-child {
+  border-right: none;
+}
+
+.table td {
+  padding: 8px;
+  border: 3px solid #4ECDC4;
+  text-align: left;
+  font-size: 0.8rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+}
+
+.table td:first-child {
+  border-left: none;
+}
+
+.table td:last-child {
+  border-right: none;
+}
+
+.table th, .table td {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  line-height: 1rem;
+}
+
+.table table .delete {
+  color: #C44D58;
+  cursor: pointer;
+}
+
+.table table .delete:hover {
+  color: #FF6B6B;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 850px), (min-device-width: 850px) and (max-device-width: 1024px) {
+  .table {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  .table table {
+    width: 90%;
+  }
+  .table tr:nth-child(even) {
+    background: #EDFAF9;
+  }
+  .table table, .table thead, .table tbody, .table th, .table td, .table tr {
+    display: block;
+  }
+  .table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .table tr {
+    border: 1px solid #4ECDC4;
+  }
+  .table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  .table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 9px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+    color: #556270;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 800;
   }
 }
 

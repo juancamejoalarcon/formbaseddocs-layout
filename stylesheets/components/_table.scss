@@ -1,0 +1,135 @@
+.table {
+    
+    /* width: 750px;  */
+    border-collapse: collapse; 
+    margin:50px auto;
+
+    a {
+        text-decoration: none;
+        transition: all ease-out;
+        transition-duration: 0.1s;
+        &:hover {
+            text-decoration: underline;
+            color: color(primaryB-color);
+        }
+    }
+
+    .delete {
+        transition: all ease-out;
+        transition-duration: 0.1s;
+        font-size: 1rem;
+        &:hover {
+            color: color(secondary-color);
+            cursor: pointer;
+        }
+    }
+    /* Zebra striping */
+    tr:nth-of-type(odd) { 
+            /* background: #eee;  */
+        }
+    
+    th { 
+        /* background: #3498db;  */
+        color: color(primary-color); 
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        border-left: 3px solid color(primaryB-color);
+        border-right: 3px solid color(primaryB-color);
+        padding: 8px; 
+        }
+        
+    th:first-child {
+        border-left: none;
+    }
+    
+    th:last-child {
+        border-right: none;
+    }
+    
+    td { 
+        padding: 8px; 
+        border: 3px solid color(primaryB-color); 
+        text-align: left; 
+        font-size: 0.8rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: lighter;
+        }
+    
+    td:first-child {
+        border-left: none;
+    }
+    
+    td:last-child {
+        border-right: none;
+    }
+    
+    th, td {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        line-height: 1rem;
+    }
+    
+    table .delete {
+        color: color(secondary-color);
+        cursor: pointer;
+    }
+    
+    table .delete:hover {
+        color: color(secondaryB-color);
+        cursor: pointer;
+    }
+    
+    /* 
+    Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically.
+    */
+    @media 
+    only screen and (max-width: 850px),
+    (min-device-width: 850px) and (max-device-width: 1024px)  {
+    
+        table { 
+              width: 90%; 
+        }
+        tr:nth-child(even) { background: #EDFAF9}
+        /* Force table to not be like tables anymore */
+        table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        tr { border: 1px solid color(primaryB-color); }
+        
+        td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+    
+        td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 9px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+            /* Label the data */
+            content: attr(data-column);
+    
+            color: color(primary-color);
+            font-family: 'Montserrat', 'sans-serif';
+            font-weight: 800;
+        }
+    
+    }
+}

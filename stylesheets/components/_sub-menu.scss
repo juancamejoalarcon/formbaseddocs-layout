@@ -143,9 +143,31 @@
                 width: 50%;
                 text-align: center;
             }
+
+            &--my-forms {
+                @include breakpoint-590 {
+                    padding-left: 0.7rem;
+                    padding-right: 0.7rem;
+                    font-size: 0.8rem;
+                }
+    
+                @include breakpoint-450 {
+                    padding-left: 0.7rem;
+                    padding-right: 0.7rem;
+                    font-size: 0.8rem;
+                }
+    
+                @include breakpoint-380 {
+                    font-size: 0.8rem;
+                }
+            }
         }
 
         &--form {
+            justify-content: center;
+        }
+
+        &--my-forms {
             justify-content: center;
         }
     }
