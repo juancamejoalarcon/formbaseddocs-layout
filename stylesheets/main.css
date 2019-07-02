@@ -2479,6 +2479,24 @@ input[type=checkbox] {
   }
 }
 
+.table--notifications {
+  width: 80%;
+}
+
+.table--notifications td {
+  text-align: center;
+}
+
+.table--notifications th {
+  border: none;
+}
+
+@media only screen and (max-width: 885px) {
+  .table--notifications {
+    font-size: 90%;
+  }
+}
+
 .form-creator__container {
   display: -ms-grid;
   display: grid;
