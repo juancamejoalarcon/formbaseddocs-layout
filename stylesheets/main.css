@@ -2493,7 +2493,7 @@ input[type=checkbox] {
 
 @media only screen and (max-width: 885px) {
   .table--notifications {
-    font-size: 90%;
+    width: 90%;
   }
 }
 
