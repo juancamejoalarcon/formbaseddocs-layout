@@ -29,7 +29,7 @@
                 <button class="button-filled button-filled--sub-menu">Guide</button>
             </div>
             <ul class="sub-menu__nav sub-menu__nav--form">
-                <li class="sub-menu__nav__button sub-menu__nav__button--current" data-toogle="form">
+                <li class="sub-menu__nav__button sub-menu__nav__button--current" data-toogle="form-creator">
                     Form
                 </li>
                 <li class="sub-menu__nav__button" data-toogle="information">
@@ -142,6 +142,165 @@
             </div>
         </div>
     </div>
+    <div class="information" id="information" style="display: none">
+        <p>information</p>
+    </div>
+    <div class="comments" id="comments" style="display: none">
+        <div class="comments__container">
+            <div class="comments__new-comment">
+                <textarea cols="70" rows="5"></textarea>
+                <input type="submit" value="Comment">
+            </div>
+            <div class="orderby-comments">
+                <div class="orderby-comments-container">
+                    <label for="orderby">Order by: </label>
+                    <select id="orderby" autofocus="true">
+                        <option value="Date">Date</option>
+                        <option value="Like">Likes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="comment-top">
+                    <div class="author">
+                        <img src="img/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="date">15.05.2019</span>
+                </div>
+                <div class="comment-middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comment-bottom">
+                    <div class="likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="button">Responder</button>
+                    <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-top">
+                    <div class="author">
+                        <img src="img/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="date">15.05.2019</span>
+                </div>
+                <div class="comment-middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comment-bottom">
+                    <div class="likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="button">Responder</button>
+                    <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+                <div class="comment-responses">
+                    <div class="comment-response-line"></div>
+                    <div class="comment-responses-container">
+                        <div class="comment-response">
+                            <div class="comment-top">
+                                <div class="author">
+                                    <img src="img/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="date">15.05.2019</span>
+                            </div>
+                            <div class="comment-middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comment-response">
+                            <div class="comment-top">
+                                <div class="author">
+                                    <img src="img/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="date">15.05.2019</span>
+                            </div>
+                            <div class="comment-middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="new-comment">
+                            <textarea cols="50" rows="5"></textarea>
+                            <input type="submit" value="Respond">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-top">
+                    <div class="author">
+                        <img src="img/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="date">15.05.2019</span>
+                </div>
+                <div class="comment-middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comment-bottom">
+                    <div class="likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="button edit">Editar</button>
+                    <button class="button edit">Eliminar</button>
+                    <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 <script src="js/ui.js"></script>
 <script>
     const ui = new UI();
