@@ -28,6 +28,20 @@ class UI {
         if (window.innerWidth > 885) {
             const newHeight = window.innerHeight - document.getElementById('form-creator').offsetTop + 'px';
             document.getElementById('form-creator').style.height = newHeight;
+            // Remove listener to re-enable scroll
+            // window.removeEventListener('scroll', this.noScroll);
+        } else {
+            const newHeight = window.innerHeight - document.getElementById('form-creator').offsetTop + 'px';
+            document.getElementById('form-creator').style.height = '100%';
+            document.getElementById('fields-area').style.height = newHeight;
+            document.getElementById('text-area').style.height = window.innerHeight + 'px';
+            // add listener to disable scroll
+            // window.addEventListener('scroll', this.noScroll);
+
         }
+    }
+
+    noScroll() {
+        window.scrollTo(0, 0);
     }
 }

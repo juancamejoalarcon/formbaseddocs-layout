@@ -50,7 +50,7 @@
     </div>
     <div class="form-creator" id="form-creator">
         <div class="form-creator__container">
-            <div class="form-creator__fields-area">
+            <div class="form-creator__fields-area" id="fields-area">
                 <div class="form-creator__fields-area__container">
 
                     <!-- <div class="form-creator__fields-area__add-question" style="display: none">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-creator__text-area">
+            <div class="form-creator__text-area" id="text-area">
             <div id="wodoformbaseddocs" style="width:100%; height:100%; margin:0px; padding:0px">
                 <div id="editorContainer" style="width:100%; height:100%; margin:0px; padding:0px">
                 </div>
@@ -143,7 +143,62 @@
         </div>
     </div>
     <div class="information" id="information" style="display: none">
-        <p>information</p>
+        <div class="information__container">
+            <div class="information__section-left">
+                <input type="text" placeholder="Título">
+                <textarea name="description" id="description" cols="30" rows="6" placeholder="description"></textarea>
+                <textarea name="indications" id="description" cols="30" rows="10" placeholder="indications"></textarea>
+            </div>
+            <div class="information__section-right">
+                <div class="information__section-right__tags">
+                    <input type="text" placeholder="tags">
+                    <div class="information__section-right__tags__container">
+                        <span>tag</span>
+                        <span>tag de prueba</span>
+                    </div>
+                </div>
+                <div class="information__section-right__buttons">
+                    <div class="information__section-right__buttons__switch-button">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider slider--round"></span>
+                        </label>
+                        <span class="information__section-right__buttons__label">
+                            Hacer el formulario privado
+                        </span>
+                    </div>
+                    <div class="information__section-right__buttons__switch-button">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider slider--round"></span>
+                        </label>
+                        <span class="information__section-right__buttons__switch-button__label">
+                            Desactivar comentarios
+                        </span>
+                    </div>
+                    <div class="information__section-right__buttons__switch-button">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider slider--round"></span>
+                        </label>
+                        <span class="information__section-right__buttons__switch-button__label">
+                            Mantener el formulario inactivo
+                        </span>
+                    </div>
+                </div>
+                <div class="information__section-right__notifications">
+                    <span class="information__section-right__notifications__title">Activar notificaciones</span>
+                    <div class="information__section-right__notifications__checkboxes">
+                        <div class="information__section-right__notifications__form-group">
+                            <label for="rememberme">
+                                <input type="checkbox" class="filled-in" name="rememberme" id="rememberme" value="Remember me" checked />
+                                <span>Desea que le enviemos notificaciones a su correo</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="comments" id="comments" style="display: none">
         <div class="comments__container">
@@ -151,8 +206,8 @@
                 <textarea cols="70" rows="5"></textarea>
                 <input type="submit" value="Comment">
             </div>
-            <div class="orderby-comments">
-                <div class="orderby-comments-container">
+            <div class="comments__orderby-comments">
+                <div class="comments__orderby-comments__container">
                     <label for="orderby">Order by: </label>
                     <select id="orderby" autofocus="true">
                         <option value="Date">Date</option>
@@ -160,15 +215,15 @@
                     </select>
                 </div>
             </div>
-            <div class="comment">
-                <div class="comment-top">
-                    <div class="author">
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
                         <img src="img/avatar.jpg" alt="avatar">
                         <h4>Juan Camejo Alarcón</h4>
                     </div>
-                    <span class="date">15.05.2019</span>
+                    <span class="comments__comment__top__date">15.05.2019</span>
                 </div>
-                <div class="comment-middle">
+                <div class="comments__comment__middle">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
@@ -179,25 +234,25 @@
                     </p>
                     <span>Leer más</span>
                 </div>
-                <div class="comment-bottom">
-                    <div class="likes">
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
                         <span class="icon icon-like-button"></span>
                         <span>5.500</span>
                     </div>
-                    <button class="button">Responder</button>
-                    <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-top">
-                    <div class="author">
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
                         <img src="img/avatar.jpg" alt="avatar">
                         <h4>Juan Camejo Alarcón</h4>
                     </div>
-                    <span class="date">15.05.2019</span>
+                    <span class="comments__comment__top__date">15.05.2019</span>
                 </div>
-                <div class="comment-middle">
+                <div class="comments__comment__middle">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
@@ -208,26 +263,26 @@
                     </p>
                     <span>Leer más</span>
                 </div>
-                <div class="comment-bottom">
-                    <div class="likes">
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
                         <span class="icon icon-like-button"></span>
                         <span>5.500</span>
                     </div>
-                    <button class="button">Responder</button>
-                    <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
                 </div>
-                <div class="comment-responses">
-                    <div class="comment-response-line"></div>
-                    <div class="comment-responses-container">
-                        <div class="comment-response">
-                            <div class="comment-top">
-                                <div class="author">
+                <div class="comments__comment__comment-responses">
+                    <div class="comments__comment__comment-responses__line"></div>
+                    <div class="comments__comment__comment-responses__container">
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
                                     <img src="img/avatar.jpg" alt="avatar">
                                     <h4>Juan Camejo Alarcón</h4>
                                 </div>
-                                <span class="date">15.05.2019</span>
+                                <span class="comments__comment__top__date">15.05.2019</span>
                             </div>
-                            <div class="comment-middle">
+                            <div class="comments__comment__middle">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                     Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
@@ -239,15 +294,15 @@
                                 <span>Leer más</span>
                             </div>
                         </div>
-                        <div class="comment-response">
-                            <div class="comment-top">
-                                <div class="author">
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
                                     <img src="img/avatar.jpg" alt="avatar">
                                     <h4>Juan Camejo Alarcón</h4>
                                 </div>
-                                <span class="date">15.05.2019</span>
+                                <span class="comments__comment__top__date">15.05.2019</span>
                             </div>
-                            <div class="comment-middle">
+                            <div class="comments__comment__middle">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                     Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
@@ -259,7 +314,7 @@
                                 <span>Leer más</span>
                             </div>
                         </div>
-                        <div class="new-comment">
+                        <div class="comments__new-comment">
                             <textarea cols="50" rows="5"></textarea>
                             <input type="submit" value="Respond">
                         </div>
@@ -267,15 +322,15 @@
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-top">
-                    <div class="author">
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
                         <img src="img/avatar.jpg" alt="avatar">
                         <h4>Juan Camejo Alarcón</h4>
                     </div>
-                    <span class="date">15.05.2019</span>
+                    <span class="comments__comment__top__date">15.05.2019</span>
                 </div>
-                <div class="comment-middle">
+                <div class="comments__comment__middle">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
@@ -286,14 +341,14 @@
                     </p>
                     <span>Leer más</span>
                 </div>
-                <div class="comment-bottom">
-                    <div class="likes">
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
                         <span class="icon icon-like-button"></span>
                         <span>5.500</span>
                     </div>
-                    <button class="button edit">Editar</button>
-                    <button class="button edit">Eliminar</button>
-                    <span class="responses-bottom">Respuestas (10)  &#9660;</span>
+                    <button class="comments__comment__bottom__button">Editar</button>
+                    <button class="comments__comment__bottom__button">Eliminar</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
                 </div>
             </div>
         </div>
