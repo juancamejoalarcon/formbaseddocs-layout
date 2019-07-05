@@ -1266,158 +1266,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-.steps {
-  padding: 0;
-  overflow: hidden;
-}
-
-.steps li {
-  float: left;
-  margin-left: 0;
-  /* width: 180px; */
-  /* 100 / number of steps */
-  height: 35px;
-  /* total height */
-  line-height: 30px;
-  list-style-type: none;
-  padding: 5px 5px 5px 12px;
-  /* padding around text, last should include arrow width */
-  border-right: 3px solid white;
-  /* width: gap between arrows, color: background of document */
-  position: relative;
-  /* white arrow to the left to "erase" background (starting from the 2nd object) */
-}
-
-@media only screen and (max-width: 985px) {
-  .steps li {
-    padding: 3px 3px 3px 8px;
-    /* padding around text, last should include arrow width */
-  }
-}
-
-.steps li:nth-child(n+2)::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-left: 10px solid white;
-  /* width: arrow width, color: background of document */
-  border-top: 20px solid transparent;
-  /* width: half height */
-  border-bottom: 20px solid transparent;
-  /* width: half height */
-  width: 0;
-  height: 0;
-  content: " ";
-}
-
-.steps li:nth-child(n+2)::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-left: 10px solid white;
-  /* width: arrow width, color: background of document */
-  border-top: 20px solid transparent;
-  /* width: half height */
-  border-bottom: 20px solid transparent;
-  /* width: half height */
-  width: 0;
-  height: 0;
-  content: " ";
-}
-
-.steps li::after {
-  z-index: 1;
-  /* need to bring this above the next item */
-  position: absolute;
-  top: 0;
-  right: -10px;
-  /* arrow width (negated) */
-  display: block;
-  border-left: 10px solid #556270;
-  /* width: arrow width */
-  border-top: 20px solid transparent;
-  /* width: half height */
-  border-bottom: 20px solid transparent;
-  /* width: half height */
-  width: 0;
-  height: 0;
-  content: " ";
-}
-
-/* Setup colors (both the background and the arrow) */
-/* Completed */
-.steps li {
-  background-color: #4ECDC4;
-}
-
-.steps li:hover {
-  background-color: #4ECDC4;
-  cursor: pointer;
-}
-
-.steps li:hover::after {
-  border-left-color: #4ECDC4;
-  cursor: pointer;
-}
-
-.steps li::after {
-  border-left-color: #4ECDC4;
-}
-
-.steps li span.number {
-  display: none;
-}
-
-/* Current */
-.steps li.current {
-  background-color: #4ECDC4;
-}
-
-.steps li.current::after {
-  border-left-color: #4ECDC4;
-}
-
-.steps li.current span.number {
-  display: inline-block;
-}
-
-.steps li.current i.fa.fa-check {
-  display: none;
-}
-
-/* Following */
-.steps li.current ~ li {
-  background-color: #BBECE8;
-}
-
-.steps li.current ~ li:hover {
-  background-color: #4ECDC4;
-  cursor: pointer;
-}
-
-.steps li.current ~ li:hover::after {
-  border-left-color: #4ECDC4;
-  cursor: pointer;
-}
-
-.steps li.current ~ li::after {
-  border-left-color: #BBECE8;
-}
-
-.steps li.current ~ li a {
-  color: #4ECDC4;
-}
-
-.steps li.current ~ li span.number {
-  display: inline-block;
-}
-
-.steps li.current ~ li i.fa.fa-check {
-  display: none;
-}
-
 .switch {
   position: relative;
   display: inline-block;
@@ -2422,6 +2270,59 @@ input[type=checkbox] {
   transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.flex ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+  margin: auto;
+  width: 85%;
+  background-color: white;
+}
+
+.flex ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+  list-style: none;
+  border: 1px solid #4ECDC4;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flex ul li:hover {
+  background-color: #9ee3df;
+  color: white;
+}
+
+.flex ul li:hover:nth-of-type(2) ~ .bar {
+  left: 20%;
+}
+
+.flex ul li:hover:nth-of-type(3) ~ .bar {
+  left: 40%;
+}
+
+.flex ul li:hover:nth-of-type(4) ~ .bar {
+  left: 60%;
+}
+
+.flex ul li:hover:nth-of-type(5) ~ .bar {
+  left: 80%;
 }
 
 .sub-menu {

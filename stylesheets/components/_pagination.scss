@@ -1,0 +1,35 @@
+.flex {
+
+	ul {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		// box-shadow: 0 10px 20px 0 rgba(black, 0.25);
+		overflow: scroll;
+		margin: auto;
+		width: 85%;
+		background-color: white;
+		li {
+            flex: 1;
+            padding: 1rem;
+			list-style: none;
+			border: 1px solid color(primaryB-color);
+			text-align: center;
+			position: relative;
+			font-size: 20px;
+			font-weight: bold;
+			transition: 0.2s ease;
+			cursor: pointer;
+			user-select: none;
+			&:hover {
+                background-color: lighten(color(primaryB-color), 20);
+				color: white;
+				@for $i from 2 through 5 {
+					&:nth-of-type(#{$i}) ~ .bar {
+						left: $i * 20% - 20%;
+					}
+				}
+			}
+		}
+	}
+}
