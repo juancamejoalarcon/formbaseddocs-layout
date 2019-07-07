@@ -91,6 +91,14 @@
         &--search-page {
             width: 100%;
         }
+
+        &--fill-form {
+            justify-content: center;
+
+            @include breakpoint-768 {
+                justify-content: flex-start;
+            }
+        }
     }
 
     &__left-button {
@@ -167,6 +175,13 @@
             justify-content: center;
         }
 
+        &--fill-form {
+            justify-content: center;
+            @include breakpoint-768 {
+                justify-content: flex-start;
+            }
+        }
+
         &--my-forms {
             justify-content: center;
         }
@@ -213,6 +228,24 @@
                 -ms-transform: translateX(24px);
                 transform: translateX(24px);
             }
+        }
+    }
+
+    &__likes-views {
+        position: absolute;
+        width: 98%;
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+        font-size: 1.3rem;
+
+        &__likes {
+            padding-right: 0.8rem;
+        }
+
+        @include breakpoint-590 {
+            font-size: 1rem;
+            width: 96%;
         }
     }
 }

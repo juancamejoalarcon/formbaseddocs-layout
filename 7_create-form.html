@@ -53,21 +53,22 @@
             <div class="form-creator__fields-area" id="fields-area">
                 <div class="form-creator__fields-area__container">
 
-                    <div class="form-creator__fields-area__add-question">
+                    <div class="form-creator__fields-area__add-question d-none">
                         <span class="icon icon-plus-circle-solid" id="add-new-question"></span>
                     </div>
-
-                    <!-- <div class="form-creator__fields-area__top">
+                    
+                    <div class="form-creator__fields-area__top">
                         <div class="form-creator__fields-area__top__container">
                             <div>
                             </div>
                             <div class="form-creator__fields-area__top__add-question">
                                 Add
-                                <span class="icon icon-plus-circle-solid"></span>
+                                <span class="icon icon-plus-circle-solid" onclick="toggleModal()"></span>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
+                    <!-- Input text -->
                     <!-- <div class="form-creator__fields-area__middle">
                         <div class="form-creator__fields-area__middle__container">
                             <div class="form-creator__fields-area__field">
@@ -79,7 +80,8 @@
                                                     Id:
                                                 </span>
                                                 <span class="form-creator__fields-area__field__top__identifier__id">
-                                                    <input type="text" value="izd5rdh">
+                                                    <span id="dragIdisjdvfe" draggable="true" ondragstart="drag(event)" ondblclick="editInput(event)">izd5rdh</span>
+                                                    <input type="text" value="izd5rdh" class="d-none" onfocusout="editInput(event)">
                                                 </span>
                                             </div>
                                         </div>
@@ -97,8 +99,15 @@
                                                     <span class="slider slider--round"></span>
                                                 </label>
                                             </div>
-                                            <div class="form-creator__fields-area__field__bottom__menu">
-                                                <span class="icon icon-ellipsis-v-solid" id="right-button-menu"></span>
+                                            <div class="form-creator__fields-area__field__bottom__menu">     
+                                                <div class="tooltip">
+                                                    <span class="icon icon-ellipsis-v-solid" id="right-button-menu" onclick="showMenu();"></span>
+                                                    <span class="tooltip__right-button-menu">
+                                                        <div class="tooltip__right-button-menu__group">
+                                                            <span>Indicactions for this field</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +116,77 @@
                         </div>
                     </div> -->
 
-                    <!-- <div class="form-creator__fields-area__bottom">
+                    <!-- Input Radio -->
+                    <div class="form-creator__fields-area__middle">
+                        <div class="form-creator__fields-area__middle__container">
+                            <div class="form-creator__fields-area__field">
+                                <div class="form-creator__fields-area__field__container">
+                                    <div class="form-creator__fields-area__field__field-area form-creator__fields-area__field__field-area--input-text">
+                                        <div class="form-creator__fields-area__field__top">
+                                            <div class="form-creator__fields-area__field__top__identifier">
+                                                <span class="form-creator__fields-area__field__top__identifier__label">
+                                                    Id:
+                                                </span>
+                                                <span class="form-creator__fields-area__field__top__identifier__id">
+                                                    <span id="dragIdisjdvfe" draggable="true" ondragstart="drag(event)" ondblclick="editInput(event)">izd5rdh</span>
+                                                    <input type="text" value="izd5rdh" class="d-none" onfocusout="editInput(event)">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__middle">
+                                            <input type="text" placeholder="Question">
+                                            <div class="form-creator__fields-area__field__middle__radio-input radio">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__middle__radio-input radio">
+                                                <input type="radio" id="radio-button" name="radio-group">
+                                                <label for="radio-button"></label>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__middle__add-another-radio-button">
+                                                <span class="icon icon-plus-circle-solid"></span>
+                                                <span class="label-icon">Add answer</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__bottom">
+                                            <div class="form-creator__fields-area__field__bottom__trash">
+                                                <span class="icon icon-trash-alt-regular"></span>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__bottom__mandatory">
+                                                <span class="form-creator__fields-area__field__bottom__mandatory__switch-label">Obligatorio</span>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider slider--round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__bottom__menu">     
+                                                <div class="tooltip">
+                                                    <span class="icon icon-ellipsis-v-solid" id="right-button-menu" onclick="showMenu();"></span>
+                                                    <span class="tooltip__right-button-menu">
+                                                        <div class="tooltip__right-button-menu__group">
+                                                            <span>Indicactions for this field</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-creator__fields-area__bottom">
                         <div class="flex">
                             <ul>
                             <li>1</li>
@@ -125,7 +204,7 @@
 
                             </ul>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="form-creator__text-area" id="text-area">
@@ -348,24 +427,89 @@
         </div>
     </div>
 
+    <!-- Add question modal -->
     <div class="modal">
-        <div class="modal__content ">
-            <div class="modal__content__top ">
-                <h2>Políticas de privacidad</h2>
-            </div>
-            <div class="modal__content__modal-middle">
+        <div class="modal__content modal__content--add-new-question">
+            <div class="modal__content__modal-middle modal__content__modal-middle--add-new-question">
                 <div class="modal__content__modal-middle__container">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet ipsam magni asperiores? Est quod deleniti eius ipsum quis culpa? Omnis at nostrum nihil provident quas ea quibusdam sunt dolorem!
-                    </p>
+                    <div class="modal__content__modal-middle__button-panel">
+                        <div class="modal__content__modal-middle__button-panel__container">
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="modal__content__modal-bottom">
-                <button class="button-filled" id="modal-button">Entendido</button>
             </div>
         </div>
     </div>
+
+    <!-- Indications -->
+    <!-- <div class="modal">
+        <div class="modal__content modal__content--add-new-question">
+            <div class="modal__content__modal-middle modal__content__modal-middle--add-new-question">
+                <div class="modal__content__modal-middle__container">
+                    <div class="modal__content__modal-middle__button-panel">
+                        <div class="modal__content__modal-middle__button-panel__container">
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
 
 
@@ -386,15 +530,31 @@
         ui.setDivHeight();
         window.addEventListener("resize", ui.setDivHeight);
 
-        document.getElementById('add-new-question').addEventListener('click', toggleModal());
+        document.getElementById('add-new-question').addEventListener('click', toggleModal);
         window.addEventListener("click", windowOnClick);
+
+        // drag and drop
+        setTimeout( () => {  
+            document.getElementsByTagName('document')[0].addEventListener("dragstart", function(event) {
+            });
+
+            document.getElementsByTagName('document')[0].addEventListener("dragenter", function(event) {
+            });
+            document.getElementsByTagName('document')[0].addEventListener('dragover', function(event) {
+                event.preventDefault();
+                // document.getElementsByTagName('text:p')[2].setPointerCapture()
+                // console.log(event.path[0]);
+            });
+            document.addEventListener("drop", (event) => {
+                // console.log(event);
+            });
+        }, 3000);
     }
 
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
 
     function toggleModal() {
-        console.log('si');
         modal.classList.toggle("show-modal");
     }
 
@@ -404,39 +564,26 @@
         }
     }
 
-    function sustituir() {
-        const all = document.getElementsByTagName("document")[0].childNodes[6].childNodes[0].getElementsByTagName("*");
-        for (var i = 0; i < all.length; i++) {
-            if (!all[i].nodeName.includes('sequence-decl') && !all[i].nodeName.includes('annotation')) {
-                if (all[i].childNodes.length) {
-                    const all2 = all[i].childNodes;
-
-                    for (var j = 0; j < all2.length; j++) {
-
-                        if (all2[j].childNodes.length) {
-                            const all3 = all2[j
-                        ].childNodes;
-
-                            for (var g = 0; g < all3.length; g++) {
-
-                                if (all3[g].childNodes.length) {
-                                    console.log(all3[g].childNodes);
-                                } else {
-                                    console.log(all3[g].textContent);
-                                }
-                            }
-
-                        } else {
-                            console.log(all2[j].textContent);
-                        }
-                    }
-
-                } else {
-                    // console.log(all[i]);
-                }
-            }
-        }
+    function editInput(e) {
+        e.target.parentNode.childNodes[1].classList.toggle('d-none');
+        e.target.parentNode.childNodes[3].classList.toggle('d-none');
     }
+
+    // Drag and drop
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", 'izd5rdh');
+    }
+
+    function onDrop(e) {
+        // console.log(e);
+    }
+
+    function showMenu() {
+    const tooltip = document.querySelector('.tooltip__right-button-menu');
+    tooltip.style.display = 'block';
+    tooltip.classList.add("smooth-intro");
+}
 </script>
 <!-- editor: start -->
 <script src="./wodotexteditor/wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>

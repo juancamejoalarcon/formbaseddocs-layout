@@ -105,5 +105,19 @@ input:focus + .slider {
             font-size: 0.8rem;
         }
     }
+
+    &--add-new-question {
+        background: white;
+        border: 3px solid color(primaryB-color);
+        color: color(primaryB-color);
+        height: 30px;
+        width: 85px;
+
+        &:hover {
+            color: white;
+            background: color(primaryB-color);
+            cursor: pointer;
+        }
+    }
 }
 

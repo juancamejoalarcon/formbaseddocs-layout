@@ -636,6 +636,22 @@
                 display: flex;
                 justify-content: flex-end;
 
+                &--fill-form {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .indication {
+                        padding-top: 0.5rem;
+                        padding-right: 0.5rem;
+                        font-size: 1.5rem;
+                        transition: all .4s ease;
+                        &:hover {
+                            color: color(primaryB-color);
+                            cursor: pointer;
+                        }
+                    }
+                }
+
                 &__identifier {
                     padding: 0.2rem 0.4rem 0rem 0rem;
                     display: flex;
@@ -644,6 +660,7 @@
                     &__label {
                         color: color(primary-color);
                         font-weight: lighter;
+                        padding-right: 0.1rem;
                     }
 
                     &__id {
@@ -651,12 +668,33 @@
                         font-weight: lighter;
 
                         input {
-                            border-bottom: 2px solid color(primaryB-color);
+                            border-bottom: 2px solid color(primary-color);
                             padding: 0.2rem;
                             font-size: 1rem;
                             color: color(primaryB-color);
                             font-weight: lighter;
                             width: 80px;
+                            transition: all .4s ease;
+
+                            &:focus {
+                                border-bottom: 2px solid color(primaryB-color);
+                            }
+                        }
+
+                        span {
+                            cursor: pointer;
+                            padding-left: .5rem;
+                            padding-right: .5rem;
+                            padding-bottom: .2rem;
+                            transition: all .4s ease;
+                            border-radius: 25px;
+                            border: 1px solid #fff;
+
+                            &:hover {
+                                color: color(primary-color);
+                                background-color: lighten(color(primaryB-color), 40);
+                                border: 1px solid color(primary-color);
+                            }
                         }
                     }
                 }
@@ -666,6 +704,67 @@
                 width: 90%;
                 margin: auto;
                 padding: 2rem 0rem 3rem 0rem;
+                
+                &__question-fill-form {
+                    font-weight: lighter;
+                    font-size: 1.2rem;
+                }
+
+                &__radio-input {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem 0rem 0rem 0rem;
+
+                    &[type=text] {
+                        width: 88%;
+                        padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+                        border: 2px solid color(primary-color);
+                        border-radius: 25px;
+
+                        &:focus {
+                            border: 2px solid color(primaryB-color);
+                        }
+                    }
+
+                    &__remove-radio {
+                        display: flex;
+                        align-items: center;
+                        color: color(secondary-color);
+
+                        &:hover {
+                            cursor: pointer;
+                            color: color(secondaryB-color);
+                        }
+                    }
+                                    
+                    .icon {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                &__add-another-radio-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.5rem;
+                    font-size: 1.5rem;
+                    margin-top: 0.5rem;
+                    color: color(primary-color);
+                    transition: all 0.4s;
+
+                    &:hover {
+                        color: color(primaryB-color);
+                        cursor: pointer;
+                    }
+
+                    .label-icon {
+                        font-size: 1rem;
+                    }
+
+                    .icon {
+                        padding-right: 0.5rem;
+                    }
+                }
             }
 
             &__bottom {
@@ -721,11 +820,28 @@
                     }
                 }
 
-                &__menu {
-                    padding-right: 0.3rem;
+                &__mandatory-label {
+                    padding-right: 0.6rem;
+                    padding-bottom: 0.3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    font-size: 0.9rem;
+                    font-weight: lighter;
+                    color: color(secondary-color);
+                }
+
+                .icon {
+                    padding-right: 0.5rem;
                     padding-left: 0.5rem;
                     padding-top: 0.3rem;
                     font-size: 1.2rem;
+                    transition: all .1s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: color(primaryB-color);
+                    }
                 }
             }
         }

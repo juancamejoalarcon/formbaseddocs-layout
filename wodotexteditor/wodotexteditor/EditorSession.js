@@ -46,6 +46,7 @@ define("webodf/editor/EditorSession", [
     runtime.loadClass("gui.HyperlinkTooltipView");
     runtime.loadClass("gui.TrivialUndoManager");
     runtime.loadClass("gui.SvgSelectionView");
+    runtime.loadClass("gui.SelectionController");
     runtime.loadClass("gui.SelectionViewManager");
     runtime.loadClass("core.EventNotifier");
     runtime.loadClass("gui.ShadowCursor");
@@ -283,6 +284,10 @@ define("webodf/editor/EditorSession", [
 
         this.getCursorPosition = function () {
             return odtDocument.getCursorPosition(localMemberId);
+        };
+
+        this.removeCursor = function () {
+            return odtDocument.removeCursor(localMemberId);
         };
 
         this.getCursorSelection = function () {

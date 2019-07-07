@@ -381,8 +381,13 @@ window.Wodo = window.Wodo || (function () {
             runtime.assert(editorSession, "editorSession should exist here.");
 
             tools.setEditorSession(editorSession);
-            editorSession.sessionController.insertLocalCursor();
+            // Remove for fill form
+            // editorSession.sessionController.insertLocalCursor();
             editorSession.sessionController.startEditing();
+        }
+
+        window.prueba = function () {
+            console.log(editorSession.removeCursor());
         }
 
         /**
@@ -691,10 +696,12 @@ window.Wodo = window.Wodo || (function () {
 
             // put into tree
             canvasContainerElement.appendChild(canvasElement);
-            toolbarContainerElement.appendChild(toolbarElement);
+            // Delete toolbar in fill-form
+            // toolbarContainerElement.appendChild(toolbarElement);
             editorElement.appendChild(toolbarContainerElement);
             editorElement.appendChild(canvasContainerElement);
             mainContainerElement.appendChild(editorElement);
+        
 
             // style all elements with Dojo's claro.
             // Not nice to do this on body, but then there is no other way known
