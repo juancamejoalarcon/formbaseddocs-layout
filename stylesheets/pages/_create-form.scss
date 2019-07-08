@@ -715,20 +715,18 @@
                     justify-content: space-between;
                     padding: 1rem 0rem 0rem 0rem;
 
-                    &[type=text] {
-                        width: 88%;
-                        padding: 0.4rem 0.4rem 0.4rem 0.4rem;
-                        border: 2px solid color(primary-color);
-                        border-radius: 25px;
+                    input[type=text], input[type=password], input[type=email] {
+                        width: 85%;
+                        border-bottom: 1px solid color(primary-color);
 
                         &:focus {
-                            border: 2px solid color(primaryB-color);
+                            border-bottom: 1px solid color(primaryB-color);
                         }
                     }
 
                     &__remove-radio {
                         display: flex;
-                        align-items: center;
+                        align-items: flex-end;
                         color: color(secondary-color);
 
                         &:hover {
@@ -738,7 +736,13 @@
                     }
                                     
                     .icon {
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
+                    }
+
+                    &--fill-form {
+                        p {
+                            padding-top: 0.5rem;
+                        }
                     }
                 }
 
@@ -749,20 +753,14 @@
                     padding: 0.5rem;
                     font-size: 1.5rem;
                     margin-top: 0.5rem;
-                    color: color(primary-color);
-                    transition: all 0.4s;
-
-                    &:hover {
-                        color: color(primaryB-color);
-                        cursor: pointer;
-                    }
-
-                    .label-icon {
-                        font-size: 1rem;
-                    }
 
                     .icon {
-                        padding-right: 0.5rem;
+                        color: color(primary-color);
+                        transition: all 0.4s;
+                        &:hover {
+                            color: color(primaryB-color);
+                            cursor: pointer;
+                        }
                     }
                 }
             }
