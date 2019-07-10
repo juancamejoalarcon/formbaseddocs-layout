@@ -69,3 +69,10 @@
 .d-grid {
   display: grid !important;
 }
+
+.error-messages {
+  list-style: none;
+  font-size: 0.8rem;
+  color: color(secondaryB-color);
+  font-weight: lighter;
+}

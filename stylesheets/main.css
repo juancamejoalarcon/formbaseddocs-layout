@@ -649,8 +649,8 @@ label {
 /***************/
 @font-face {
   font-family: 'icon';
-  src: url("fonts/icon.eot?oumoia");
-  src: url("fonts/icon.eot?oumoia#iefix") format("embedded-opentype"), url("fonts/icon.ttf?oumoia") format("truetype"), url("fonts/icon.woff?oumoia") format("woff"), url("fonts/icon.svg?oumoia#icon") format("svg");
+  src: url("/assets/fontsicon.eot?oumoia");
+  src: url("/assets/fontsicon.eot?oumoia#iefix") format("embedded-opentype"), url("/assets/fontsicon.ttf?oumoia") format("truetype"), url("/assets/fontsicon.woff?oumoia") format("woff"), url("/assets/fontsicon.svg?oumoia#icon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -3948,14 +3948,14 @@ input[type=checkbox] {
   left: 0;
   height: 85%;
   width: 100%;
-  background-image: url("../img/document.png");
+  background-image: url("/assets/images/document.png");
   background-size: auto 98%;
   background-position: center;
   background-repeat: no-repeat, repeat;
 }
 
 .search__results__result__document:hover {
-  background-image: url("../img/document-hover.png");
+  background-image: url("/assets/images/document-hover.png");
   cursor: pointer;
   -webkit-transition: all ease-out;
   transition: all ease-out;
