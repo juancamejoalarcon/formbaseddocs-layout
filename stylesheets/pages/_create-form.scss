@@ -557,7 +557,7 @@
 
     &__fields-area {
         background-color: #EDFAF9;
-        overflow: scroll;
+        overflow-y: scroll;
 
         &__container {
             width: 100%;
@@ -734,9 +734,22 @@
                             color: color(secondaryB-color);
                         }
                     }
+
+                    &__modal-button {
+                        display: flex;
+                        align-items: flex-end;
+                        color: color(primary-color);
+
+                        &:hover {
+                            cursor: pointer;
+                            color: color(primaryB-color);
+                        }
+                    }
                                     
                     .icon {
                         font-size: 1.3rem;
+                        padding-left: 0.2rem;
+                        padding-right: 0.2rem;
                     }
 
                     &--fill-form {

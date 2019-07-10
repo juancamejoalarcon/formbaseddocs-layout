@@ -219,6 +219,9 @@
                                                 </p>
 
                                                 <input type="text" placeholder="Option">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__modal-button">
+                                                    <span class="icon icon-modal-icon" onclick="toggleModal()"></span>
+                                                </div>
                                                 <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
                                                     <span class="icon icon-times-solid"></span>
                                                 </div>
@@ -232,7 +235,7 @@
                                                 </p>
 
                                                 <input type="text" placeholder="Option">
-                                                <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__modal-button">
                                                     <span class="icon icon-modal-icon"></span>
                                                 </div>
                                                 <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
@@ -272,22 +275,23 @@
                     </div>
 
                     <div class="form-creator__fields-area__bottom">
-                        <div class="flex">
+                        <div class="pagination">
+                            <span>p</span>
                             <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>11</li>
+                                <li>12</li>
                             </ul>
+                            <span>p</span>
                         </div>
                     </div>
                 </div>
@@ -513,7 +517,7 @@
     </div>
 
     <!-- Add question modal -->
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="modal__content modal__content--add-new-question">
             <div class="modal__content__modal-middle modal__content__modal-middle--add-new-question">
                 <div class="modal__content__modal-middle__container">
@@ -547,6 +551,22 @@
                                     <span class="icon icon-plus-solid"></span>
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Input radio b modal -->
+    <div class="modal">
+        <div class="modal__content modal__content--add-new-question">
+            <div class="modal__content__modal-middle modal__content__modal-middle--input-radio-b">
+                <div class="modal__content__modal-middle__container">
+                    <div class="modal__content__modal-middle__button-panel">
+                        <div class="modal__content__modal-middle__button-panel__container">
+                            <h3>Optio</h3>
+                            <textarea name="" id="" cols="60" rows="15"></textarea>
                         </div>
                     </div>
                 </div>
@@ -620,22 +640,11 @@
 
         // drag and drop
         setTimeout( () => {  
-            document.getElementsByTagName('document')[0].addEventListener("dragstart", function(event) {
-            });
 
-            document.getElementsByTagName('document')[0].addEventListener("dragenter", function(event) {
-            });
-            document.getElementsByTagName('document')[0].addEventListener('dragover', function(event) {
-                event.preventDefault();
-                // document.getElementsByTagName('text:p')[2].setPointerCapture()
-                // console.log(event.path[0]);
-            });
-            document.addEventListener("drop", (event) => {
-                // console.log(event);
-            });
         }, 3000);
     }
 
+    // modal
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
 
@@ -648,6 +657,7 @@
             toggleModal();
         }
     }
+
 
     function editInput(e) {
         e.target.parentNode.childNodes[1].classList.toggle('d-none');
