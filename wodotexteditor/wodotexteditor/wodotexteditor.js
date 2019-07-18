@@ -357,15 +357,18 @@ window.Wodo = window.Wodo || (function () {
                 hyperlinkEditingEnabled: hyperlinkEditingEnabled,
                 annotationsEnabled: annotationsEnabled,
                 zoomingEnabled: zoomingEnabled,
-                reviewModeEnabled: reviewModeEnabled
+                reviewModeEnabled: reviewModeEnabled,
+                formType: editorOptions.formType
             });
             if (undoRedoEnabled) {
                 editorSession.sessionController.setUndoManager(new gui.TrivialUndoManager());
                 editorSession.sessionController.getUndoManager().subscribe(gui.UndoManager.signalDocumentModifiedChanged, relayModifiedSignal);
             }
 
-            // Relay any metadata changes to the Editor's consumer as an event
-            editorSession.sessionController.getMetadataController().subscribe(gui.MetadataController.signalMetadataChanged, relayMetadataSignal);
+            if (editorOptions.formType !== 'fillForm') {
+                // Relay any metadata changes to the Editor's consumer as an event
+                editorSession.sessionController.getMetadataController().subscribe(gui.MetadataController.signalMetadataChanged, relayMetadataSignal);
+            }
 
             // and report back to caller
             pendingEditorReadyCallback();
@@ -379,15 +382,15 @@ window.Wodo = window.Wodo || (function () {
          */
         function startEditing() {
             runtime.assert(editorSession, "editorSession should exist here.");
-
             tools.setEditorSession(editorSession);
             // Remove for fill form
-            // editorSession.sessionController.insertLocalCursor();
-            editorSession.sessionController.startEditing();
-        }
-
-        window.prueba = function () {
-            console.log(editorSession.removeCursor());
+            if (editorOptions.formType !== 'fillForm') {
+                editorSession.sessionController.insertLocalCursor();
+                editorSession.sessionController.startEditing();
+            } else {
+                const element = document.getElementById('webodfeditor-canvas1');
+                element.classList.add('not-selectable');
+            }
         }
 
         /**
@@ -599,7 +602,9 @@ window.Wodo = window.Wodo || (function () {
          * @return {undefined}
          */
         function setFocusToOdfCanvas() {
-            editorSession.sessionController.getEventManager().focus();
+            if ( editorOptions.formType !== 'fillForm') {
+                editorSession.sessionController.getEventManager().focus();
+            }
         }
 
         /**
@@ -641,6 +646,12 @@ window.Wodo = window.Wodo || (function () {
         // TODO:
         // this.openDocumentFromByteArray = openDocumentFromByteArray; see also https://github.com/kogmbh/WebODF/issues/375
         // setReadOnly: setReadOnly,
+
+        // FORMBASEDDOCS API
+
+        this.setDocumentToFitScreen = function() {
+            return editorSession.getOdfCanvas().getZoomHelper().setZoomLevel((document.getElementById('webodfeditor-canvascontainer1').offsetWidth / document.getElementById('webodfeditor-canvas1').offsetWidth) );
+        };
 
         /**
          * Registers a callback which should be called if the given event happens.
@@ -697,7 +708,7 @@ window.Wodo = window.Wodo || (function () {
             // put into tree
             canvasContainerElement.appendChild(canvasElement);
             // Delete toolbar in fill-form
-            // toolbarContainerElement.appendChild(toolbarElement);
+            toolbarContainerElement.appendChild(toolbarElement);
             editorElement.appendChild(toolbarContainerElement);
             editorElement.appendChild(canvasContainerElement);
             mainContainerElement.appendChild(editorElement);
@@ -739,7 +750,7 @@ window.Wodo = window.Wodo || (function () {
                 annotationsEnabled: annotationsEnabled,
                 undoRedoEnabled: undoRedoEnabled,
                 zoomingEnabled: zoomingEnabled,
-                aboutEnabled: true
+                aboutEnabled: false
             });
 
             odfCanvas = new odf.OdfCanvas(canvasElement);
@@ -823,9 +834,13 @@ window.Wodo = window.Wodo || (function () {
         /**
          * @return {undefined}
          */
+
+        var self = this;
+
         function create() {
             var editor = new TextEditor(editorContainerElementId, editorOptions);
             onEditorCreated(null, editor);
+            saveEditor(self, editor);
         }
 
         if (!isInitalized) {
@@ -843,12 +858,22 @@ window.Wodo = window.Wodo || (function () {
         }
     }
 
+    // Save editor so I can use it later to retrieve 
+    // the Formbaseddocs api
+    function saveEditor(self) {
+        self.editor = editor;
+    }
+
+    function getEditor() {
+        return self.editor;
+    }
 
     /**
      * @lends Wodo#
      */
     return {
         createTextEditor: createTextEditor,
+        getEditor: getEditor,
         // flags
         /** Id of full editing modus */
         MODUS_FULLEDITING: MODUS_FULLEDITING,

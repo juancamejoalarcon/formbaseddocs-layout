@@ -602,27 +602,31 @@ define("webodf/editor/EditorSession", [
             fontStyles.media = 'screen, print, handheld, projection';
             fontStyles.appendChild(document.createTextNode(fontsCSS));
             head.appendChild(fontStyles);
-
+            
             odfFieldView = new gui.OdfFieldView(odfCanvas);
+            
             odfFieldView.showFieldHighlight();
-            self.sessionController = new gui.SessionController(session, localMemberId, shadowCursor, {
-                annotationsEnabled: config.annotationsEnabled,
-                directTextStylingEnabled: config.directTextStylingEnabled,
-                directParagraphStylingEnabled: config.directParagraphStylingEnabled
-            });
-            sessionConstraints = self.sessionController.getSessionConstraints();
+            if (config.formType !== 'fillForm') { 
+                self.sessionController = new gui.SessionController(session, localMemberId, shadowCursor, {
+                    annotationsEnabled: config.annotationsEnabled,
+                    directTextStylingEnabled: config.directTextStylingEnabled,
+                    directParagraphStylingEnabled: config.directParagraphStylingEnabled
+                });
+            
+                sessionConstraints = self.sessionController.getSessionConstraints();
 
-            eventManager = self.sessionController.getEventManager();
-            hyperlinkTooltipView = new gui.HyperlinkTooltipView(odfCanvas,
-                                                    self.sessionController.getHyperlinkClickHandler().getModifier);
-            eventManager.subscribe("mousemove", hyperlinkTooltipView.showTooltip);
-            eventManager.subscribe("mouseout", hyperlinkTooltipView.hideTooltip);
+                eventManager = self.sessionController.getEventManager();
+                hyperlinkTooltipView = new gui.HyperlinkTooltipView(odfCanvas,
+                                                        self.sessionController.getHyperlinkClickHandler().getModifier);
+                eventManager.subscribe("mousemove", hyperlinkTooltipView.showTooltip);
+                eventManager.subscribe("mouseout", hyperlinkTooltipView.hideTooltip);
 
-            caretManager = new gui.CaretManager(self.sessionController, odfCanvas.getViewport());
-            selectionViewManager = new gui.SelectionViewManager(gui.SvgSelectionView);
-            self.sessionView = new gui.SessionView(config.viewOptions, localMemberId, session, sessionConstraints, caretManager, selectionViewManager);
-            self.availableFonts = getAvailableFonts();
-            selectionViewManager.registerCursor(shadowCursor, true);
+                caretManager = new gui.CaretManager(self.sessionController, odfCanvas.getViewport());
+                selectionViewManager = new gui.SelectionViewManager(gui.SvgSelectionView);
+                self.sessionView = new gui.SessionView(config.viewOptions, localMemberId, session, sessionConstraints, caretManager, selectionViewManager);
+                self.availableFonts = getAvailableFonts();
+                selectionViewManager.registerCursor(shadowCursor, true);
+            }
 
             // Session Constraints can be applied once the controllers are instantiated.
             if (config.reviewModeEnabled) {
@@ -632,19 +636,21 @@ define("webodf/editor/EditorSession", [
             }
 
             // Custom signals, that make sense in the Editor context. We do not want to expose webodf's ops signals to random bits of the editor UI.
-            odtDocument.subscribe(ops.Document.signalMemberAdded, onMemberAdded);
-            odtDocument.subscribe(ops.Document.signalMemberUpdated, onMemberUpdated);
-            odtDocument.subscribe(ops.Document.signalMemberRemoved, onMemberRemoved);
-            odtDocument.subscribe(ops.Document.signalCursorAdded, onCursorAdded);
-            odtDocument.subscribe(ops.Document.signalCursorRemoved, onCursorRemoved);
-            odtDocument.subscribe(ops.Document.signalCursorMoved, onCursorMoved);
-            odtDocument.subscribe(ops.OdtDocument.signalCommonStyleCreated, onStyleCreated);
-            odtDocument.subscribe(ops.OdtDocument.signalCommonStyleDeleted, onStyleDeleted);
-            odtDocument.subscribe(ops.OdtDocument.signalParagraphStyleModified, onParagraphStyleModified);
-            odtDocument.subscribe(ops.OdtDocument.signalParagraphChanged, trackCurrentParagraph);
-            odtDocument.subscribe(ops.OdtDocument.signalUndoStackChanged, undoStackModified);
+            if (config.formType !== 'fillForm') {
+                odtDocument.subscribe(ops.Document.signalMemberAdded, onMemberAdded);
+                odtDocument.subscribe(ops.Document.signalMemberUpdated, onMemberUpdated);
+                odtDocument.subscribe(ops.Document.signalMemberRemoved, onMemberRemoved);
+                odtDocument.subscribe(ops.Document.signalCursorAdded, onCursorAdded);
+                odtDocument.subscribe(ops.Document.signalCursorRemoved, onCursorRemoved);
+                odtDocument.subscribe(ops.Document.signalCursorMoved, onCursorMoved);
+                odtDocument.subscribe(ops.OdtDocument.signalCommonStyleCreated, onStyleCreated);
+                odtDocument.subscribe(ops.OdtDocument.signalCommonStyleDeleted, onStyleDeleted);
+                odtDocument.subscribe(ops.OdtDocument.signalParagraphStyleModified, onParagraphStyleModified);
+                odtDocument.subscribe(ops.OdtDocument.signalParagraphChanged, trackCurrentParagraph);
+                odtDocument.subscribe(ops.OdtDocument.signalUndoStackChanged, undoStackModified);
+            }
         }
-
+       
         init();
     };
 

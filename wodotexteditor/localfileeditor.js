@@ -24,7 +24,7 @@
 
 /*global document, window, runtime, FileReader, alert, Uint8Array, Blob, saveAs, Wodo*/
 
-function createEditor() {
+function createEditor(formType) {
     "use strict";
 
     var editor = null,
@@ -126,6 +126,7 @@ function createEditor() {
             form = document.getElementById("fileloader");
         }
         form.click();
+        
     }
 
     function save() {
@@ -145,11 +146,24 @@ function createEditor() {
 
         editor.getDocumentAsByteArray(saveByteArrayLocally);
     }
-
+    // Fill form
     editorOptions = {
-        loadCallback: load,
+        loadCallback: formType === 'fillForm' ? false : load,
         saveCallback: save,
-        allFeaturesEnabled: true
+        allFeaturesEnabled: formType === 'fillForm' ? false : true,
+        viewOptions: formType === 'fillForm' ? false : true,
+        directTextStylingEnabled: formType === 'fillForm' ? false : true,
+        directParagraphStylingEnabled: formType === 'fillForm' ? false : true,
+        paragraphStyleSelectingEnabled: formType === 'fillForm' ? false : true,
+        paragraphStyleEditingEnabled: formType === 'fillForm' ? false : true,
+        imageEditingEnabled: formType === 'fillForm' ? false : true,
+        hyperlinkEditingEnabled: formType === 'fillForm' ? false : true,
+        annotationsEnabled: formType === 'fillForm' ? false : true,
+        zoomingEnabled: true,
+        reviewModeEnabled: formType === 'fillForm' ? false : true,
+        undoRedoEnabled: formType === 'fillForm' ? false : true,
+        formType: formType
+
     };
 
     function onEditorCreated(err, e) {
@@ -162,6 +176,7 @@ function createEditor() {
         }
 
         editor = e;
+        window.editor = editor;
         editor.setUserData({
             fullName: "WebODF-Curious",
             color:    "black"
@@ -185,4 +200,9 @@ function createEditor() {
     }
 
     Wodo.createTextEditor('editorContainer', editorOptions, onEditorCreated);
+
+}
+
+function documentToFitScreen() {
+    Wodo.getEditor().setDocumentToFitScreen();
 }

@@ -54,6 +54,27 @@
   width: 1px;
 }
 
+/**
+ * Does not allowed to select any text inside the div
+ */
+.not-selectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/**
+ * Highlights text when substitution occurs
+ */
+ .highlight {
+   background-color: yellow;
+}
+
+
+
 .d-none {
   display: none !important;
 }

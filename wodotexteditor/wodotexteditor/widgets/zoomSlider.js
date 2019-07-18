@@ -80,10 +80,18 @@ define("webodf/editor/widgets/zoomSlider", [
 
                 slider.onChange = function (value) {
                     if (editorSession) {
+                        // editorSession.getOdfCanvas().getZoomHelper().setZoomLevel(Math.pow(extremeZoomFactor, value));
                         editorSession.getOdfCanvas().getZoomHelper().setZoomLevel(Math.pow(extremeZoomFactor, value));
                     }
                     self.onToolDone();
                 };
+
+                // Fill form
+                window.resizeDocument = function() {
+                    if ((document.getElementById('webodfeditor-canvascontainer1').offsetWidth < document.getElementById('webodfeditor-canvas1').offsetWidth)) {
+                        editorSession.getOdfCanvas().getZoomHelper().setZoomLevel((document.getElementById('webodfeditor-canvascontainer1').offsetWidth / document.getElementById('webodfeditor-canvas1').offsetWidth) );
+                    }
+                }.bind(this);
 
                 return callback(slider);
             }

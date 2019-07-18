@@ -934,6 +934,25 @@ h1, h2, h3, h4, h5, h6 {
   width: 1px;
 }
 
+/**
+ * Does not allowed to select any text inside the div
+ */
+.not-selectable {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  pointer-events: none;
+}
+
+/**
+ * Highlights text when substitution occurs
+ */
+.highlight {
+  background-color: yellow;
+}
+
 .d-none {
   display: none !important;
 }
@@ -1406,6 +1425,21 @@ input:focus + .slider {
 .button-filled--add-new-question:hover {
   color: white;
   background: #4ECDC4;
+  cursor: pointer;
+}
+
+.button-filled--start-form {
+  background: white;
+  border: 3px solid #556270;
+  color: #556270;
+  height: 40px;
+  width: 200px;
+  margin-top: 0.8rem;
+}
+
+.button-filled--start-form:hover {
+  color: white;
+  background: #556270;
   cursor: pointer;
 }
 
@@ -2256,6 +2290,12 @@ input[type=checkbox] {
   box-shadow: 0 4px 6px -6px #222;
 }
 
+.modal__content__top--add-new-question {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .modal__content__top__close-button {
   float: right;
   width: 1.5rem;
@@ -2278,6 +2318,7 @@ input[type=checkbox] {
   margin: 0rem 0rem 0rem 0rem;
   padding: 1rem;
   border: 3px solid #556270;
+  border-radius: 10px;
   font-weight: lighter;
   width: 90%;
   font-size: 0.8rem;
@@ -2486,6 +2527,7 @@ input[type=checkbox] {
 
 .progress-container {
   padding: 1rem;
+  margin-right: 0.6rem;
 }
 
 .progress {
@@ -2518,15 +2560,19 @@ input[type=checkbox] {
   font-size: 1rem;
   height: 25px;
   line-height: 1.7;
+  padding: 0.2rem;
+  border: 3px solid #556270;
+  border-radius: 20px;
 }
 
 .progress > span {
-  background-color: #2bc253;
+  background-color: #4ECDC4;
   display: block;
   height: 100%;
   overflow: hidden;
   position: relative;
   width: auto;
+  border-radius: 20px;
 }
 
 .progress.progress-stacked > span {
@@ -3207,6 +3253,176 @@ input[type=checkbox] {
 .form-creator__fields-area__top__add-question span:hover {
   cursor: pointer;
   color: #4ECDC4;
+}
+
+.form-creator__fields-area__top__author-date__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-creator__fields-area__top__author-date__author span {
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: bolder;
+  padding-left: 0.5rem;
+  text-decoration: none;
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
+}
+
+.form-creator__fields-area__top__author-date__author span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-creator__fields-area__top__author-date__author__image-container {
+  width: 5%;
+}
+
+.form-creator__fields-area__top__author-date__author__image-container img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.form-creator__fields-area__top__author-date__date {
+  margin-top: -0.6rem;
+  font-weight: lighter;
+}
+
+.form-creator__fields-area__top__author-date__date span {
+  text-decoration: underline;
+}
+
+.form-creator__fields-area__top__before-start-button__information-modal-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
+}
+
+.form-creator__fields-area__top__before-start-button__information-modal-icon:hover {
+  font-size: 1.2rem;
+  color: #4ECDC4;
+}
+
+.form-creator__fields-area__middle__initial-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.2rem;
+}
+
+.form-creator__fields-area__middle__initial-screen__description {
+  font-weight: lighter;
+  text-align: center;
+}
+
+.form-creator__fields-area__bottom__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.form-creator__fields-area__bottom--initial-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2rem;
+}
+
+.form-creator__fields-area__bottom__step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.form-creator__fields-area__bottom__step span {
+  padding: 0.2rem;
+}
+
+.form-creator__fields-area__bottom__step .icon {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .form-creator__fields-area__bottom__step .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.form-creator__fields-area__bottom__step__number {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+@media only screen and (max-width: 1050px) {
+  .form-creator__fields-area__bottom__step__number {
+    font-size: 1rem;
+  }
+}
+
+.form-creator__fields-area__bottom__step__description {
+  line-height: 1rem;
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 1050px) {
+  .form-creator__fields-area__bottom__step__description {
+    font-size: 0.9rem;
+  }
+}
+
+.form-creator__fields-area__bottom__arrow-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.form-creator__fields-area__bottom__arrow-button:hover {
+  color: #4ECDC4;
+  cursor: pointer;
+}
+
+.form-creator__fields-area__bottom__arrow-button .icon {
+  font-size: 2rem;
+}
+
+.form-creator__fields-area__bottom__arrow-button__label {
+  padding: 0.4rem;
 }
 
 .form-creator__fields-area__field {

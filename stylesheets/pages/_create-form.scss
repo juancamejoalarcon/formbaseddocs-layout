@@ -612,6 +612,142 @@
                     }
                 }
             }
+
+            &__author-date {
+                &__author  {
+                    display: flex;
+
+                    span  {
+                        font-family: 'Montserrat', 'sans-serif';
+                        font-weight: bolder;
+                        padding-left: 0.5rem;
+                        text-decoration: none;
+                        transition: all 0.2 ease;
+
+                        &:hover {
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &__image-container  {
+                        width: 5%;
+
+                        img  {
+                            width: 100%;
+                            border-radius: 25px;
+                        }
+                    }
+                }
+
+                &__date  {
+                    margin-top: -0.6rem;
+                    font-weight: lighter;
+
+                    span  {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &__before-start-button {
+                &__information-modal-icon  {
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    transition: all 0.2 ease;
+
+                    &:hover {
+                        font-size: 1.2rem;
+                        color: color(primaryB-color);
+                    }
+                }
+            }
+        }
+
+        &__middle {
+            &__initial-screen {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0.2rem;
+
+                &__description {
+                    font-weight: lighter;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__bottom {
+            
+            &__container {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
+            }
+            &--initial-screen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.2rem;
+            }
+
+            &__step {
+                display: flex;
+                align-items: flex-end;
+
+                span {
+                    padding:0.2rem;
+                }
+                .icon {
+                    font-size: 2rem;
+                    margin-bottom: 0.3rem;
+
+                    @include breakpoint-1050 {
+                        font-size: 1.5rem;
+                        margin-bottom: 0.2rem;
+                    }
+                }
+
+                &__number {
+                    font-size: 1.5rem;
+                    font-weight: bolder;
+                    font-family: 'Montserrat', 'sans-serif';
+
+                    @include breakpoint-1050 {
+                        font-size: 1rem;
+                    }
+                }
+
+                &__description {
+                    line-height: 1rem;
+                    font-weight: lighter;
+
+                    @include breakpoint-1050 {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            &__arrow-button {
+                display: flex;
+                align-items: center;
+                transition: all .4s ease;
+
+                &:hover {
+                    color: color(primaryB-color);
+                    cursor: pointer;
+                }
+                .icon {
+                    font-size: 2rem;
+                }
+                &__label {
+                    padding: 0.4rem;
+                }
+            }
         }
 
         &__field {

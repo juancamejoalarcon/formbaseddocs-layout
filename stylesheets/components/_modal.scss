@@ -72,6 +72,9 @@
                 box-shadow: 0 4px 6px -6px #222;
             }
 
+            &--add-new-question {
+                justify-content: center;
+            }
             &__close-button {
                 float: right;
                 width: 1.5rem;
@@ -95,6 +98,7 @@
                 margin: 0rem 0rem 0rem 0rem;
                 padding: 1rem;
                 border: 3px solid color(primary-color);
+                border-radius: 10px;
                 font-weight: lighter;
                 width: 90%;
                 font-size: 0.8rem;
