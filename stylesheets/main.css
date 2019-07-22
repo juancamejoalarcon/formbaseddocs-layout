@@ -649,8 +649,8 @@ label {
 /***************/
 @font-face {
   font-family: 'icon';
-  src: url("fonts/icon.eot?oumoia");
-  src: url("fonts/icon.eot?oumoia#iefix") format("embedded-opentype"), url("fonts/icon.ttf?oumoia") format("truetype"), url("fonts/icon.woff?oumoia") format("woff"), url("fonts/icon.svg?oumoia#icon") format("svg");
+  src: url("/assets/fonts/icon.eot?oumoia");
+  src: url("/assets/fonts/icon.eot?oumoia#iefix") format("embedded-opentype"), url("/assets/fonts/icon.ttf?oumoia") format("truetype"), url("/assets/fonts/icon.woff?oumoia") format("woff"), url("/assets/fonts/icon.svg?oumoia#icon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -872,7 +872,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
-  color: var(--primary-color);
 }
 
 /**
@@ -2112,7 +2111,7 @@ input:focus + .slider {
   fill: #4ECDC4;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text], input[type=password], input[type=email], input[type=date] {
   margin: 0rem 0rem 0rem 0rem;
   border: none;
   padding: 0.5rem 0.25rem 0.5rem 0.25rem;
@@ -2125,31 +2124,31 @@ input[type=text], input[type=password], input[type=email] {
   color: #556270;
 }
 
-input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder {
+input[type=text]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder, input[type=date]::placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=date]:focus {
   border-bottom: 3px solid #4ECDC4;
   -webkit-transition: 200ms linear;
   transition: 200ms linear;
@@ -3631,6 +3630,16 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
+.form-creator__fields-area__field__middle__date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .form-creator__fields-area__field__bottom {
   padding-left: 0.6rem;
   padding-bottom: 0.3rem;
@@ -4248,14 +4257,14 @@ input[type=checkbox] {
   left: 0;
   height: 85%;
   width: 100%;
-  background-image: url("../img/document.png");
+  background-image: url("/assets/images/document.png");
   background-size: auto 98%;
   background-position: center;
   background-repeat: no-repeat, repeat;
 }
 
 .search__results__result__document:hover {
-  background-image: url("../img/document-hover.png");
+  background-image: url("/assets/images/document-hover.png");
   cursor: pointer;
   -webkit-transition: all ease-out;
   transition: all ease-out;

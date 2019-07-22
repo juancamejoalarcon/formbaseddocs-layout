@@ -122,13 +122,13 @@
                 top: 0; left: 0;
                 height: 85%;
                 width: 100%;
-                background-image: url('../img/document.png');
+                background-image: url('/assets/images/document.png');
                 background-size: auto 98%;
                 background-position: center;
                 background-repeat: no-repeat, repeat;
 
                 &:hover {
-                    background-image: url('../img/document-hover.png');
+                    background-image: url('/assets/images/document-hover.png');
                     cursor: pointer;
                     transition: all ease-out;
                     transition-duration: 0.2s;
