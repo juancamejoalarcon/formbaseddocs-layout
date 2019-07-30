@@ -64,7 +64,7 @@
                                     <div class="form-creator__fields-area__field__field-area form-creator__fields-area__field__field-area--input-text">
                                         <div class="form-creator__fields-area__field__top form-creator__fields-area__field__top--fill-form">
                                             <div class="indication">
-                                                <span class="icon icon-info-circle-solid trigger"></span>
+                                                <span class="icon icon-info-circle-solid trigger" onclick="showIndication('easy')"></span>
                                             </div>
                                         </div>
                                         <div class="form-creator__fields-area__field__middle">
@@ -112,6 +112,10 @@
                                 <span class="icon icon-chevron-left-solid"></span>
                                 <span class="form-creator__fields-area__bottom__arrow-button__label">Anterior</span>
                             </div>
+                            <div class="form-creator__fields-area__bottom__preview-button">
+                                <button class="button-filled button-filled--preview-document" onclick="changeScrollPosition('bottom')"
+                                        id="preview-document-button">Preview <span style='font-size:20px;'>&#8595;</span></button>
+                            </div>
                             <div class="form-creator__fields-area__bottom__arrow-button">
                                 <span class="form-creator__fields-area__bottom__arrow-button__label">Siguiente</span>
                                 <span class="icon icon-chevron-right-solid"></span>
@@ -125,6 +129,7 @@
                 <div id="editorContainer" style="width:100%; height:100%; margin:0px; padding:0px">
                 </div>
             </div>
+            <button class="button-filled button-filled--preview-document" id="scrollToTop" style='position: fixed;bottom: 0; right: 0; margin: 25px; display: none' onclick="changeScrollPosition('top')">Form <span style='font-size:20px;'>&#8593;</span></button>
             </div>
         </div>
     </div>
@@ -386,6 +391,65 @@ function sustituir(wordToReplace, replacement) {
     }
 }
 
+function showIndication(wordToReplace) {
+    let element;
+    findword(documentBodyClone.getElementsByTagName("*"), document.getElementsByTagName("office:body")[0].getElementsByTagName("*"));
+    function findword(cloneOfElements, elements) {
+        for (let i = 0; i < cloneOfElements.length; i++) {
+            if (cloneOfElements[i].childNodes.length === 0) {
+                if (cloneOfElements[i].textContent.includes(wordToReplace)) {
+                    element = elements[i].parentElement;
+                }
+            } else {
+                if (elements[i] !== undefined) {
+                    findword(cloneOfElements[i].childNodes, elements[i].childNodes);
+                }
+            }
+        }
+    };
+    var para = document.createElement("div");
+    para.innerHTML = `<div class="indicator-content">
+                        <button id="close-indication">&#10006;</button>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        </span>
+                    </div>`;
+    para.style.top = element.getBoundingClientRect().top;
+    para.style.left = element.getBoundingClientRect().left;
+    para.classList.add('indicator');
+    para.classList.add('smooth-intro');
+    element.appendChild(para);
+    getPosition(element);
+    element.querySelector('#close-indication').addEventListener('click', () => {
+        para.parentNode.removeChild(para);
+    });
+}
+
+function getPosition(el) {
+
+const scrollResult =  el.parentElement.getBoundingClientRect().top - 
+    document.getElementsByClassName('sub-menu')[0].clientHeight -
+    document.getElementsByTagName("office:text")[0].getBoundingClientRect().top - 
+    document.getElementsByTagName("nav")[0].clientHeight;
+
+    document.getElementById('webodfeditor-canvascontainer1').scrollTop = scrollResult;
+}
+
+function changeScrollPosition(position) {
+    scrollPosition = position;
+    if (position === 'top') {
+        window.scrollTo(0, 0);
+        document.getElementById('scrollToTop').style.display = 'none';
+    } else {
+        window.scrollTo(0, document.body.scrollHeight);
+        document.getElementById('scrollToTop').style.display = 'block';
+    }
+}
 
 </script>
 </body>

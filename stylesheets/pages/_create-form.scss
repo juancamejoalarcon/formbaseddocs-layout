@@ -674,6 +674,7 @@
                 &__description {
                     font-weight: lighter;
                     text-align: center;
+                    padding: 1rem;
                 }
             }
         }
@@ -690,7 +691,7 @@
             }
             &--initial-screen {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
                 padding: 0.2rem;
             }
@@ -706,9 +707,27 @@
                     font-size: 2rem;
                     margin-bottom: 0.3rem;
 
-                    @include breakpoint-1050 {
+                    @include breakpoint-1120 {
                         font-size: 1.5rem;
                         margin-bottom: 0.2rem;
+                    }
+
+                    @include breakpoint-985 {
+                        font-size: 1.2rem;
+                    }
+
+                    @include breakpoint-885 {
+                        font-size: 2rem;
+                        margin-bottom: 0.3rem;
+                    }
+
+                    @include breakpoint-590 {
+                        font-size: 1.5rem;
+                        margin-bottom: 0.2rem;
+                    }
+
+                    @include breakpoint-450 {
+                        font-size: 1.2rem;
                     }
                 }
 
@@ -717,17 +736,50 @@
                     font-weight: bolder;
                     font-family: 'Montserrat', 'sans-serif';
 
-                    @include breakpoint-1050 {
+                    @include breakpoint-1120 {
                         font-size: 1rem;
+                    }
+                    @include breakpoint-985 {
+                        font-size: 0.9rem;
+                    }
+                    @include breakpoint-885 {
+                        font-size: 1.5rem;
+                    }
+                    @include breakpoint-590 {
+                        font-size: 1rem;
+                    }
+                    @include breakpoint-450 {
+                        font-size: 0.9rem;
                     }
                 }
 
                 &__description {
                     line-height: 1rem;
                     font-weight: lighter;
+                    text-align: center;
+                    max-width: 120px;;
 
-                    @include breakpoint-1050 {
+                    @include breakpoint-1120 {
                         font-size: 0.9rem;
+                    }
+
+                    @include breakpoint-985 {
+                        font-size: 0.8rem;
+                        line-height: 0.9rem;
+                    }
+
+                    @include breakpoint-885 {
+                        font-size: 1rem;
+                    }
+
+                    @include breakpoint-590 {
+                        font-size: 0.9rem;
+                    }
+
+                    
+                    @include breakpoint-450 {
+                        font-size: 0.8rem;
+                        line-height: 0.9rem;
                     }
                 }
             }

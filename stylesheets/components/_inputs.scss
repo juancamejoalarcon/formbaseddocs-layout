@@ -1,5 +1,5 @@
 input {
-    &[type=text], &[type=password], &[type=email], &[type=date] {
+    &[type=text], &[type=password], &[type=email], &[type=date], &[type=range]  {
         margin: 0rem 0rem 0rem 0rem;
         border: none;
         padding: 0.5rem 0.25rem 0.5rem 0.25rem;

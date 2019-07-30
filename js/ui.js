@@ -30,19 +30,33 @@ class UI {
             const newHeight = window.innerHeight - document.getElementById('form-creator').offsetTop + 'px';
             document.getElementById('form-creator').style.height = newHeight;
             // Remove listener to re-enable scroll
-            // window.removeEventListener('scroll', this.noScroll);
+            window.removeEventListener('scroll', this.noScroll);
+            document.body.style.overflow = 'visible';
+            for (let i = 0; i < document.getElementsByClassName('button-filled--preview-document').length; i++ ) { 
+                document.getElementsByClassName('button-filled--preview-document')[i].hidden = true
+            }
+            document.getElementById('scrollToTop').style.display = 'none';
         } else {
             const newHeight = window.innerHeight - document.getElementById('form-creator').offsetTop + 'px';
             document.getElementById('form-creator').style.height = '100%';
             document.getElementById('fields-area').style.height = newHeight;
             document.getElementById('text-area').style.height = window.innerHeight + 'px';
             // add listener to disable scroll
-            // window.addEventListener('scroll', this.noScroll);
+            window.addEventListener('scroll', this.noScroll);
+            document.body.style.overflow = 'hidden';
+            for (let i = 0; i < document.getElementsByClassName('button-filled--preview-document').length; i++ ) { 
+                document.getElementsByClassName('button-filled--preview-document')[i].hidden = false;
+            }
 
         }
     }
 
     noScroll() {
-        window.scrollTo(0, 0);
+        if (scrollPosition === 'top') {
+            window.scrollTo(0, 0);
+            document.getElementById('scrollToTop').style.display = 'none';
+        } else {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
     }
 }

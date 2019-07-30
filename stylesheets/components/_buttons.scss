@@ -134,5 +134,11 @@ input:focus + .slider {
             cursor: pointer;
         }
     }
+
+    &--preview-document {
+        width: 110px;
+        height: 35px;
+        line-height: 0.8rem;
+    }
 }
 
