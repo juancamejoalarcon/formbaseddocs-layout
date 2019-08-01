@@ -58,5 +58,30 @@
 				}
 			}
 		}
+
+		.current-page {
+			background-color: lighten(color(primaryB-color), 20);
+			color: white;
+		}
+	}
+
+	&__left-icon {
+		padding-bottom: 0.5rem;
+    	font-size: 2rem;
+		padding-left: 0.5rem;
+		&:hover {
+			cursor: pointer;
+			color: color(primaryB-color);
+		}
+	}
+
+	&__right-icon {
+		padding-bottom: 0.5rem;
+    	font-size: 2rem;
+		padding-right: 0.5rem;
+		&:hover {
+			cursor: pointer;
+			color: color(primaryB-color);
+		}
 	}
 }

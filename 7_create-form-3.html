@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; margin:0px; padding:0px" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+</head>
+<body style="width:100%; height:100%; margin:0px; padding:0px" onload="createEditor();">
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="/assets/images/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
+                <li class="nav__menu__button"><a href="9_my-forms.html">My forms</a></li>
+                <li class="nav__menu__button"><a href="settings.html">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <div class="sub-menu__container">
+            <div class="sub-menu__left-button">
+                <button class="button-filled button-filled--sub-menu">Guide</button>
+            </div>
+            <ul class="sub-menu__nav sub-menu__nav--form">
+                <li class="sub-menu__nav__button sub-menu__nav__button--current" data-toogle="form-creator">
+                    Form
+                </li>
+                <li class="sub-menu__nav__button" data-toogle="information">
+                    Information
+                </li>
+                <li class="sub-menu__nav__button" data-toogle="comments">
+                    Comments
+                </li>
+            </ul>
+            <div class="sub-menu__right-button">
+                <span class="sub-menu__right-button__label">Preview</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider slider--round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-creator" id="form-creator">
+        <div class="form-creator__container">
+            <div class="form-creator__fields-area" id="fields-area">
+                <div class="form-creator__fields-area__container">
+
+                    <div class="form-creator__fields-area__add-question d-none">
+                        <span class="icon icon-plus-circle-solid" id="add-new-question"></span>
+                    </div>
+                    
+                    <div class="form-creator__fields-area__top">
+                        <div class="form-creator__fields-area__top__container">
+                            <div>
+                            </div>
+                            <div class="form-creator__fields-area__top__add-question">
+                                Add
+                                <span class="icon icon-plus-circle-solid" onclick="toggleModal()"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Radio -->
+                    <div class="form-creator__fields-area__middle">
+                        <div class="form-creator__fields-area__middle__container">
+                            <div class="form-creator__fields-area__field">
+                                <div class="form-creator__fields-area__field__container">
+                                    <div class="form-creator__fields-area__field__field-area form-creator__fields-area__field__field-area--input-text">
+                                        <div class="form-creator__fields-area__field__top">
+                                            <div class="form-creator__fields-area__field__top__identifier">
+                                                <span class="form-creator__fields-area__field__top__identifier__label">
+                                                    Id:
+                                                </span>
+                                                <span class="form-creator__fields-area__field__top__identifier__id">
+                                                    <span id="dragIdisjdvfe" draggable="true" ondragstart="drag(event)" ondblclick="editInput(event)">izd5rdh</span>
+                                                    <input type="text" value="izd5rdh" class="d-none" onfocusout="editInput(event)">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__middle">
+                                            <input type="text" placeholder="Question">
+                                            <div class="form-creator__fields-area__field__middle__radio-input radio">
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap" name="group1" type="radio"  />
+                                                        <span></span>
+                                                    </label>
+                                                </p>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__middle__radio-input radio">
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap" name="group1" type="radio"  />
+                                                        <span></span>
+                                                    </label>
+                                                </p>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__middle__add-another-radio-button">
+                                                <span class="icon icon-plus-circle-solid"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__bottom">
+                                            <div class="form-creator__fields-area__field__bottom__trash">
+                                                <span class="icon icon-trash-alt-regular"></span>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__bottom__mandatory">
+                                                <span class="form-creator__fields-area__field__bottom__mandatory__switch-label">Obligatorio</span>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider slider--round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__bottom__menu">     
+                                                <div class="tooltip">
+                                                    <span class="icon icon-ellipsis-v-solid" id="right-button-menu" onclick="showMenu();"></span>
+                                                    <span class="tooltip__right-button-menu">
+                                                        <div class="tooltip__right-button-menu__group">
+                                                            <span>Indicactions for this field</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="form-creator__fields-area__middle">
+                        <div class="form-creator__fields-area__middle__container">
+                            <div class="form-creator__fields-area__field">
+                                <div class="form-creator__fields-area__field__container">
+                                    <div class="form-creator__fields-area__field__field-area form-creator__fields-area__field__field-area--input-text">
+                                        <div class="form-creator__fields-area__field__top">
+                                            <div class="form-creator__fields-area__field__top__identifier">
+                                                <span class="form-creator__fields-area__field__top__identifier__label">
+                                                    Id:
+                                                </span>
+                                                <span class="form-creator__fields-area__field__top__identifier__id">
+                                                    <span id="dragIdisjdvfe" draggable="true" ondragstart="drag(event)" ondblclick="editInput(event)">izd5rdh</span>
+                                                    <input type="text" value="izd5rdh" class="d-none" onfocusout="editInput(event)">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__middle">
+                                            <input type="text" placeholder="Question">
+                                            <div class="form-creator__fields-area__field__middle__radio-input radio">
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap" name="group1" type="radio"  />
+                                                        <span></span>
+                                                    </label>
+                                                </p>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__modal-button">
+                                                    <span class="icon icon-modal-icon" onclick="toggleModal()"></span>
+                                                </div>
+                                                <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__middle__radio-input radio">
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap" name="group1" type="radio"  />
+                                                        <span></span>
+                                                    </label>
+                                                </p>
+
+                                                <input type="text" placeholder="Option">
+                                                <div class="form-creator__fields-area__field__middle__radio-input__modal-button">
+                                                    <span class="icon icon-modal-icon"></span>
+                                                </div>
+                                                <div class="form-creator__fields-area__field__middle__radio-input__remove-radio">
+                                                    <span class="icon icon-times-solid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__middle__add-another-radio-button">
+                                                <span class="icon icon-plus-circle-solid"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__bottom">
+                                            <div class="form-creator__fields-area__field__bottom__trash">
+                                                <span class="icon icon-trash-alt-regular"></span>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__bottom__mandatory">
+                                                <span class="form-creator__fields-area__field__bottom__mandatory__switch-label">Obligatorio</span>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider slider--round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-creator__fields-area__field__bottom__menu">     
+                                                <div class="tooltip">
+                                                    <span class="icon icon-ellipsis-v-solid" id="right-button-menu" onclick="showMenu();"></span>
+                                                    <span class="tooltip__right-button-menu">
+                                                        <div class="tooltip__right-button-menu__group">
+                                                            <span>Indicactions for this field</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="form-creator__fields-area__bottom">
+                        <div class="pagination">
+                            <span class="pagination__left-icon icon icon-chevron-left-solid"></span>
+                            <ul>
+                                <li class="current-page">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>11</li>
+                                <li>12</li>
+                            </ul>
+                            <span class="pagination__right-icon icon icon-chevron-right-solid"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-creator__text-area" id="text-area">
+            <div id="wodoformbaseddocs" style="width:100%; height:100%; margin:0px; padding:0px">
+                <div id="editorContainer" style="width:100%; height:100%; margin:0px; padding:0px">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="information" id="information" style="display: none">
+        <div class="information__container">
+            <div class="information__section-left">
+                <input type="text" placeholder="Título">
+                <textarea name="description" id="description" cols="30" rows="6" placeholder="description"></textarea>
+                <textarea name="indications" id="description" cols="30" rows="10" placeholder="indications"></textarea>
+            </div>
+            <div class="information__section-right">
+                <div class="information__section-right__tags">
+                    <input type="text" placeholder="tags">
+                    <div class="information__section-right__tags__container">
+                        <span>tag</span>
+                        <span>tag de prueba</span>
+                    </div>
+                </div>
+                <div class="information__section-right__buttons">
+                    <div class="information__section-right__buttons__switch-button">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider slider--round"></span>
+                        </label>
+                        <span class="information__section-right__buttons__label">
+                            Hacer el formulario privado
+                        </span>
+                    </div>
+                    <div class="information__section-right__buttons__switch-button">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider slider--round"></span>
+                        </label>
+                        <span class="information__section-right__buttons__switch-button__label">
+                            Desactivar comentarios
+                        </span>
+                    </div>
+                    <div class="information__section-right__buttons__switch-button">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider slider--round"></span>
+                        </label>
+                        <span class="information__section-right__buttons__switch-button__label">
+                            Mantener el formulario inactivo
+                        </span>
+                    </div>
+                </div>
+                <div class="information__section-right__notifications">
+                    <span class="information__section-right__notifications__title">Activar notificaciones</span>
+                    <div class="information__section-right__notifications__checkboxes">
+                        <div class="information__section-right__notifications__form-group">
+                            <label for="rememberme">
+                                <input type="checkbox" class="filled-in" name="rememberme" id="rememberme" value="Remember me" checked />
+                                <span>Desea que le enviemos notificaciones a su correo</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comments" id="comments" style="display: none">
+        <div class="comments__container">
+            <div class="comments__new-comment">
+                <textarea cols="70" rows="5"></textarea>
+                <input type="submit" value="Comment">
+            </div>
+            <div class="comments__orderby-comments">
+                <div class="comments__orderby-comments__container">
+                    <label for="orderby">Order by: </label>
+                    <select id="orderby" autofocus="true">
+                        <option value="Date">Date</option>
+                        <option value="Like">Likes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+                <div class="comments__comment__comment-responses">
+                    <div class="comments__comment__comment-responses__line"></div>
+                    <div class="comments__comment__comment-responses__container">
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__new-comment">
+                            <textarea cols="50" rows="5"></textarea>
+                            <input type="submit" value="Respond">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Editar</button>
+                    <button class="comments__comment__bottom__button">Eliminar</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add question modal -->
+    <div class="modal">
+        <div class="modal__content modal__content--add-new-question">
+            <div class="modal__content__modal-middle modal__content__modal-middle--add-new-question">
+                <div class="modal__content__modal-middle__container">
+                    <div class="modal__content__modal-middle__button-panel">
+                        <div class="modal__content__modal-middle__button-panel__container">
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">
+                                    <strong onclick="toggleLightbox()">&#128712;</strong>
+                                    Input text
+                                </span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">
+                                    <strong onclick="toggleLightbox()">&#128712;</strong>
+                                    Input date
+                                </span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">
+                                    <strong onclick="toggleLightbox()">&#128712;</strong>
+                                    Input radio a
+                                </span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">
+                                    <strong onclick="toggleLightbox()">&#128712;</strong>
+                                    Input radio b
+                                </span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">
+                                    <strong onclick="toggleLightbox()">&#128712;</strong>
+                                    Input radio c
+                                </span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input radio b modal -->
+    <!-- <div class="modal">
+        <div class="modal__content modal__content--add-new-question">
+            <div class="modal__content__modal-middle modal__content__modal-middle--input-radio-b">
+                <div class="modal__content__modal-middle__container">
+                    <div class="modal__content__modal-middle__button-panel">
+                        <div class="modal__content__modal-middle__button-panel__container">
+                            <h3>Optio</h3>
+                            <textarea name="" id="" cols="60" rows="15"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Indications -->
+    <!-- <div class="modal">
+        <div class="modal__content modal__content--add-new-question">
+            <div class="modal__content__modal-middle modal__content__modal-middle--add-new-question">
+                <div class="modal__content__modal-middle__container">
+                    <div class="modal__content__modal-middle__button-panel">
+                        <div class="modal__content__modal-middle__button-panel__container">
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                            <div class="modal__content__modal-middle__button-panel__row">
+                                <span class="modal__content__modal-middle__button-panel__row__label">Input Text</span>
+                                <button class="button-filled button-filled--add-new-question">
+                                    Add
+                                    <span class="icon icon-plus-solid"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="info-lightbox d-none">
+        <span class="close-info-lightbox" onclick="toggleLightbox()">&times;</span>
+        <div class="info-lightbox__content">
+            <p>prueba</p>
+        </div>
+    </div>
+
+
+
+<script src="js/ui.js"></script>
+<script>
+    
+const ui = new UI();
+
+
+const menu = document.querySelector('.sub-menu__nav');
+menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+
+ui.setDivHeight();
+window.addEventListener("resize", ui.setDivHeight);
+
+document.getElementById('add-new-question').addEventListener('click', toggleModal);
+window.addEventListener("click", windowOnClick);
+
+
+    // modal
+    var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
+
+    function editInput(e) {
+        e.target.parentNode.childNodes[1].classList.toggle('d-none');
+        e.target.parentNode.childNodes[3].classList.toggle('d-none');
+    }
+
+    // Drag and drop
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", 'izd5rdh');
+    }
+
+    function onDrop(e) {
+        // console.log(e);
+    }
+
+    function showMenu() {
+    const tooltip = document.querySelector('.tooltip__right-button-menu');
+    tooltip.style.display = 'block';
+    tooltip.classList.add("smooth-intro");
+}
+
+function toggleLightbox() {
+    document.querySelector('.info-lightbox').classList.toggle('d-none');
+}
+</script>
+<!-- editor: start -->
+<script src="./wodotexteditor/wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/localfileeditor.js" type="text/javascript" charset="utf-8"></script>
+<!-- editor: end -->
+</body>
+</html>

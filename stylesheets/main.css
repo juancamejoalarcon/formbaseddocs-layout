@@ -2195,7 +2195,43 @@ input:focus + .slider {
   }
 }
 
-input[type=text], input[type=password], input[type=email], input[type=date], input[type=range] {
+.info-lightbox {
+  position: fixed;
+  z-index: 2;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.info-lightbox__content {
+  position: relative;
+  color: white;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.close-info-lightbox {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close-info-lightbox:hover, .close-info-lightbox:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=date] {
   margin: 0rem 0rem 0rem 0rem;
   border: none;
   padding: 0.5rem 0.25rem 0.5rem 0.25rem;
@@ -2208,31 +2244,31 @@ input[type=text], input[type=password], input[type=email], input[type=date], inp
   color: #556270;
 }
 
-input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder, input[type=range]::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder, input[type=range]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder, input[type=range]::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder, input[type=date]::placeholder, input[type=range]::placeholder {
+input[type=text]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder, input[type=date]::placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=date]:focus, input[type=range]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=date]:focus {
   border-bottom: 3px solid #4ECDC4;
   -webkit-transition: 200ms linear;
   transition: 200ms linear;
@@ -2451,7 +2487,7 @@ input[type=checkbox] {
 }
 
 .modal__content__modal-middle--privacy {
-  overflow-y: scroll;
+  overflow: scroll;
   height: 75%;
   padding: 2rem;
   font-weight: lighter;
@@ -2543,6 +2579,28 @@ input[type=checkbox] {
 .modal__content__modal-middle__button-panel__row__label {
   font-size: 1rem;
   font-weight: lighter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__content__modal-middle__button-panel__row__label strong {
+  padding-right: 0.3rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
+
+.modal__content__modal-middle__button-panel__row__label strong:hover {
+  cursor: pointer;
+  color: #C44D58;
+}
+
+.modal__content__modal-middle__button-panel__row__label sup:hover {
+  cursor: pointer;
+  color: #C44D58;
 }
 
 .modal__content__modal-bottom {
@@ -2662,6 +2720,33 @@ input[type=checkbox] {
 
 .pagination ul li:hover:nth-of-type(5) ~ .bar {
   left: 80%;
+}
+
+.pagination ul .current-page {
+  background-color: #9ee3df;
+  color: white;
+}
+
+.pagination__left-icon {
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  padding-left: 0.5rem;
+}
+
+.pagination__left-icon:hover {
+  cursor: pointer;
+  color: #4ECDC4;
+}
+
+.pagination__right-icon {
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  padding-right: 0.5rem;
+}
+
+.pagination__right-icon:hover {
+  cursor: pointer;
+  color: #4ECDC4;
 }
 
 .progress-container {
@@ -3257,7 +3342,7 @@ input[type=checkbox] {
 .tooltip__right-button-menu {
   width: 200px;
   height: 50px;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: white;
   text-align: center;
   padding: 5px 0;
@@ -3950,6 +4035,22 @@ input[type=checkbox] {
 .form-creator__fields-area__field__bottom .icon:hover {
   cursor: pointer;
   color: #4ECDC4;
+}
+
+.form-creator__fields-area__end-step__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-creator__text-area {

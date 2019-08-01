@@ -711,7 +711,7 @@
                         font-size: 1.5rem;
                         margin-bottom: 0.2rem;
                     }
-
+                    
                     @include breakpoint-985 {
                         font-size: 1.2rem;
                     }
@@ -738,7 +738,7 @@
 
                     @include breakpoint-1120 {
                         font-size: 1rem;
-                    }
+                    }                    
                     @include breakpoint-985 {
                         font-size: 0.9rem;
                     }
@@ -762,7 +762,7 @@
                     @include breakpoint-1120 {
                         font-size: 0.9rem;
                     }
-
+                    
                     @include breakpoint-985 {
                         font-size: 0.8rem;
                         line-height: 0.9rem;
@@ -1046,6 +1046,15 @@
                         color: color(primaryB-color);
                     }
                 }
+            }
+        }
+
+        &__end-step {
+            &__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

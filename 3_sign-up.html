@@ -157,12 +157,15 @@
         </div>
     </div>
 
-<script src="js/common.js"></script>
+<script src="js/ui.js"></script>
 <script>
 
+const ui = new UI();
+setModal();
 document.querySelector('#privacy-label').addEventListener('click', (e) => {
     e.preventDefault();
 
+    // Check if checkbox is enabled and user has click on checkbox and not the link that opens the modal
     if (e.target.tagName !== 'A' && document.querySelector('#privacy-checkbox').disabled === false) {
         document.querySelector('#privacy-checkbox').checked = !document.querySelector('#privacy-checkbox').checked;
     }
@@ -173,6 +176,7 @@ document.querySelector('#privacy-label').addEventListener('click', (e) => {
     }
 });
 
+// Enable checkbox if user has scroll to the bottom of the modal
 document.querySelector('#modal-middle-privacy').addEventListener('scroll', (e) => {
     if (e.srcElement.scrollHeight - e.srcElement.scrollTop === e.srcElement.clientHeight) {
         enablePrivacyButton();
@@ -182,6 +186,7 @@ document.querySelector('#modal-middle-privacy').addEventListener('scroll', (e) =
 
 document.querySelector('#modal-button').addEventListener('click', () => {
 
+    // If user has not scroll to the bottom of the modal alert message will be shwon
     if (document.querySelector('#modal-button').classList.contains('button-filled__disabled')) {
         alert('Debes leer todas las condiciones');
     } else {

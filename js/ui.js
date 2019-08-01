@@ -35,7 +35,9 @@ class UI {
             for (let i = 0; i < document.getElementsByClassName('button-filled--preview-document').length; i++ ) { 
                 document.getElementsByClassName('button-filled--preview-document')[i].hidden = true
             }
-            document.getElementById('scrollToTop').style.display = 'none';
+            if (document.getElementById('scrollToTop')) {
+                document.getElementById('scrollToTop').style.display = 'none';
+            }
         } else {
             const newHeight = window.innerHeight - document.getElementById('form-creator').offsetTop + 'px';
             document.getElementById('form-creator').style.height = '100%';
@@ -58,5 +60,28 @@ class UI {
         } else {
             window.scrollTo(0, document.body.scrollHeight);
         }
+    }
+}
+
+// Modal 
+var modal;
+var trigger;
+
+function setModal() {
+    // Modal 
+    modal = document.querySelector(".modal");
+    trigger = document.querySelector(".trigger");
+    trigger.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+}
+
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
     }
 }

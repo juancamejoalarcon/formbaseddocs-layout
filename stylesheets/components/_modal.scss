@@ -140,7 +140,7 @@
             }
 
             &--privacy {
-                overflow-y: scroll;
+                overflow: scroll;
                 height: 75%;
                 padding: 2rem;
                 font-weight: lighter;
@@ -227,6 +227,23 @@
                     &__label {
                         font-size: 1rem;
                         font-weight: lighter;
+                        display: flex;
+                        align-items: center;
+                        strong {
+                            padding-right: 0.3rem;
+                            font-size: 1.4rem;
+                            font-weight: bolder;
+                            &:hover {
+                                cursor: pointer;
+                                color: color(secondary-color);
+                            }
+                        }
+                        sup {
+                            &:hover {
+                                cursor: pointer;
+                                color: color(secondary-color);
+                            }
+                        }
                     }
                 }
             }

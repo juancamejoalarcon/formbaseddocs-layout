@@ -180,7 +180,7 @@
                 <div class="search__results__container">
 
                     <div class="search__results__result">
-                        <div class="search__results__result__document" onclick="openForm();">
+                        <div class="search__results__result__document">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -208,7 +208,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="/assets/images/avatar.jpg" alt="avatar">
-                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
+                                <span >Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -218,7 +218,7 @@
                     </div>
 
                     <div class="search__results__result">
-                        <div class="search__results__result__document" onclick="openForm();">
+                        <div class="search__results__result__document">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -246,7 +246,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="/assets/images/avatar.jpg" alt="avatar">
-                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
+                                <span >Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -256,7 +256,7 @@
                     </div>
 
                     <div class="search__results__result">
-                        <div class="search__results__result__document" onclick="openForm();">
+                        <div class="search__results__result__document">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -284,7 +284,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="/assets/images/avatar.jpg" alt="avatar">
-                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
+                                <span >Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -294,7 +294,7 @@
                     </div>
 
                     <div class="search__results__result" >
-                        <div class="search__results__result__document" onclick="openForm();">
+                        <div class="search__results__result__document">
                             <div class="search__results__result__document__container">
                                 <div class="search__results__result__document__container__date">
                                     <span>12 octubre de 2018</span>
@@ -322,7 +322,7 @@
                         <div class="search__results__result__more-info">
                             <div class="search__results__result__more-info__author">
                                 <img src="/assets/images/avatar.jpg" alt="avatar">
-                                <span onclick="openProfile();">Juan Camejo Alarcón</span>
+                                <span >Juan Camejo Alarcón</span>
                             </div>
                             <div class="search__results__result__more-info__tags">
                                 <span>tag, tag, tag, tag, tag, tag, tag, tag, 
@@ -376,27 +376,11 @@
     </footer>
 <script src="js/ui.js"></script>
 <script>
+
 const ui = new UI();
+const menu = document.querySelector('.sub-menu__nav');
+menu.addEventListener('click', ui.subMenuNavigation.bind(ui));
 
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
-
-// Event Listeners
-function ready() {
-    const menu = document.querySelector('.sub-menu__nav');
-    menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
-}
-
-function openForm() {
-    window.location.href = '/7_create-form.html'; 
-}
-
-function openProfile() {
-    window.location.href = '/6_profile.html'; 
-}
 </script>
 </body>
 </html>
