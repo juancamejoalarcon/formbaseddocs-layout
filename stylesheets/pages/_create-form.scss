@@ -1055,6 +1055,23 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                padding: 1rem;
+            }
+            &__title {
+                text-align: center;
+            }
+
+            &__icons {
+                display: flex;
+                .icon {
+                    font-size: 4rem;
+                    padding: 1rem;
+                    color: color(primaryB-color);
+                    &:hover {
+                        color: color(primary-color);
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
