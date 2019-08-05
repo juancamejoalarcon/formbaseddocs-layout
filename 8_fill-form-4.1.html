@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; margin:0px; padding:0px" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+</head>
+<body style="width:100%; height:100%; margin:0px; padding:0px" onload="createEditor('fillForm');">
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="/assets/images/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
+                <li class="nav__menu__button"><a href="9_my-forms.html">My forms</a></li>
+                <li class="nav__menu__button"><a href="settings.html">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <div class="sub-menu__container sub-menu__container--fill-form">
+            <ul class="sub-menu__nav sub-menu__nav--fill-form">
+                <li class="sub-menu__nav__button sub-menu__nav__button--current" data-toogle="form-creator">
+                    Form
+                </li>
+                <li class="sub-menu__nav__button" data-toogle="comments">
+                    Comments
+                </li>
+            </ul>
+            <div class="sub-menu__likes-views">
+                <div class="sub-menu__likes-views__likes">
+                    <span class="icon icon-like-button"></span>
+                    <span>5.500</span>
+                </div>
+                <div class="views">
+                    <span class="icon icon-eye-solid"></span>
+                    <span>2.000.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-creator" id="form-creator">
+        <div class="form-creator__container">
+            <div class="form-creator__fields-area" id="fields-area">
+
+                <div class="form-creator__fields-area__container">
+                    <div class="progress-container">
+                        <div class="progress progress-large">
+                            <span style="width: 100%">100%</span>
+                        </div>
+                    </div>
+
+                    <div class="form-creator__fields-area__middle">
+                        <div class="form-creator__fields-area__middle__container">
+                            <div class="form-creator__fields-area__end-step">
+                                <div class="form-creator__fields-area__end-step__container">
+                                        <!-- <h1 class="form-creator__fields-area__end-step__title">Contrato de alquiler de vivienda</h1> -->
+                                        <span class=" form-creator__fields-area__end-step__check icon icon-check-circle-solid"></span>
+                                        <h1>Finalizado</h1>
+                                        <button class="button-filled button-filled--start-form trigger">
+                                            Descargar
+                                        </button>
+                                        <div class="form-creator__fields-area__end-step__icons">
+                                            <span class="icon icon-file-word-solid trigger"></span>
+                                            <span class="icon icon-file-pdf-solid"></span>
+                                        </div>
+                                        <!-- <h1>10 €</h1> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-creator__fields-area__bottom">
+                        <div class="form-creator__fields-area__bottom__container">
+                            <div class="form-creator__fields-area__bottom__arrow-button">
+                                <span class="icon icon-chevron-left-solid"></span>
+                                <span class="form-creator__fields-area__bottom__arrow-button__label">Anterior</span>
+                            </div>
+                            <!-- <div class="form-creator__fields-area__bottom__arrow-button">
+                                <span class="form-creator__fields-area__bottom__arrow-button__label">Siguiente</span>
+                                <span class="icon icon-chevron-right-solid"></span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-creator__text-area" id="text-area">
+            <div id="wodoformbaseddocs" style="width:100%; height:100%; margin:0px; padding:0px">
+                <div id="editorContainer" style="width:100%; height:100%; margin:0px; padding:0px">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="comments" id="comments" style="display: none">
+        <div class="comments__container">
+            <div class="comments__new-comment">
+                <textarea cols="70" rows="5"></textarea>
+                <input type="submit" value="Comment">
+            </div>
+            <div class="comments__orderby-comments">
+                <div class="comments__orderby-comments__container">
+                    <label for="orderby">Order by: </label>
+                    <select id="orderby" autofocus="true">
+                        <option value="Date">Date</option>
+                        <option value="Like">Likes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+                <div class="comments__comment__comment-responses">
+                    <div class="comments__comment__comment-responses__line"></div>
+                    <div class="comments__comment__comment-responses__container">
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__new-comment">
+                            <textarea cols="50" rows="5"></textarea>
+                            <input type="submit" value="Respond">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Editar</button>
+                    <button class="comments__comment__bottom__button">Eliminar</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__content modal__content--payment">
+          <div class="checkout-panel">
+            <div class="checkout-panel__body">    
+                <div class="checkout-panel__body__progress-bar">
+                    <div class="checkout-panel__body__progress-bar__step checkout-panel__body__progress-bar__step__active"></div>
+                    <div class="checkout-panel__body__progress-bar__step"></div>
+                    <div class="checkout-panel__body__progress-bar__step"></div>
+                    <div class="checkout-panel__body__progress-bar__step"></div>
+                </div>
+
+                <div class="checkout-panel__body__invoice">
+                    <div class="checkout-panel__body__invoice__container">
+                        <div class="checkout-panel__body__invoice__document">
+                            <img src="/assets/images/checkout-document.png" alt="checkout-image">
+                        </div>
+                        <div class="checkout-panel__body__invoice__text">
+                            <h2 class="checkout-panel__body__invoice__text__title">Contrato de alquiler de vivienda</h2>
+                            <div class="checkout-panel__body__invoice__text__description">
+                                <ul>
+                                    <li>Descarga inmediata en formatos Word y PDF</li>
+                                    <li>3.060 personas ya han comprado este documento</li>
+                                </ul>
+                            </div>
+                            <div class="checkout-panel__body__invoice__text__total">
+                                <span class="checkout-panel__body__invoice__text__total__right">Total:</span>
+                                <span class="checkout-panel__body__invoice__text__total__left">19.90 eur</span>
+                            </div>
+                            <div class="checkout-panel__body__invoice__text__more-info">
+                                <img src="/assets/images/ssl-secure-en.png" alt="secure payment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+            <div class="checkout-panel__footer">
+              <button class="btn back-btn" style="opacity: 0">Back</button>
+              <button class="btn next-btn">Next Step</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+<!-- editor: start -->
+<script src="./wodotexteditor/wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/localfileeditor.js" type="text/javascript" charset="utf-8"></script>
+<!-- editor: end -->
+<script src="js/ui.js"></script>
+<script>
+    const ui = new UI();
+
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', ready)
+    } else {
+        ready()
+    }
+
+    function ready() {
+        const menu = document.querySelector('.sub-menu__nav');
+        menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+
+        ui.setDivHeight();
+        window.addEventListener("resize", ui.setDivHeight);
+
+    }
+
+    setModal();
+
+
+
+</script>
+</body>
+</html>

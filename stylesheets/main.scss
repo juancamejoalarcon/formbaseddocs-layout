@@ -37,16 +37,17 @@
   'components/inputs',
   'components/modal',
   'components/pagination',
-  'components/payment_steps',
   'components/progressbar',
   'components/radio-buttons',
   'components/select',
   'components/sub-menu',
   'components/table',
+  'components/tabs',
   'components/tooltip-menu';
 
 // 6. Page-specific styles
 @import
+  'pages/checkout-panel',
   'pages/create-form',
   'pages/landing-page',
   'pages/my-forms',

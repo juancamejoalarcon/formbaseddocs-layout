@@ -1,0 +1,69 @@
+.tabs {
+
+  background: #fff;
+  text-align: center;
+
+  p:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
+  &__section {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #abc;
+  }
+  
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #abc;
+    border: 1px solid transparent;
+
+    &:before {
+      font-family: fontawesome;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: #789;
+      cursor: pointer;
+    }
+  }
+  input:checked + label {
+    color: #0af;
+    border: 1px solid #abc;
+    border-top: 2px solid #0af;
+    border-bottom: 1px solid #fff;
+  }
+  
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2,
+  #tab3:checked ~ #content3,
+  #tab4:checked ~ #content4 {
+    display: block;
+  }
+  
+  @media screen and (max-width: 800px) {
+    label {
+      font-size: 0;
+    }
+    label:before {
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    label {
+      padding: 15px;
+    }
+  }
+}

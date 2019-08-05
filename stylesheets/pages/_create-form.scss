@@ -1059,19 +1059,23 @@
             }
             &__title {
                 text-align: center;
+                text-decoration: underline;
             }
 
             &__icons {
                 display: flex;
                 .icon {
-                    font-size: 4rem;
-                    padding: 1rem;
+                    font-size: 1.2rem;
+                    padding: 0.2rem;
+                    padding-top: 0.4rem;
                     color: color(primaryB-color);
-                    &:hover {
-                        color: color(primary-color);
-                        cursor: pointer;
-                    }
                 }
+            }
+
+            &__check {
+                color: color(secondaryC-color);
+                border-color: color(primary-color);
+                font-size: 8rem;
             }
         }
     }
