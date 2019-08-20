@@ -9,7 +9,7 @@
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    z-index: 2;
+    z-index: 12;
 
     &__content {
         position: relative;
@@ -46,6 +46,7 @@
             left: 20%;
             width: 38%;
             height: 60%;
+            padding: 0rem;
 
             @include breakpoint-885 {
                 top: 55%;
@@ -259,6 +260,9 @@
                             }
                         }
                         sup {
+                            padding: 0.2rem;
+                            font-size: 0.8rem;
+                            color: color(primaryB-color);
                             &:hover {
                                 cursor: pointer;
                                 color: color(secondary-color);
@@ -288,4 +292,143 @@
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.new-modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+
+    &__body {
+        padding: 0;
+        flex: 1;
+        overflow-y: scroll;
+
+        textarea  {
+            margin: 5%;
+            padding: 1rem;
+            border: 3px solid color(primary-color);
+            font-weight: lighter;
+            width: 90%;
+            height: 90%;
+            font-size: 0.8rem;
+            border-radius: 25px;
+            -webkit-transition: all .1s ease;
+            -moz-transition: all .1s ease;
+            -ms-transition: all .1s ease;
+            -o-transition: all .1s ease;
+            transition: all .1s ease;
+    
+            &:focus {
+                border: 3px solid color(primaryB-color);
+            }
+        }
+    }
+
+    &__header {
+        &__tabs {
+            display: flex;
+            justify-content: center;
+
+            &__tab {
+                width: 100%;
+                height: 60px;
+                text-align: center;
+                background: #fff;
+                border: 2px solid color(primaryB-color);
+                color: color(primaryB-color);
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                font-size: 0.9rem;
+                transition: background, color;
+                transition-duration: 0.2s;
+                cursor: pointer;
+
+                &:hover {
+                    background: color(primaryB-color);
+                    color: #fff;
+                }
+
+                &--active {
+                    background: color(primaryB-color);
+                    color: #fff;
+                }
+
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        width: 100%;
+        height: 96px;
+
+        background-color: rgb(239, 239, 239);
+        justify-content: center;
+        align-items: center;
+        
+
+        .btn {
+            font-size: 16px;
+            width: 163px;
+            height: 48px;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 23px;
+        }
+           
+        .back-btn {
+            color: #1abc9c;
+            background: #fff;
+        }
+           
+        .next-btn {
+            color: #fff;
+            background: #1abc9c;
+        }
+           
+        .btn:focus {
+            outline: none;
+        }
+           
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .blue-border {
+            border: 1px solid rgb(110, 178, 251);
+        }
+
+        .warning {
+            border-color: #1abc9c;
+        }
+    }
+}
+
+.editor-container-modal-new-question {
+
+    #editor {
+        border: none;
+    }
+}
+
+.close-modal-button {
+    color: color(primary-color);
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 35px;
+    font-weight: bold;
+
+    &:hover, &:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }

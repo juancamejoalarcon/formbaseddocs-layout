@@ -47,9 +47,22 @@ function createEditor(formType) {
     function guessDocUrl() {
         var pos, docUrl = String(document.location);
         // If the URL has a fragment (#...), try to load the file it represents
-        pos = docUrl.indexOf('#');
-        if (pos !== -1) {
-            docUrl = docUrl.substr(pos + 1);
+        // Eliminar esta mierda para que no de problemas
+        // pos = docUrl.indexOf('#');
+        // if (pos !== -1) {
+        //     docUrl = docUrl.substr(pos + 1);
+        // } else {
+        //     // FILL FORM or CREATE FORM
+        //     if (window.DOCUMENTOURL) {
+        //         docUrl = window.DOCUMENTOURL;
+        //     } else {
+        //         docUrl = "welcome.odt";
+        //     }
+        // }
+
+        // FILL FORM or CREATE FORM
+        if (window.DOCUMENTOURL) {
+            docUrl = window.DOCUMENTOURL;
         } else {
             docUrl = "welcome.odt";
         }
@@ -168,6 +181,7 @@ function createEditor(formType) {
 
     function onEditorCreated(err, e) {
         var docUrl = guessDocUrl();
+        // console.log(window.DOCUMENTOURL);
 
         if (err) {
             // something failed unexpectedly
@@ -206,3 +220,13 @@ function createEditor(formType) {
 function documentToFitScreen() {
     Wodo.getEditor().setDocumentToFitScreen();
 }
+// Eliminar
+function closeDocument() {
+    Wodo.getEditor().closeDocument(()=>{});
+}
+
+module.exports = {
+    createEditor: createEditor,
+    documentToFitScreen: documentToFitScreen,
+    closeDocument: closeDocument
+};

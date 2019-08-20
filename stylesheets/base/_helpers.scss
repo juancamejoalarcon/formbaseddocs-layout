@@ -73,9 +73,21 @@
    background-color: yellow;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 
 
 .d-none {
+  display: none !important;
+}
+
+.d-none-flex {
+  display: none !important;
+}
+
+.d-none-grid {
   display: none !important;
 }
 

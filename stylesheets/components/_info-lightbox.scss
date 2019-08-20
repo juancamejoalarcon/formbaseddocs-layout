@@ -17,6 +17,38 @@
         width: 90%;
         max-width: 1200px;
     }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__description {
+        &__content {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__instructions {
+        &__steps {
+            &__step {
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                justify-content: space-evenly;
+
+                p {
+                    padding: 0.5rem;
+                    max-width: 500px;
+                }
+
+                img {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
 }
 
 .close-info-lightbox {

@@ -48,6 +48,7 @@
 			transition: 0.2s ease;
 			cursor: pointer;
 			user-select: none;
+			max-width: 50px;
 			&:hover {
                 background-color: lighten(color(primaryB-color), 20);
 				color: white;

@@ -1084,6 +1084,11 @@
         height: 100%;
         width: 100%;
 
+        &--quill-text {
+            padding: 1rem;
+            background-color: #ddd;
+        }
+
         &__field {
             padding: 0.5rem 0rem 0.5rem 0rem; 
             width: 95%;

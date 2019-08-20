@@ -1,0 +1,13 @@
+.ql-toolbar.ql-snow {
+    background-color: white;
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+    background-color: white;
+    box-shadow: 0px 10px 10px #aaa;
+}
+
+#editor-container {
+    height: 62vh;
+}

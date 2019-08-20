@@ -10,6 +10,8 @@
     <link rel=”canonical” href=”https://www.formbaseddocs.com” />
     <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
     <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body style="width:100%; height:100%; margin:0px; padding:0px" onload="createEditor();">
     <nav class="nav">
@@ -360,14 +362,33 @@
 
     <div class="modal">
         <div class="modal__content modal__content--add-new-question">
-            <div class="modal__content__modal-middle modal__content__modal-middle--input-radio-b">
-                <div class="modal__content__modal-middle__container">
-                    <div class="modal__content__modal-middle__button-panel">
-                        <div class="modal__content__modal-middle__button-panel__container">
-                            <h3>Optio</h3>
-                            <textarea name="" id="" cols="60" rows="15"></textarea>
+            <div class="new-modal-content">
+                <div class="new-modal-content__header">
+                    <div class="new-modal-content__header__tabs">
+                        <button class="new-modal-content__header__tabs__tab new-modal-content__header__tabs__tab--active tablink w3-red" onclick="openCity(event,'London')">
+                            Outside text
+                        </button>
+                        <button class="new-modal-content__header__tabs__tab tablink" onclick="openCity(event,'Paris')">
+                            Inside text
+                        </button>
+                    </div>
+                </div>
+                <div class="new-modal-content__body">    
+                    <div id="London" class="w3-container w3-border city editor-container-modal-new-question">
+                        <!-- Create the editor container -->
+                        <div id="editor">
+                            <p>Hello World!</p>
+                            <p>Some initial <strong>bold</strong> text</p>
+                            <p><br></p>
                         </div>
                     </div>
+                    
+                    <div id="Paris" class="w3-container w3-border city" style="display:none">
+                        <textarea name="" id="" rows="10" placeholder="Indicacion for this field..."></textarea>
+                    </div>
+                </div>         
+                <div class="new-modal-content__footer">
+                    <button class="btn next-btn">Hecho</button>
                 </div>
             </div>
         </div>
@@ -423,16 +444,40 @@ window.addEventListener("click", windowOnClick);
     const tooltip = document.querySelector('.tooltip__right-button-menu');
     tooltip.style.display = 'block';
     tooltip.classList.add("smooth-intro");
-}
+    }
 
-function toggleLightbox() {
-    document.querySelector('.info-lightbox').classList.toggle('d-none');
-}
+    function toggleLightbox() {
+        document.querySelector('.info-lightbox').classList.toggle('d-none');
+    }
+
+    function openCity(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" new-modal-content__header__tabs__tab--active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " new-modal-content__header__tabs__tab--active";
+    }
 </script>
 <!-- editor: start -->
 <script src="./wodotexteditor/wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
 <script src="./wodotexteditor/FileSaver.js" type="text/javascript" charset="utf-8"></script>
 <script src="./wodotexteditor/localfileeditor.js" type="text/javascript" charset="utf-8"></script>
 <!-- editor: end -->
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+  var quill = new Quill('#editor', {
+    theme: 'snow'
+  });
+</script>
 </body>
 </html>

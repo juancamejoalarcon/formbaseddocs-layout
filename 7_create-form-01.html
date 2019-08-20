@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; margin:0px; padding:0px" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+</head>
+<body style="width:100%; height:100%; margin:0px; padding:0px">
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="/assets/images/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
+                <li class="nav__menu__button"><a href="9_my-forms.html">My forms</a></li>
+                <li class="nav__menu__button"><a href="settings.html">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <div class="sub-menu__container">
+            <div class="sub-menu__left-button">
+                <button class="button-filled button-filled--sub-menu-fill-form icon icon-save-solid"></button>
+                <button class="button-filled button-filled--sub-menu-fill-form icon icon-trash-alt-regular"></button>
+            </div>
+            <ul class="sub-menu__nav sub-menu__nav--form">
+                <li class="sub-menu__nav__button sub-menu__nav__button--current" data-toogle="form-creator">
+                    Form
+                </li>
+                <li class="sub-menu__nav__button" data-toogle="information">
+                    Information
+                </li>
+                <li class="sub-menu__nav__button" data-toogle="comments">
+                    Comments
+                </li>
+            </ul>
+            <div class="sub-menu__right-button">
+                <span class="sub-menu__right-button__label">Preview</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider slider--round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-creator" id="form-creator">
+        <div class="form-creator__container">
+            <div class="form-creator__fields-area" id="fields-area">
+                <div class="form-creator__fields-area__container">
+
+                    <div class="form-creator__fields-area__add-question d-none">
+                        <span class="icon icon-plus-circle-solid" id="add-new-question"></span>
+                    </div>
+                    
+                    <div class="form-creator__fields-area__top">
+                        <div class="form-creator__fields-area__top__container">
+                            <div>
+                            </div>
+                            <div class="form-creator__fields-area__top__add-question">
+                                Add
+                                <span class="icon icon-plus-circle-solid" onclick="toggleModal()"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-creator__fields-area__middle">
+                    </div>
+
+                    <div class="form-creator__fields-area__bottom">
+                    </div>
+                </div>
+            </div>
+            <div class="form-creator__text-area form-creator__text-area--quill-text" id="text-area">
+                <!-- Include stylesheet -->
+                <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+                <style>
+                    #editor {
+                        height: 65vh;
+                    }
+                </style>
+
+                <!-- Create the editor container -->
+                <div id="editor">
+                <p>Hello World!</p>
+                <p>Some initial <strong>bold</strong> text</p>
+                <p><br></p>
+                </div>
+
+                <!-- Include the Quill library -->
+                <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+                <!-- Initialize Quill editor -->
+                <script>
+                    var toolbarOptions = [
+                    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+                    ['blockquote', 'code-block'],
+
+                    [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                    [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+                    [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+                    [{ 'direction': 'rtl' }],                         // text direction
+
+                    [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+                    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                    [{ 'font': [] }],
+                    [{ 'align': [] }],
+
+                    ['clean']                                         // remove formatting button
+                    ];
+                var quill = new Quill('#editor', {
+                    modules: {
+                        toolbar: toolbarOptions
+                    },
+                    theme: 'snow'
+                });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="information" id="information" style="display: none">
+        <div class="information__container">
+
+        </div>
+    </div>
+    <div class="comments" id="comments" style="display: none">
+        <div class="comments__container">
+            
+        </div>
+    </div>
+
+
+<script src="js/ui.js"></script>
+<script>
+    
+const ui = new UI();
+
+
+const menu = document.querySelector('.sub-menu__nav');
+menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+
+ui.setDivHeight();
+window.addEventListener("resize", ui.setDivHeight);
+
+document.getElementById('add-new-question').addEventListener('click', toggleModal);
+window.addEventListener("click", windowOnClick);
+
+
+
+function editInput(e) {
+    e.target.parentNode.childNodes[1].classList.toggle('d-none');
+    e.target.parentNode.childNodes[3].classList.toggle('d-none');
+}
+
+function showMenu() {
+    const tooltip = document.querySelector('.tooltip__right-button-menu');
+    tooltip.style.display = 'block';
+    tooltip.classList.add("smooth-intro");
+}
+
+function toggleLightbox() {
+    document.querySelector('.info-lightbox').classList.toggle('d-none');
+}
+
+</script>
+<!-- editor: start -->
+<!-- <script src="./wodotexteditor/wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/localfileeditor.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- editor: end -->
+</body>
+</html>
