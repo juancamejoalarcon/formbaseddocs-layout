@@ -332,9 +332,11 @@
         &__tabs {
             display: flex;
             justify-content: center;
+            padding: 1rem;
 
             &__tab {
-                width: 100%;
+                // width: 100%;
+                padding: 1rem;
                 height: 60px;
                 text-align: center;
                 background: #fff;
@@ -370,6 +372,10 @@
         justify-content: center;
         align-items: center;
         
+        &--indicactions {
+            flex-direction: column;
+            padding: 0.4rem;
+        }
 
         .btn {
             font-size: 16px;
@@ -390,6 +396,13 @@
         .next-btn {
             color: #fff;
             background: #1abc9c;
+
+            &--delete {
+                background-color: color(secondary-color);
+                width: 130px;
+                margin-top: 0.2rem;
+                height: 30px;
+            }
         }
            
         .btn:focus {
@@ -412,8 +425,11 @@
 
 .editor-container-modal-new-question {
 
+    padding: 1rem;
+    height: 85%;
+
     #editor {
-        border: none;
+        
     }
 }
 

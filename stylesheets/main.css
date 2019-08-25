@@ -2792,10 +2792,11 @@ input[type=checkbox] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1rem;
 }
 
 .new-modal-content__header__tabs__tab {
-  width: 100%;
+  padding: 1rem;
   height: 60px;
   text-align: center;
   background: #fff;
@@ -2836,6 +2837,14 @@ input[type=checkbox] {
           align-items: center;
 }
 
+.new-modal-content__footer--indicactions {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.4rem;
+}
+
 .new-modal-content__footer .btn {
   font-size: 16px;
   width: 163px;
@@ -2858,6 +2867,13 @@ input[type=checkbox] {
   background: #1abc9c;
 }
 
+.new-modal-content__footer .next-btn--delete {
+  background-color: #C44D58;
+  width: 130px;
+  margin-top: 0.2rem;
+  height: 30px;
+}
+
 .new-modal-content__footer .btn:focus {
   outline: none;
 }
@@ -2875,8 +2891,9 @@ input[type=checkbox] {
   border-color: #1abc9c;
 }
 
-.editor-container-modal-new-question #editor {
-  border: none;
+.editor-container-modal-new-question {
+  padding: 1rem;
+  height: 85%;
 }
 
 .close-modal-button {

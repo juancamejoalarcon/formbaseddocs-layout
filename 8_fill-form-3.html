@@ -314,7 +314,7 @@
 
 
 setTimeout( () => {
-    documentBodyClone = document.getElementsByTagName("office:body")[0].cloneNode(true);
+    documentBodyClone = document.getElementsByTagName("office:text")[0].cloneNode(true);
 }, 1000);
 
 
@@ -327,8 +327,8 @@ function sustituir(wordToReplace, replacement) {
 
     let valuesToChange = [];
     documentBodyClone2 = documentBodyClone.cloneNode(true);
-    document.getElementsByTagName("office:body")[0].parentElement.replaceChild(documentBodyClone2, document.getElementsByTagName("office:body")[0]);
-    findword(documentBodyClone.getElementsByTagName("*"), document.getElementsByTagName("office:body")[0].getElementsByTagName("*"));
+    document.getElementsByTagName("office:text")[0].parentElement.replaceChild(documentBodyClone2, document.getElementsByTagName("office:text")[0]);
+    findword(documentBodyClone.getElementsByTagName("*"), document.getElementsByTagName("office:text")[0].getElementsByTagName("*"));
 
     function findword(cloneOfElements, elements) {
         for (let i = 0; i < cloneOfElements.length; i++) {
@@ -393,7 +393,7 @@ function sustituir(wordToReplace, replacement) {
 
 function showIndication(wordToReplace) {
     let element;
-    findword(documentBodyClone.getElementsByTagName("*"), document.getElementsByTagName("office:body")[0].getElementsByTagName("*"));
+    findword(documentBodyClone.getElementsByTagName("*"), document.getElementsByTagName("office:text")[0].getElementsByTagName("*"));
     function findword(cloneOfElements, elements) {
         for (let i = 0; i < cloneOfElements.length; i++) {
             if (cloneOfElements[i].childNodes.length === 0) {
