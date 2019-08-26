@@ -230,6 +230,10 @@
                         justify-content: space-between;
                         align-items: baseline;
 
+                        .icon {
+                            padding-right: 0.3rem;
+                        }
+
                         @include breakpoint-885 {
                             font-size: 0.9rem;
                         }
@@ -275,6 +279,7 @@
                     img {
                         width: 30px;
                         padding-right: 5px;
+                        border-radius: 50%;
 
                         @include breakpoint-785 {
                             width: 25px;

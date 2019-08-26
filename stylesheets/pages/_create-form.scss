@@ -1113,12 +1113,12 @@
 }
 
 .information {
-    height: 100%;
-    width: 90%;
     margin: auto;
-    margin-top: 5rem;
     display: flex;
     align-items: center;
+    background-color: #EDFAF9;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     @include breakpoint-785 {
         justify-content: center;
@@ -1127,10 +1127,15 @@
     &__container {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
         justify-content: center;
         align-items: center;
+        background-color: white;
+        max-width: 600px;
+        margin: auto;
+        padding: 2rem;
+        -webkit-box-shadow: 0px 0px 25px -8px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 25px -8px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 25px -8px rgba(0,0,0,0.75);
 
         @include breakpoint-785 {
             width: 70%;

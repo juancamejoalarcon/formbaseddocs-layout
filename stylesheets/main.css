@@ -987,6 +987,12 @@ h1, h2, h3, h4, h5, h6 {
   display: grid !important;
 }
 
+.noMoreForms {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .nav__container {
   display: -ms-grid;
   display: grid;
@@ -5043,16 +5049,16 @@ input[type=checkbox] {
 }
 
 .information {
-  height: 100%;
-  width: 90%;
   margin: auto;
-  margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #EDFAF9;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 @media only screen and (max-width: 785px) {
@@ -5067,15 +5073,18 @@ input[type=checkbox] {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.75);
 }
 
 @media only screen and (max-width: 785px) {
@@ -5693,6 +5702,10 @@ input[type=checkbox] {
           align-items: baseline;
 }
 
+.search__results__result__document__container__likes-views .icon {
+  padding-right: 0.3rem;
+}
+
 @media only screen and (max-width: 885px) {
   .search__results__result__document__container__likes-views {
     font-size: 0.9rem;
@@ -5751,6 +5764,7 @@ input[type=checkbox] {
 .search__results__result__more-info__author img {
   width: 30px;
   padding-right: 5px;
+  border-radius: 50%;
 }
 
 @media only screen and (max-width: 785px) {
