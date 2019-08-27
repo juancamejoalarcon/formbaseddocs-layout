@@ -5,41 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Form-based docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel=”canonical” href=”https://www.formbaseddocs.com” />
     <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
     <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
 </head>
 <style>
-    ul {
-        padding: 3rem;
-    }
+* {margin: 0; padding: 0;}
 
-    a:hover {
-        text-decoration: underline;
-    }
+div {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+}
+
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
 </style>
 <body>
-    <ul >
-        <li>
-            <a href="1_landing.html">1.- Landing</a>
-        </li>
-        <li>
-            <a href="2_sign-in.html">2.- Sign in</a>
-        </li>
-        <li>
-            <a href="3_sign-up.html">3.- Sign up</a>
-        </li>
-        <li>
-            <a href="4_recover-password.html">4.- Recover password</a>
-        </li>
-        <li>
-            <a href="5_search.html">5.- Search</a>
-        </li>
-        <li>
-            <a href="6_profile.html">6.- Profile</a>
-        </li>
+    <div>
+        <ul>
+            <li onclick="window.open('1_landing.html', '_blank')">
+                <h3>Landing page</h3>
+                <p>Página principal</p>
+            </li>
+            
+            <li onclick="window.open('2_sign-in.html', '_blank')">
+                <h3>Sign in</h3>
+                <p>Página de login</p>
+            </li>
+
+            <li onclick="window.open('3_sign-up.html', '_blank')">
+                <h3>Sign up</h3>
+                <p>Página de registro</p>
+            </li>
+
+            <li onclick="window.open('4_recover-password.html', '_blank')">
+                <h3>Recover password</h3>
+                <p>Recuperar contraseña</p>
+            </li>
+
+            <li onclick="window.open('5_search.html', '_blank')">
+                <h3>Search</h3>
+                <p>Buscar documents</p>
+            </li>
+
+            <li onclick="window.open('6_profile.html', '_blank')">
+                <h3>Profile</h3>
+                <p>Perfil de usuario</p>
+            </li>
+
+            <li onclick="window.open('7_create-form-1a.html', '_blank')">
+                <h3>Create form 1a</h3>
+                <p>Crear formulario. Sólo aparece el modal inicial para elegir entre plain text o office document</p>
+            </li>
+
+            <li onclick="window.open('7_create-form-1b.html', '_blank')">
+                <h3>Create form 1b</h3>
+                <p>Crear formulario. Pantalla de edición con la versión del editor QUILL TEXT</p>
+            </li>
+
+            <li onclick="window.open('7_create-form-1c.html', '_blank')">
+                <h3>Create form 1c</h3>
+                <p>Crear formulario. Pantalla de edición con la versión del editor WEB ODF.</p>
+                <P>El botón de add question hace aparecer el menú para añadir inputs</P>
+            </li>
+
+            <li onclick="window.open('7_create-form-1c.html', '_blank')">
+                <h3>Create form 1c</h3>
+                <p>Crear formulario. Pantalla de edición con la versión del editor WEB ODF.</p>
+                <P>El botón de add question hace aparecer el menú para añadir inputs</P>
+            </li>
+
+            <li onclick="window.open('7_create-form-1d.html', '_blank')">
+                <h3>Create form 1d</h3>
+                <p>Crear formulario. Preview del texto con la versión del editor QUILL TEXT.</p>
+            </li>
+
+            <li onclick="window.open('7_create-form-1e.html', '_blank')">
+                <h3>Create form 1e</h3>
+                <p>Crear formulario.</p>
+                <p>Input text.</p>
+                <p>Indicaciones.</p>
+            </li>
+
+            <li onclick="window.open('7_create-form-1f.html', '_blank')">
+                <h3>Create form 1e</h3>
+                <p>Crear formulario.</p>
+                <p>Input radio .</p>
+            </li>
+        </ul>
+    </div>
+    <!-- <ul >
+
         <li>
             <a href="7_create-form-1.html">7.- Create form</a>
         </li>
@@ -80,6 +161,6 @@
         <li>
             <a href="10_settings.html">10.- Settings</a>
         </li>
-    </ul>
+    </ul> -->
 </body>
 </html>

@@ -77,8 +77,6 @@
   pointer-events: none;
 }
 
-
-
 .d-none {
   display: none !important;
 }
@@ -101,6 +99,10 @@
 
 .d-grid {
   display: grid !important;
+}
+
+.comment-d-none {
+  display: none !important;
 }
 
 .noMoreForms {

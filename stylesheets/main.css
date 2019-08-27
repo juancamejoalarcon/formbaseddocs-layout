@@ -987,6 +987,10 @@ h1, h2, h3, h4, h5, h6 {
   display: grid !important;
 }
 
+.comment-d-none {
+  display: none !important;
+}
+
 .noMoreForms {
   text-align: center;
   padding-top: 2rem;
@@ -2005,10 +2009,6 @@ input:focus + .slider {
   padding-top: 2rem;
 }
 
-.comments__comment:last-child {
-  border-bottom: none;
-}
-
 .comments__comment__top__author {
   font-family: 'Montserrat', sans-serif;
   color: #556270;
@@ -2030,6 +2030,7 @@ input:focus + .slider {
   max-height: 25px;
   margin-left: -30px;
   margin-right: 8px;
+  border-radius: 50%;
 }
 
 .comments__comment__middle {
@@ -2142,6 +2143,35 @@ input:focus + .slider {
 
 .comments textarea:focus {
   border: 3px solid #4ECDC4;
+}
+
+.comment-middle-edit {
+  padding: 0rem !important;
+  text-align: center;
+}
+
+.comment-middle-edit .button {
+  height: 30px;
+  text-align: center;
+  width: 90px;
+  border-radius: 40px;
+  background: white;
+  border: 2px solid #556270;
+  color: #556270;
+  font-family: 'Lato', sans-serif;
+  font-weight: regular;
+  font-size: 0.9rem;
+  -webkit-transition: background, color;
+  transition: background, color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  margin-top: 4px;
+}
+
+.comment-middle-edit .button:hover {
+  color: white;
+  background: #556270;
+  cursor: pointer;
 }
 
 .loader {
