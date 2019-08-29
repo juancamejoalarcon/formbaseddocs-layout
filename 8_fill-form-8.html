@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; margin:0px; padding:0px" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+</head>
+<body style="width:100%; height:100%; margin:0px; padding:0px" onload="createEditor('fillForm');">
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="/assets/images/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
+                <li class="nav__menu__button"><a href="9_my-forms.html">My forms</a></li>
+                <li class="nav__menu__button"><a href="settings.html">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <div class="sub-menu__container sub-menu__container--fill-form">
+            <div class="sub-menu__left-button sub-menu__left-button--fill-form">
+                <button class="button-filled button-filled--sub-menu-fill-form icon icon-save-solid trigger"></button>
+            </div>
+            <ul class="sub-menu__nav sub-menu__nav--fill-form">
+                <li class="sub-menu__nav__button sub-menu__nav__button--current" data-toogle="form-creator">
+                    Form
+                </li>
+                <li class="sub-menu__nav__button" data-toogle="comments">
+                    Comments
+                </li>
+            </ul>
+            <div class="sub-menu__likes-views">
+                <div class="sub-menu__likes-views__likes">
+                    <span class="icon icon-like-button"></span>
+                    <span>5.500</span>
+                </div>
+                <div class="views">
+                    <span class="icon icon-eye-solid"></span>
+                    <span>2.000.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-creator" id="form-creator">
+        <div class="form-creator__container">
+            <div class="form-creator__fields-area" id="fields-area">
+
+                <div class="form-creator__fields-area__container">
+                    <div class="progress-container">
+                        <div class="progress progress-large">
+                            <span style="width: 75%">75%</span>
+                        </div>
+                    </div>
+
+                    <div class="form-creator__fields-area__middle">
+                        <div class="form-creator__fields-area__middle__container">
+                            <div class="form-creator__fields-area__field">
+                                <div class="form-creator__fields-area__field__container">
+                                    <div class="form-creator__fields-area__field__field-area form-creator__fields-area__field__field-area--input-text">
+                                        <div class="form-creator__fields-area__field__top form-creator__fields-area__field__top--fill-form">
+                                            <div class="indication">
+                                                <span class="icon icon-info-circle-solid trigger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__middle">
+                                            <span class="form-creator__fields-area__field__middle__question">Pregunta 1</span>
+                                            <div class="slider-range-container">
+                                                <input type="range" min="1" max="10" value="5" class="range-slider" id="myRange">
+                                                <p>Value: <span id="demo">2</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-creator__fields-area__field__bottom">
+                                            <span class="form-creator__fields-area__field__bottom__mandatory-label">
+                                                Obligatorio *
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-creator__fields-area__bottom">
+                        <div class="form-creator__fields-area__bottom__container">
+                            <div class="form-creator__fields-area__bottom__arrow-button">
+                                <span class="icon icon-chevron-left-solid"></span>
+                                <span class="form-creator__fields-area__bottom__arrow-button__label">Anterior</span>
+                            </div>
+                            <div class="form-creator__fields-area__bottom__preview-button">
+                                    <button class="button-filled button-filled--preview-document" onclick="changeScrollPosition('bottom')"
+                                            id="preview-document-button">Preview <span style='font-size:20px;'>&#8595;</span></button>
+                                </div>
+                            <div class="form-creator__fields-area__bottom__arrow-button">
+                                <span class="form-creator__fields-area__bottom__arrow-button__label">Siguiente</span>
+                                <span class="icon icon-chevron-right-solid"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-creator__text-area" id="text-area">
+            <div id="wodoformbaseddocs" style="width:100%; height:100%; margin:0px; padding:0px">
+                <div id="editorContainer" style="width:100%; height:100%; margin:0px; padding:0px">
+                </div>
+            </div>
+            <button class="button-filled button-filled--preview-document" id="scrollToTop" style='position: fixed;bottom: 0; right: 0; margin: 25px; display: none' onclick="changeScrollPosition('top')">Form <span style='font-size:20px;'>&#8593;</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="comments" id="comments" style="display: none">
+        <div class="comments__container">
+            <div class="comments__new-comment">
+                <textarea cols="70" rows="5"></textarea>
+                <input type="submit" value="Comment">
+            </div>
+            <div class="comments__orderby-comments">
+                <div class="comments__orderby-comments__container">
+                    <label for="orderby">Order by: </label>
+                    <select id="orderby" autofocus="true">
+                        <option value="Date">Date</option>
+                        <option value="Like">Likes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+                <div class="comments__comment__comment-responses">
+                    <div class="comments__comment__comment-responses__line"></div>
+                    <div class="comments__comment__comment-responses__container">
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__new-comment">
+                            <textarea cols="50" rows="5"></textarea>
+                            <input type="submit" value="Respond">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Editar</button>
+                    <button class="comments__comment__bottom__button">Eliminar</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal__content modal__content--payment">
+            <span class="close-modal-button">&times;</span>
+            <div class="sign-in sign-in--component">
+                <div class="sign-in__container">
+                    <img src="/assets/images/logo.png" alt="login image" class="sign-in__container__top-image">
+                    <h1 class="sign-in__container__title">Sign in</h1>
+                    <a href="3_sign-up.html" class="sign-in__container__need-account">Do you need an account?</a>
+                    <form class="sign-in__container__form">
+                        <div class="sign-in__container__form__form-group">
+                            <label for="name"></label>
+                            <input type="text" name="name" id="name" placeholder="USERNAME or EMAIL">
+                        </div>
+                        <div class="sign-in__container__form__form-group">
+                            <label for="password"></label>
+                            <input type="password" name="password" id="password" placeholder="PASSWORD">
+                        </div>
+                        <div class="sign-in__container__form__checkbox">
+                            <label for="rememberme">
+                                <input type="checkbox" class="filled-in" name="rememberme" id="rememberme" value="Remember me" checked />
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+                        <input type="submit" value="Sign in">
+                        <br>
+                        <a href="4_recover-password.html" class="sign-in__container__need-account" target="_blank">I forgot my password</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- editor: start -->
+<script src="./wodotexteditor/wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/localfileeditor.js" type="text/javascript" charset="utf-8"></script>
+<!-- editor: end -->
+<script src="js/ui.js"></script>
+<script>
+    let scrollPosition = 'top';
+    const ui = new UI();
+
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', ready)
+    } else {
+        ready()
+    }
+
+    function ready() {
+        const menu = document.querySelector('.sub-menu__nav');
+        menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+
+        ui.setDivHeight();
+        window.addEventListener("resize", ui.setDivHeight);
+
+    }
+
+    setModal();
+
+
+setTimeout( () => {
+
+    documentBodyClone = document.getElementsByTagName("office:text")[0].cloneNode(true);
+
+}, 1000);
+
+function changeText(value) {
+    sustituir('PALABRATEST', value);
+}
+
+
+function changeScrollPosition(position) {
+    scrollPosition = position;
+    if (position === 'top') {
+        window.scrollTo(0, 0);
+        document.getElementById('scrollToTop').style.display = 'none';
+    } else {
+        window.scrollTo(0, document.body.scrollHeight);
+        document.getElementById('scrollToTop').style.display = 'block';
+    }
+}
+
+
+</script>
+</body>
+</html>
