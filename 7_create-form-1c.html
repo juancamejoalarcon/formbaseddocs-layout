@@ -417,7 +417,7 @@
         </div>
     </div> -->
 
-    <div class="info-lightbox d-none">
+    <div class="info-lightbox">
         <span class="close-info-lightbox" onclick="toggleLightbox()">&times;</span>
         <div class="info-lightbox__content">
             <h1 class="info-lightbox__title">Input Text</h1>
@@ -511,7 +511,7 @@ window.addEventListener("click", windowOnClick);
 }
 
 function toggleLightbox() {
-    document.querySelector('.info-lightbox').classList.toggle('d-none');
+    document.querySelector('.info-lightbox').classList.toggle('show-lightbox');
 }
 </script>
 <!-- editor: start -->
