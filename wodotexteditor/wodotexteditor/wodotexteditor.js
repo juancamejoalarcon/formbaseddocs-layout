@@ -650,7 +650,13 @@ window.Wodo = window.Wodo || (function () {
         // FORMBASEDDOCS API
 
         this.setDocumentToFitScreen = function() {
-            return editorSession.getOdfCanvas().getZoomHelper().setZoomLevel((document.getElementById('webodfeditor-canvascontainer1').offsetWidth / document.getElementById('webodfeditor-canvas1').offsetWidth) );
+            editorSession.getOdfCanvas().getZoomHelper().setZoomLevel(1);
+            var containerCanvasWidth = document.getElementById('webodfeditor-canvascontainer1').offsetWidth;
+            var editorCanvasWidth = document.getElementById('webodfeditor-canvas1').offsetWidth;
+            var scale = containerCanvasWidth / editorCanvasWidth;
+            if (containerCanvasWidth < editorCanvasWidth) {
+                return editorSession.getOdfCanvas().getZoomHelper().setZoomLevel((scale - 0.04));
+            }
         };
 
         /**
