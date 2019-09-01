@@ -659,6 +659,11 @@ window.Wodo = window.Wodo || (function () {
             }
         };
 
+        // FORMBASEDDOCS API
+        this.setCursorPositionForDragAndDrop = function(event) {
+            editorSession.setCursorPositionForDragAndDrop(event);
+        }
+
         /**
          * Registers a callback which should be called if the given event happens.
          * @name TextEditor#addEventListener

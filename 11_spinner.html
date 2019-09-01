@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; margin:0px; padding:0px" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+</head>
+<body style="width:100%; height:100%; margin:0px; padding:0px" onload="createEditor('fillForm');">
+    <!-- SPINNER -->
+    <div class="loading show-spinner">
+        <div style="color: #fff" class="la-square-spin la-3x">
+            <div></div>
+        </div>
+    </div>
+    <!-- END OF SPINNER -->
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="/assets/images/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
+                <li class="nav__menu__button"><a href="9_my-forms.html">My forms</a></li>
+                <li class="nav__menu__button"><a href="settings.html">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <div class="sub-menu__container sub-menu__container--fill-form">
+            <div class="sub-menu__left-button sub-menu__left-button--fill-form">
+                <button class="button-filled button-filled--sub-menu-fill-form icon icon-save-solid"></button>
+            </div>
+            <ul class="sub-menu__nav sub-menu__nav--fill-form">
+                <li class="sub-menu__nav__button sub-menu__nav__button--current" data-toogle="form-creator">
+                    Form
+                </li>
+                <li class="sub-menu__nav__button" data-toogle="comments">
+                    Comments
+                </li>
+            </ul>
+            <div class="sub-menu__likes-views">
+                <div class="sub-menu__likes-views__likes">
+                    <span class="icon icon-like-button"></span>
+                    <span>5.500</span>
+                </div>
+                <div class="views">
+                    <span class="icon icon-eye-solid"></span>
+                    <span>2.000.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-creator" id="form-creator">
+        <div class="form-creator__container">
+            <div class="form-creator__fields-area" id="fields-area">
+
+                <div class="form-creator__fields-area__container">
+                    <div class="form-creator__fields-area__top">
+                        <div class="form-creator__fields-area__top__container">
+                            <div class="form-creator__fields-area__top__author-date">
+                                <span class="form-creator__fields-area__top__author-date__author">
+                                    <div class="form-creator__fields-area__top__author-date__author__image-container">
+                                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    </div>
+                                    <span>Juan Camejo Alarcón</span>
+                                </span>
+                                <span class="form-creator__fields-area__top__author-date__date">
+                                    <span>Last updated:</span>
+                                    20 abril 2019
+                                </span>
+                            </div>
+                            <div class="form-creator__fields-area__top__before-start-button">
+                                <div class="form-creator__fields-area__top__before-start-button__information-modal-icon trigger">
+                                    <span class="icon icon-info-solid"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Input radio -->
+                    <div class="form-creator__fields-area__middle">
+                        <div class="form-creator__fields-area__middle__container">
+                            <div class="form-creator__fields-area__middle__initial-screen">
+                                <h2 class="form-creator__fields-area__middle__initial-screen__form-title">
+                                    Contrato de alquiler
+                                </h2>
+                                <span class="form-creator__fields-area__middle__initial-screen__description">
+                                    Tras el proceso de oferta y búsqueda de vivienda, una vez que hemos llegado a un acuerdo entre propietario e inquilino, 
+                                    ya sea de forma privada o a través de un programa público de alquiler, se procede a la firma del contrato. 
+                                    Este contrato será el vínculo entre el arrendador y el arrendatario.
+                                </span>
+                                <button class="button-filled button-filled--start-form">
+                                    Rellenar formulario
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-creator__fields-area__bottom form-creator__fields-area__bottom--initial-screen">
+                        <div class="form-creator__fields-area__bottom__step">
+                            <span class="icon icon-file-regular"></span>
+                            <span class="form-creator__fields-area__bottom__step__number">1.</span>
+                            <span class="form-creator__fields-area__bottom__step__description">Elige un documento</span>
+                        </div>
+                        <div class="form-creator__fields-area__bottom__step">
+                            <span class="icon icon-list-alt-regular"></span>
+                            <span class="form-creator__fields-area__bottom__step__number">2.</span>
+                            <span class="form-creator__fields-area__bottom__step__description">Rellena el formulario</span>
+                        </div>
+                        <div class="form-creator__fields-area__bottom__step">
+                            <span class="icon icon-print-solid"></span>
+                            <span class="form-creator__fields-area__bottom__step__number">3.</span>
+                            <span class="form-creator__fields-area__bottom__step__description">Guárdalo e imprímelo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-creator__text-area" id="text-area">
+            <div id="wodoformbaseddocs" style="width:100%; height:100%; margin:0px; padding:0px">
+                <div id="editorContainer" style="width:100%; height:100%; margin:0px; padding:0px">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="comments" id="comments" style="display: none">
+        <div class="comments__container">
+            <div class="comments__new-comment">
+                <textarea cols="70" rows="5"></textarea>
+                <input type="submit" value="Comment">
+            </div>
+            <div class="comments__orderby-comments">
+                <div class="comments__orderby-comments__container">
+                    <label for="orderby">Order by: </label>
+                    <select id="orderby" autofocus="true">
+                        <option value="Date">Date</option>
+                        <option value="Like">Likes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Responder</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+                <div class="comments__comment__comment-responses">
+                    <div class="comments__comment__comment-responses__line"></div>
+                    <div class="comments__comment__comment-responses__container">
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__comment comments__comment--response">
+                            <div class="comments__comment__top">
+                                <div class="comments__comment__top__author">
+                                    <img src="/assets/images/avatar.jpg" alt="avatar">
+                                    <h4>Juan Camejo Alarcón</h4>
+                                </div>
+                                <span class="comments__comment__top__date">15.05.2019</span>
+                            </div>
+                            <div class="comments__comment__middle">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                                    natoque penatibus et magnis dis parturient montes, nascetur 
+                                    ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                                    Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                                    scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                                </p>
+                                <span>Leer más</span>
+                            </div>
+                        </div>
+                        <div class="comments__new-comment">
+                            <textarea cols="50" rows="5"></textarea>
+                            <input type="submit" value="Respond">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments__comment">
+                <div class="comments__comment__top">
+                    <div class="comments__comment__top__author">
+                        <img src="/assets/images/avatar.jpg" alt="avatar">
+                        <h4>Juan Camejo Alarcón</h4>
+                    </div>
+                    <span class="comments__comment__top__date">15.05.2019</span>
+                </div>
+                <div class="comments__comment__middle">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent cursus nunc ac justo facilisis lacinia. Orci varius 
+                        natoque penatibus et magnis dis parturient montes, nascetur 
+                        ridiculus mus. Vestibulum cursus vulputate urna vitae sodales. 
+                        Integer viverra urna leo. Nullam euismod augue eget neque gravida 
+                        scelerisque. Nunc nibh lorem, suscipit eu aliquam eu, laoreet id mi.
+                    </p>
+                    <span>Leer más</span>
+                </div>
+                <div class="comments__comment__bottom">
+                    <div class="comments__comment__bottom__likes">
+                        <span class="icon icon-like-button"></span>
+                        <span>5.500</span>
+                    </div>
+                    <button class="comments__comment__bottom__button">Editar</button>
+                    <button class="comments__comment__bottom__button">Eliminar</button>
+                    <span class="comments__comment__bottom__responses-bottom">Respuestas (10)  &#9660;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__content modal__content--privacy">
+            <div class="modal__content__top modal__content__top--privacy">
+                <h2>Indicaciones antes de comenzar el formulario</h2>
+            </div>
+            <div class="modal__content__modal-middle modal__content__modal-middle--privacy" id="modal-middle-privacy">
+                <div class="modal__content__modal-middle__container">
+                    <p>
+                        El contrato de alquiler es el documento que regula la cesión y el uso de inmueble 
+                        y los derechos y obligaciones de arrendador (el propietario) y arrendatario (inquilino). 
+                        Para que tenga validez, debe realizarse siguiendo las pautas del nuevo decreto de medidas 
+                        urgentes en materia de alquiler, en vigor desde el 6 de marzo de 2019, que introduce algunos 
+                        cambios en la Ley de Arrendamientos Urbanos (LAU).
+                    </p>
+                    <h3>Duración de un contrato de alquiler</h3>
+                    <p>
+                        Lo más habitual es firmar contrato por un año, renovable hasta cinco. 
+                        Incluso si se han pactado periodos más cortos, el inquilino tiene derecho a prorrogarlo hasta 5 años. 
+                        Además, si el arrendador es una persona jurídica (una empresa o entidad), se amplía a 7 años. 
+                        Esta es una de las principales del nuevo decreto, ya que hasta su entrada en vigor la renovación quedaba limitada a 3 años.
+                    </p>
+                    <h3>Prórroga tácita</h3>
+                    <p>
+                        Además de la duración inicial del contrato, 
+                        exista la posibilidad de una prórroga tácita: si al final de los 5 o 7 años 
+                        previstos ninguna de las partes comunica que quiere extinguir el contrato, 
+                        este se amplía de nuevo de manera anual hasta tres años más. 
+                        El plazo para comunicar la extinción del contrato antes de que se active 
+                        la prórroga tácita es de cuatro meses para el propietario y de dos meses para el inquilino.
+                    </p>
+                    <h3>Garantía ante la venta de la vivienda</h3>
+                    <p>En caso de venta de la vivienda, se garantiza el derecho del inquilino a permanecer en ella durante el periodo del su contrato (cinco o siete años). Es otro de los cambios destacados, ya que hasta ahora la venta del inmueble a una tercera persona podía conllevar que se exigiera extinguir el contrato.</p>
+                    <h3>Irregularidades en la duración de un contrato de alquiler</h3>
+                    <p>Algunos arrendadores proponen realizar un contrato de once meses para hacerlo pasar por un alquiler temporal y evitarse así la obligación de extensión del plazo. La OCU destaca que si la vivienda se está usando como vivienda habitual, aunque el contrato diga otra cosa, aplica la LAU y se puede prorrogar.</p>
+                    <h3>Extinción del contrato de alquiler</h3>
+                    <p>Existe la posibilidad de que el arrendador pueda recuperar el piso después del primer año si demuestra necesidad de la vivienda para él mismo o para algún familiar directo (en primer grado de consanguinidad). Esta excepción se había usado a menudo como excusa para terminar contratos antes de ahora, pero ahora solo será válida si se ha incluido ese supuesto de manera expresa en el contrato inicial.</p>
+                    <p>Por lo que respecta al inquilino, la normativa vigente reconoce su derecho a desistir del contrato después de los seis primeros meses. La extinción del contrato antes de la fecha prevista debe comunicarse al menos con dos meses de antelación.</p>
+                    <h3>Un mes de fianza y dos de depósito</h3>
+                    <p>Con el nuevo decreto se prevé, para los alquileres de vivienda, la entrega de un mes de fianza y un máximo de dos mensualidades más como garantía adicional. Este depósito, según la OCU, es recomendable como garantía del pago de la renta, los gastos asociados y de la conservación de la vivienda en buen estado.</p>
+                    <h3>Actualización del precio del alquiler según el IPC</h3>
+                    <p>La actualización anual de la renta es uno de los puntos clave de todo contrato de alquiler. Existe libertad para que las partes fijen la manera de actualizar el alquiler, pero el incremento nunca podrá ser superior a la subida marcada por el IPC. Si no se ha especificado nada en el contrato a este respecto, no se podrá actualizar la renta durante la vigencia del mismo.</p>
+                    <h3>Un inventario detallado</h3>
+                    <p>La fianza se devuelve una vez se comprueba que no quedan deudas pendientes y el buen estado del inmueble, pero a menudo es fuente de problemas. Algunos inquilinos optan por no pagar el último mes de renta a cuenta de la fianza, a pesar de que es una práctica ilegal. En otros casos los arrendadores se encuentran con desperfectos que superan el importe de la fianza. Para evitar problemas, es aconsejable incluir junto al contrato un inventario detallado de la vivienda, incluso con fotos. A la devolución de las llaves debe revisarse la vivienda por ambas partes y firmar un documento que señale los desperfectos causados, si los hay.</p>
+                    <h3>Quién se hace cargo de los gastos</h3>
+                    <p>La LAU contempla un reparto de los gastos entre las partes, pero la OCU recomienda precisarlo en el contrato con el máximo detalle. En principio, el arrendador paga impuestos como el IBI, la comunidad de propietarios y los gastos de conservación de la vivienda y sus instalaciones. El inquilino se hace cargo de los suministros y de las pequeñas reparaciones derivadas del uso ordinario de la vivienda. En aquellas ciudades donde hay tasa de basuras, debe pactarse a quién corresponde, y lo habitual es que se haga cargo el inquilino.</p>
+                    <p>Los gastos de gestión inmobiliaria (si los hay) y de formalización del contrato irán a cuenta del propietario si se trata de una persona jurídica. En el caso de ser una persona física, la comisión de la agencia generalmente la abona quien haya contratado sus servicios.</p>
+                    <h3>Cláusulas abusivas</h3>
+                    <p>Aunque las partes pueden pactar cláusulas específicas, estas no pueden eliminar los derechos obligatorios recogidos por la normativa vigente. Por ejemplo, no se puede impedir la prórroga hasta los cinco años ni exigir un pago por desestimiento superior al que contempla la ley.</p>
+                </div>
+            </div>
+            <div class="modal__content__modal-bottom modal__content__modal-bottom--privacy">
+                <button class="button-filled" id="modal-button">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- editor: start -->
+<script src="./wodotexteditor/wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+<script src="./wodotexteditor/localfileeditor.js" type="text/javascript" charset="utf-8"></script>
+<!-- editor: end -->
+<script src="js/ui.js"></script>
+<script>
+    const ui = new UI();
+
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', ready)
+    } else {
+        ready()
+    }
+
+    function ready() {
+        const menu = document.querySelector('.sub-menu__nav');
+        menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+
+        ui.setDivHeight();
+        window.addEventListener("resize", ui.setDivHeight);
+
+    }
+
+    // Modal 
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".trigger");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+
+    function sustituir(wordToReplace) {
+        const allElements = document.getElementsByTagName("document")[0].body.getElementsByTagName("*");
+
+        findword(allElements);
+
+        function findword(elements) {
+            for (let i = 0; i < elements.length; i++) {
+                if(!isExcluded(elements[i])) {
+                    if (elements[i].childNodes.length === 0) {
+                        if (elements[i].textContent.includes(wordToReplace)) {
+                            // elements[i].textContent = 'POLLAAAAA';
+                            elements[i].parentElement.innerHTML = '<strong>POLLAAAAA</strong>'; 
+                            console.dir(elements[i].parentElement);
+                        }
+                    } else {
+                        findword(elements[i].childNodes);
+                    }
+                }
+            }
+        }
+
+        function isExcluded(element) {
+            const excludedElements = [
+                'office:text',
+                'text:sequence-decls',
+                'text:sequence-decl',
+                'draw:frame',
+                'draw:image',
+                'office:annotation',
+                'office:annotation-end',
+                'dc:creator',
+                'dc:date',
+                'DIV'
+            ];
+
+            return excludedElements.includes(element.nodeName);
+        }
+    }
+
+    setTimeout(
+        function(){ 
+            // documentToFitScreen();
+        }, 1000);
+</script>
+</body>
+</html>

@@ -88,6 +88,7 @@ define("webodf/editor/EditorSession", [
                 EditorSession.signalParagraphStyleModified,
                 EditorSession.signalUndoStackChanged]),
             shadowCursor = new gui.ShadowCursor(odtDocument),
+            selectionController = new gui.SelectionController(session, localMemberId),
             sessionConstraints,
             /**@const*/
             NEXT = core.StepDirection.NEXT;
@@ -310,6 +311,74 @@ define("webodf/editor/EditorSession", [
             return currentCommonStyleName;
         };
 
+        this.getSelectionController = function () {
+            return selectionController;
+        }
+
+        this.setCursorPositionForDragAndDrop = function (event) {
+            var selection = mutableSelection(window.getSelection()),
+            isCollapsed = window.getSelection().isCollapsed,
+            position,
+            selectionRange,
+            rect,
+            frameNode;
+
+            position = caretPositionFromPoint(event.clientX, event.clientY);
+
+            if (position) {
+                selection.anchorNode = /**@type{!Node}*/(position.container);
+                selection.anchorOffset = position.offset;
+                selection.focusNode = selection.anchorNode;
+                selection.focusOffset = selection.anchorOffset;
+            }
+
+            selectionRange = this.getSelectionController().selectionToRange(selection);
+            selectionController.selectRange(selectionRange.range,
+                selectionRange.hasForwardSelection, computeClickCount(event));
+
+            self.sessionController.getEventManager().focus();
+
+            function mutableSelection(selection) {
+                if (selection) {
+                    return {
+                        anchorNode: selection.anchorNode,
+                        anchorOffset: selection.anchorOffset,
+                        focusNode: selection.focusNode,
+                        focusOffset: selection.focusOffset
+                    };
+                }
+                return null;
+            }
+
+            function caretPositionFromPoint(x, y) {
+                var doc = odtDocument.getDOMDocument(),
+                    c,
+                    result = null;
+    
+                if (doc.caretRangeFromPoint) {
+                    c = doc.caretRangeFromPoint(x, y);
+                    result = {
+                        container: /**@type{!Node}*/(c.startContainer),
+                        offset: c.startOffset
+                    };
+                } else if (doc.caretPositionFromPoint) {
+                    c = doc.caretPositionFromPoint(x, y);
+                    if (c && c.offsetNode) {
+                        result = {
+                            container: c.offsetNode,
+                            offset: c.offset
+                        };
+                    }
+                }
+                return result;
+            }
+
+            function computeClickCount(event) {
+                // According to the spec, button === 0 indicates the primary button (the left button by default, or the
+                // right button if the user has switched their mouse buttons around).
+                return event.button === 0 ? event.detail : 0;
+            }
+        }
         /**
          * Applies the paragraph style with the given
          * style name to all the paragraphs within
