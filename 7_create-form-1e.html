@@ -493,9 +493,8 @@ window.addEventListener("click", windowOnClick);
                         cursorNode.parentNode.childNodes[index + 1].textContent = 
                         event.dataTransfer.getData("text") + cursorNode.parentNode.childNodes[index + 1].textContent;
                     } else {
-                        console.dir(cursorNode.parentNode);
                         const textContent = document.createTextNode(event.dataTransfer.getData("text"));
-                        cursorNode.parentNode.appendChild(textContent);
+                        cursorNode.parentNode.insertBefore(textContent, cursorNode);
                     }
                 }
             })
