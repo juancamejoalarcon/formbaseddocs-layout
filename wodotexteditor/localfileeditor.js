@@ -159,6 +159,7 @@ function createEditor(formType) {
 
         editor.getDocumentAsByteArray(saveByteArrayLocally);
     }
+    
     // Fill form
     editorOptions = {
         loadCallback: formType === 'fillForm' ? false : load,
@@ -230,9 +231,38 @@ function closeDocument() {
     Wodo.getEditor().closeDocument(()=>{});
 }
 
+function saveForPreview() {
+    function saveByteArrayLocally(err, data) {
+        if (err) {
+            alert(err);
+            return;
+        }
+        // TODO: odfcontainer should have a property mimetype
+        var mimetype = "application/vnd.oasis.opendocument.text",
+            // filename = loadedFilename || "doc.odt",
+            blob = new Blob([data.buffer], {type: mimetype});
+            window.DOCUMENTOPREVIEWURL = URL.createObjectURL(blob);;
+        // TODO: hm, saveAs could fail or be cancelled
+        Wodo.getEditor().setDocumentModified(false);
+    }
+
+    Wodo.getEditor().getDocumentAsByteArray(saveByteArrayLocally);
+}
+
+function loadPreview() {
+    Wodo.getEditor().openDocumentFromUrl(window.DOCUMENTOPREVIEWURL, startEditing);
+}
+
+function startEditing() {
+
+}
+
+
 module.exports = {
     createEditor: createEditor,
     documentToFitScreen: documentToFitScreen,
     setCursorPositionForDragAndDrop: setCursorPositionForDragAndDrop,
-    closeDocument: closeDocument
+    closeDocument: closeDocument,
+    saveForPreview: saveForPreview,
+    loadPreview: loadPreview
 };
