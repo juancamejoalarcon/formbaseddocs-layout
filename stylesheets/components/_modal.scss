@@ -205,9 +205,11 @@
             }
 
             &--add-new-question {
-                overflow-y: scroll;
                 height: 100%;
                 border-bottom: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
 
             &--input-radio-b {
@@ -223,7 +225,8 @@
             }
 
             &__container {
-                overflow: hidden;
+                overflow-y: scroll;
+                height: 100%;
             }
 
             &__button-panel {
