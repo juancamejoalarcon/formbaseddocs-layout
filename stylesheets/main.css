@@ -2704,9 +2704,18 @@ input[type=checkbox] {
 }
 
 .modal__content__modal-middle--add-new-question {
-  overflow-y: scroll;
   height: 100%;
   border-bottom: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal__content__modal-middle--input-radio-b {
@@ -2729,7 +2738,8 @@ input[type=checkbox] {
 }
 
 .modal__content__modal-middle__container {
-  overflow: hidden;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .modal__content__modal-middle__button-panel__container {
@@ -5259,6 +5269,7 @@ input[type=checkbox] {
   background-color: #EDFAF9;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  overflow-y: scroll;
 }
 
 @media only screen and (max-width: 785px) {

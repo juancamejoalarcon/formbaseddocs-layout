@@ -1119,6 +1119,7 @@
     background-color: #EDFAF9;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    overflow-y: scroll;
 
     @include breakpoint-785 {
         justify-content: center;
