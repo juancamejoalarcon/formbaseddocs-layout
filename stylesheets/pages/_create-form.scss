@@ -1163,11 +1163,11 @@
             transition: all .1s ease;
 
             &::placeholder {
-                color: var(--primaryB-color);
+                color: color(primaryB-color);
             }
 
             &:focus {
-                border-bottom: 3px solid var(--primaryB-color);
+                border-bottom: 3px solid color(primaryB-color);
             }
         }
     }

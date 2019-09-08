@@ -2285,7 +2285,7 @@ input:focus + .slider {
 
 .info-lightbox {
   position: fixed;
-  z-index: 2;
+  z-index: 15;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -5314,23 +5314,23 @@ input[type=checkbox] {
 }
 
 .information__section-left textarea::-webkit-input-placeholder {
-  color: var(--primaryB-color);
+  color: #4ECDC4;
 }
 
 .information__section-left textarea:-ms-input-placeholder {
-  color: var(--primaryB-color);
+  color: #4ECDC4;
 }
 
 .information__section-left textarea::-ms-input-placeholder {
-  color: var(--primaryB-color);
+  color: #4ECDC4;
 }
 
 .information__section-left textarea::placeholder {
-  color: var(--primaryB-color);
+  color: #4ECDC4;
 }
 
 .information__section-left textarea:focus {
-  border-bottom: 3px solid var(--primaryB-color);
+  border-bottom: 3px solid #4ECDC4;
 }
 
 .information__section-right {
