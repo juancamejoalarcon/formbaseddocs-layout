@@ -1014,6 +1014,19 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
 }
 
+.w-100 {
+  width: 100%;
+}
+
+.d-flex-and-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .nav__container {
   display: -ms-grid;
   display: grid;
@@ -5368,16 +5381,13 @@ input[type=checkbox] {
 }
 
 .information__section-left__indications .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: 375px;
   background-color: white;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
   border-bottom: 3px solid #556270;
   border-left: 3px solid #556270;
   border-right: 3px solid #556270;
-}
-
-.information__section-left__indications #editor {
-  height: 375px;
 }
 
 .information__section-right {

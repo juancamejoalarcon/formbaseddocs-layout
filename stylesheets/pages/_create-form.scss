@@ -1187,15 +1187,12 @@
             }
             
             .ql-toolbar.ql-snow + .ql-container.ql-snow {
+                height: 375px;
                 background-color: white;
                 box-shadow: none !important;
                 border-bottom: 3px solid color(primary-color);
                 border-left: 3px solid color(primary-color);
                 border-right: 3px solid color(primary-color);
-            }
-            
-            #editor {
-                height: 375px;
             }
         }
     }
