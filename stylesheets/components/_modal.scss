@@ -305,6 +305,23 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
 
+    .ql-toolbar.ql-snow {
+        background-color: white;
+        box-shadow: none !important;
+        border-top: 3px solid color(primary-color);
+        border-left: 3px solid color(primary-color);
+        border-right: 3px solid color(primary-color);
+
+    }
+    
+    .ql-toolbar.ql-snow + .ql-container.ql-snow {
+        background-color: white;
+        box-shadow: none !important;
+        border-bottom: 3px solid color(primary-color);
+        border-left: 3px solid color(primary-color);
+        border-right: 3px solid color(primary-color);
+    }
+
     &__body {
         padding: 0;
         flex: 1;

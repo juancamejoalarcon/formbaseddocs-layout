@@ -1014,6 +1014,19 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
 }
 
+.w-100 {
+  width: 100%;
+}
+
+.d-flex-and-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .nav__container {
   display: -ms-grid;
   display: grid;
@@ -2241,11 +2254,6 @@ input:focus + .slider {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  pointer-events: auto;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
 }
 
 .indicator-content span {
@@ -2258,6 +2266,7 @@ input:focus + .slider {
   border: none;
   color: #fff;
   padding: 0.3rem;
+  pointer-events: visiblePainted;
 }
 
 .indicator-content button:hover {
@@ -2840,6 +2849,24 @@ input[type=checkbox] {
   background-color: white;
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.new-modal-content .ql-toolbar.ql-snow {
+  background-color: white;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-top: 3px solid #556270;
+  border-left: 3px solid #556270;
+  border-right: 3px solid #556270;
+}
+
+.new-modal-content .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  background-color: white;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-bottom: 3px solid #556270;
+  border-left: 3px solid #556270;
+  border-right: 3px solid #556270;
 }
 
 .new-modal-content__body {
@@ -5282,8 +5309,13 @@ input[type=checkbox] {
 
 .information__container {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -5311,6 +5343,10 @@ input[type=checkbox] {
   .information__container {
     width: 90%;
   }
+}
+
+.information__section-left {
+  width: 90%;
 }
 
 .information__section-left textarea {
@@ -5344,7 +5380,32 @@ input[type=checkbox] {
   border-bottom: 3px solid #4ECDC4;
 }
 
+.information__section-left__indications {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.information__section-left__indications .ql-toolbar.ql-snow {
+  background-color: white;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-top: 3px solid #556270;
+  border-left: 3px solid #556270;
+  border-right: 3px solid #556270;
+}
+
+.information__section-left__indications .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: 375px;
+  background-color: white;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-bottom: 3px solid #556270;
+  border-left: 3px solid #556270;
+  border-right: 3px solid #556270;
+}
+
 .information__section-right {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5393,21 +5454,35 @@ input[type=checkbox] {
 
 .information__section-right__buttons__switch-button__label {
   font-size: 1rem;
-  color: var(--primary-color);
+  color: #556270;
   padding-left: 1rem;
 }
 
-.information__section-right__information-tags__container {
-  padding: 0.3rem;
+.information__section-right__tags__container {
+  padding: 0.4rem;
 }
 
-.information__section-right__information-tags__container span {
-  background-color: var(--primaryB-color);
+.information__section-right__tags__container span {
+  background-color: #4ECDC4;
   color: white;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 0.8rem;
   border-radius: 25px;
   padding: 0.25rem;
+  margin: 0.1rem;
+  display: inline-block;
+}
+
+.information__section-right__tags__container .icon {
+  cursor: pointer;
+}
+
+.information__section-right__tags__container .icon:hover {
+  color: #556270;
+}
+
+.information__section-right__tags__container .tag-text {
+  padding-left: 0.6rem;
 }
 
 .information__section-right__notifications__title {

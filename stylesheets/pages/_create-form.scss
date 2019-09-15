@@ -1127,7 +1127,8 @@
 
     &__container {
         width: 100%;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: white;
@@ -1150,6 +1151,7 @@
     }
 
     &__section-left {
+        width: 90%;
         textarea {
             margin-top: 1rem;
             border: none;
@@ -1171,9 +1173,32 @@
                 border-bottom: 3px solid color(primaryB-color);
             }
         }
+
+        &__indications {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+            .ql-toolbar.ql-snow {
+                background-color: white;
+                box-shadow: none !important;
+                border-top: 3px solid color(primary-color);
+                border-left: 3px solid color(primary-color);
+                border-right: 3px solid color(primary-color);
+
+            }
+            
+            .ql-toolbar.ql-snow + .ql-container.ql-snow {
+                height: 375px;
+                background-color: white;
+                box-shadow: none !important;
+                border-bottom: 3px solid color(primary-color);
+                border-left: 3px solid color(primary-color);
+                border-right: 3px solid color(primary-color);
+            }
+        }
     }
 
     &__section-right {
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1209,23 +1234,36 @@
 
                 &__label {
                     font-size: 1rem;
-                    color: var(--primary-color);
+                    color: color(primary-color);
                     padding-left: 1rem;
                 }
             }
         }
 
-        &__information-tags {
+        &__tags {
             &__container {
-                padding: 0.3rem;
+                padding: 0.4rem;
 
                 span {
-                    background-color: var(--primaryB-color);
+                    background-color: color(primaryB-color);
                     color: white;
-                    font-weight: lighter;
+                    font-weight: bold;
                     font-size: 0.8rem;
                     border-radius: 25px;
                     padding: 0.25rem;
+                    margin: 0.1rem;
+                    display: inline-block;
+                }
+                
+                .icon {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: color(primary-color);
+                    }
+                }
+                .tag-text {
+                    padding-left: 0.6rem;
                 }
             }
 

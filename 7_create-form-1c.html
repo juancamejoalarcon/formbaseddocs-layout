@@ -90,19 +90,43 @@
             <div class="information__section-left">
                 <input type="text" placeholder="Título">
                 <textarea name="description" id="description" cols="30" rows="6" placeholder="description"></textarea>
-                                                        <!-- Create the editor container -->
-                                                        <div id="editor">
-                                                            <p>Hello World!</p>
-                                                            <p>Some initial <strong>bold</strong> text</p>
-                                                            <p><br></p>
-                                                        </div>
+                <div class="information__section-left__indications">
+                    <!-- Create the editor container -->
+                    <div id="editor">
+                    </div>
+                </div>
             </div>
             <div class="information__section-right">
                 <div class="information__section-right__tags">
                     <input type="text" placeholder="tags">
                     <div class="information__section-right__tags__container">
-                        <span>tag</span>
-                        <span>tag de prueba</span>
+                        <span class="tag-text">
+                            tag <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
+                        <span class="tag-text">
+                            tag de prueba <span class="icon icon-times-solid"></span>
+                        </span>
                     </div>
                 </div>
                 <div class="information__section-right__buttons">
@@ -111,7 +135,7 @@
                             <input type="checkbox">
                             <span class="slider slider--round"></span>
                         </label>
-                        <span class="information__section-right__buttons__label">
+                        <span class="information__section-right__buttons__switch-button__label">
                             Hacer el formulario privado
                         </span>
                     </div>
@@ -536,7 +560,8 @@ function toggleLightbox() {
 <!-- Initialize Quill editor -->
 <script>
   var quill = new Quill('#editor', {
-    theme: 'snow'
+    theme: 'snow',
+    placeholder: 'Indicaciones antes de rellenar el formulario...'
   });
 </script>
 </body>
