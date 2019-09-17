@@ -66,7 +66,7 @@
                                     <div class="form-creator__fields-area__field__field-area form-creator__fields-area__field__field-area--input-text">
                                         <div class="form-creator__fields-area__field__top form-creator__fields-area__field__top--fill-form">
                                             <div class="indication">
-                                                <span class="icon icon-info-circle-solid trigger"></span>
+                                                <span class="icon icon-info-circle-solid trigger" onclick="showIndication('PALABRATEST')"></span>
                                             </div>
                                         </div>
                                         <div class="form-creator__fields-area__field__middle">
@@ -107,7 +107,18 @@
             <div class="form-creator__text-area form-creator__text-area--quill-text" id="text-area">
                 <!-- Create the editor container -->
                 <div class="form-creator__text-area__quill-text-result">
-                    <p>Hello World!</p>
+                    <p class="ql-align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet erat cursus quam rhoncus, quis gravida ipsum dapibus. Nam ut tincidunt justo. Praesent blandit augue non elit convallis vehicula. Sed ut accumsan velit. In vulputate dolor sit amet lectus mattis, vitae lobortis mi tincidunt. Aliquam nunc dui, ornare vel nibh fermentum, interdum rutrum ex. Sed id ante quis est auctor interdum non vitae nulla. Etiam venenatis quis eros in ornare. Duis a dignissim purus, id suscipit nibh. Phasellus in massa eget dui commodo convallis vitae vel dolor. Ut convallis et elit vitae condimentum. Aenean ut volutpat nisl, et venenatis orci. Morbi dolor quam, congue et libero nec, dignissim suscipit velit.</p>
+                    <p class="ql-align-justify"><br></p>
+                    <p class="ql-align-justify">Mauris id velit et nisi fermentum aliquet. PALABRATEST Praesent et sollicitudin neque, nec auctor sapien. Vestibulum finibus volutpat turpis a dictum. Quisque et sem id lorem maximus malesuada. Morbi sit amet vehicula turpis. Mauris ut luctus risus, vel fermentum nisl. Aliquam volutpat hendrerit augue, non rhoncus purus v<strong>enenatis at. Curabitur in sapien sed libero dignissim bibendum nec ac arcu. Suspendisse placerat et nunc sagittis commodo. Pellentesque euismod luctus est, a malesuada elit cursus quis.</strong></p>
+                    <p class="ql-align-justify"><br></p>
+                        <ol>
+                            <li class="ql-align-justify"><strong>asdfasdf</strong></li>
+                            <li class="ql-align-justify"><strong>asdfasdf</strong></li>
+                            <li class="ql-align-justify"><strong>asdf</strong></li>
+                            <li class="ql-align-justify"><strong>sadf</strong></li>
+                            <li class="ql-align-justify"><strong>asdfasdf</strong></li>
+                        </ol>
+                    <p><br></p>
                 </div>
             </div>
         </div>
@@ -326,13 +337,6 @@
 
     setModal();
 
-
-setTimeout( () => {
-
-    documentBodyClone = document.getElementsByTagName("office:text")[0].cloneNode(true);
-
-}, 1000);
-
 function changeText(value) {
     sustituir('PALABRATEST', value);
 }
@@ -346,6 +350,19 @@ function changeScrollPosition(position) {
     } else {
         window.scrollTo(0, document.body.scrollHeight);
         document.getElementById('scrollToTop').style.display = 'block';
+    }
+}
+
+function showIndication(word) {
+    var aTags = document.querySelector('.form-creator__text-area__quill-text-result').getElementsByTagName('*');
+    var searchText = word;
+    var found;
+    for (var i = 0; i < aTags.length; i++) {
+        if (aTags[i].textContent.includes(word)) {
+            found = aTags[i];
+            console.log(found);
+            break;
+        }
     }
 }
 
