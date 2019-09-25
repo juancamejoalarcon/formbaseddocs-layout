@@ -161,8 +161,8 @@
             }
 
             &--privacy {
-                overflow: scroll;
-                height: 75%;
+                overflow-y: scroll;
+                height: 100%;
                 padding: 2rem;
                 font-weight: lighter;
                 text-align: justify;
@@ -225,7 +225,6 @@
             }
 
             &__container {
-                overflow-y: scroll;
                 height: 100%;
             }
 
@@ -283,7 +282,7 @@
             margin-top: 1rem;
 
             &--privacy {
-                margin-top: 1vh;
+                margin-top: 2vh;
                 margin-bottom: 2vh;
             }
         }
