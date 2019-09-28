@@ -357,6 +357,8 @@ function sustituir(wordToReplace, replacement) {
         var regexp = new RegExp(wordToReplace, "g");
         var innerHTMLreplaced = innerHTML.replace(regexp, `<span class="highlight">${replacement}</span>`);
         valueToChange.element.parentElement.innerHTML = innerHTMLreplaced;
+        console.log(valueToChange.element.parentElement);
+        // valueToChange.element.parentElement.scrollIntoView({ behavior: 'smooth' });
     })
 
     function isExcluded(element) {

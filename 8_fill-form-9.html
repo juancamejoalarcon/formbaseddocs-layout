@@ -356,14 +356,37 @@ function changeScrollPosition(position) {
 function showIndication(word) {
     var aTags = document.querySelector('.form-creator__text-area__quill-text-result').getElementsByTagName('*');
     var searchText = word;
-    var found;
+    var element;
     for (var i = 0; i < aTags.length; i++) {
         if (aTags[i].textContent.includes(word)) {
-            found = aTags[i];
-            console.log(found);
+            element = aTags[i];
+            console.log(element);
             break;
         }
     }
+    var para = document.createElement("div");
+    para.innerHTML = `<div class="indicator-content" style="margin:initial;">
+                        <button id="close-indication">&#10006;</button>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        Proin cursus justo quis turpis ullamcorper, dignissim bibendum felis 
+                        </span>
+                    </div>`;
+                    console.dir(document.querySelector('.form-creator__text-area__quill-text-result'));
+    para.style.top = (element.getBoundingClientRect().top + 50) + 'px';
+    para.style.left = element.getBoundingClientRect().left + 'px';
+    para.style.width = document.querySelector('.form-creator__text-area__quill-text-result').scrollWidth + 'px';
+    para.classList.add('indicator');
+    para.style.position = 'initial';
+    para.classList.add('smooth-intro');
+    element.appendChild(para);
+    element.querySelector('#close-indication').addEventListener('click', () => {
+        para.parentNode.removeChild(para);
+    });
 }
 
 

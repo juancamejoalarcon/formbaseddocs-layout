@@ -1087,6 +1087,7 @@
         &--quill-text {
             padding: 1rem;
             background-color: #ddd;
+            overflow-y: scroll;
         }
 
         &__quill-text-result {
@@ -1094,6 +1095,7 @@
             padding: 3rem;
             height: 100%;
             box-shadow: 0px 0px 30px #aaa;
+            overflow-y: scroll;
         }
 
         &__field {
