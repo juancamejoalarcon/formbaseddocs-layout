@@ -466,6 +466,8 @@
         background-color: rgb(239, 239, 239);
         justify-content: space-between;
         align-items: center;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
 
         @include breakpoint-490 {
             padding: 0 40px;
