@@ -2386,7 +2386,7 @@ input:focus + .slider {
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=date] {
+input[type=text], input[type=number], input[type=password], input[type=email], input[type=date] {
   margin: 0rem 0rem 0rem 0rem;
   border: none;
   padding: 0.5rem 0.25rem 0.5rem 0.25rem;
@@ -2399,31 +2399,31 @@ input[type=text], input[type=password], input[type=email], input[type=date] {
   color: #556270;
 }
 
-input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=number]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder, input[type=number]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder, input[type=date]::placeholder {
+input[type=text]::placeholder, input[type=number]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder, input[type=date]::placeholder {
   -webkit-transition: 100ms linear;
   transition: 100ms linear;
   color: #4ECDC4;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=date]:focus {
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, input[type=email]:focus, input[type=date]:focus {
   border-bottom: 3px solid #4ECDC4;
   -webkit-transition: 200ms linear;
   transition: 200ms linear;
@@ -2675,8 +2675,8 @@ input[type=checkbox] {
 }
 
 .modal__content__modal-middle--privacy {
-  overflow: scroll;
-  height: 75%;
+  overflow-y: scroll;
+  height: 100%;
   padding: 2rem;
   font-weight: lighter;
   text-align: justify;
@@ -2747,7 +2747,6 @@ input[type=checkbox] {
 }
 
 .modal__content__modal-middle__container {
-  overflow-y: scroll;
   height: 100%;
 }
 
@@ -2821,7 +2820,7 @@ input[type=checkbox] {
 }
 
 .modal__content__modal-bottom--privacy {
-  margin-top: 1vh;
+  margin-top: 2vh;
   margin-bottom: 2vh;
 }
 
@@ -4069,6 +4068,13 @@ input[type=checkbox] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+  .checkout-panel__body {
+    padding: 25px 40px 0;
+  }
 }
 
 .checkout-panel__body__progress-bar {
@@ -4076,11 +4082,40 @@ input[type=checkbox] {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  margin-bottom: 50px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 710px;
+}
+
+@media only screen and (max-width: 985px) {
+  .checkout-panel__body__progress-bar {
+    width: 510px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout-panel__body__progress-bar {
+    width: 410px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .checkout-panel__body__progress-bar {
+    width: 310px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .checkout-panel__body__progress-bar {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .checkout-panel__body__progress-bar {
+    width: 200px;
+  }
 }
 
 .checkout-panel__body__progress-bar__step {
@@ -4108,10 +4143,54 @@ input[type=checkbox] {
   background-color: #efefef;
 }
 
+@media only screen and (max-width: 985px) {
+  .checkout-panel__body__progress-bar__step:after {
+    width: 132px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout-panel__body__progress-bar__step:after {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .checkout-panel__body__progress-bar__step:after {
+    width: 90px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .checkout-panel__body__progress-bar__step:after {
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .checkout-panel__body__progress-bar__step:after {
+    width: 40px;
+  }
+}
+
 .checkout-panel__body__progress-bar__step:before {
-  color: #2e2e2e;
+  color: white;
   position: absolute;
-  top: 40px;
+  top: 30px;
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .checkout-panel__body__progress-bar__step:before {
+    top: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .checkout-panel__body__progress-bar__step:before {
+    font-size: 0.7rem;
+  }
 }
 
 .checkout-panel__body__progress-bar__step:last-child:after {
@@ -4123,13 +4202,19 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__progress-bar__step:nth-child(2):before {
-  right: -40px;
-  content: 'Login/Email';
+  right: -10px;
+  content: 'Email';
 }
 
 .checkout-panel__body__progress-bar__step:nth-child(3):before {
-  right: -30px;
+  right: -20px;
   content: 'Payment';
+}
+
+@media only screen and (max-width: 380px) {
+  .checkout-panel__body__progress-bar__step:nth-child(3):before {
+    right: -14px;
+  }
 }
 
 .checkout-panel__body__progress-bar__step:nth-child(4):before {
@@ -4138,23 +4223,23 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__progress-bar__step__active {
-  background-color: #1abc9c;
+  background-color: #556270;
 }
 
 .checkout-panel__body__progress-bar__step__active:after {
-  background-color: #1abc9c;
+  background-color: #556270;
 }
 
 .checkout-panel__body__progress-bar__step__active:before {
-  color: #1abc9c;
+  color: #556270;
 }
 
 + .checkout-panel__body__progress-bar__step__step {
-  background-color: #1abc9c;
+  background-color: #556270;
 }
 
 + .checkout-panel__body__progress-bar__step__step:before {
-  color: #1abc9c;
+  color: #556270;
 }
 
 .checkout-panel__body .payment-container {
@@ -4287,6 +4372,10 @@ input[type=checkbox] {
   width: 182px;
 }
 
+.checkout-panel__body__invoice {
+  height: 100%;
+}
+
 .checkout-panel__body__invoice__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4297,6 +4386,26 @@ input[type=checkbox] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+}
+
+@media only screen and (max-width: 985px) {
+  .checkout-panel__body__invoice__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.checkout-panel__body__invoice__text__title {
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .checkout-panel__body__invoice__text__title {
+    font-size: 1.2rem;
+  }
 }
 
 .checkout-panel__body__invoice__text__description {
@@ -4308,6 +4417,12 @@ input[type=checkbox] {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .checkout-panel__body__invoice__text__description {
+    font-size: 0.9rem;
+  }
 }
 
 .checkout-panel__body__invoice__text__total {
@@ -4327,6 +4442,12 @@ input[type=checkbox] {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 490px) {
+  .checkout-panel__body__invoice__text__total {
+    padding: 0.5rem;
+  }
+}
+
 .checkout-panel__body__invoice__text__total__right {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
@@ -4343,6 +4464,32 @@ input[type=checkbox] {
 
 .checkout-panel__body__invoice__text__more-info img {
   width: 50%;
+}
+
+@media only screen and (max-width: 985px) {
+  .checkout-panel__body__invoice__text__more-info img {
+    width: 30%;
+  }
+}
+
+.checkout-panel__body__invoice__document {
+  text-align: center;
+}
+
+.checkout-panel__body__invoice__document img {
+  width: 80%;
+}
+
+@media only screen and (max-width: 985px) {
+  .checkout-panel__body__invoice__document img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .checkout-panel__body__invoice__document img {
+    width: 50%;
+  }
 }
 
 .checkout-panel__body__email {
@@ -4506,6 +4653,13 @@ input[type=checkbox] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 490px) {
+  .checkout-panel__footer {
+    padding: 0 40px;
+    height: 76px;
+  }
 }
 
 .checkout-panel__footer--one-button {

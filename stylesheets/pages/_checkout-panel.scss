@@ -14,13 +14,38 @@
     &__body {
         padding: 45px 80px 0;
         flex: 1;
+        width: 100%;
+
+        @include breakpoint-640 {
+            padding: 25px 40px 0;
+        }
 
         &__progress-bar {
             display: flex;
             margin: auto;
-            margin-bottom: 50px;
+            // margin-bottom: 50px;
             justify-content: space-between;
             width: 710px;
+
+            @include breakpoint-985 {
+                width: 510px;
+            }
+
+            @include breakpoint-768 {
+                width: 410px;
+            }
+
+            @include breakpoint-640 {
+                width: 310px;
+            }
+
+            @include breakpoint-540 {
+                width: 250px;
+            }
+
+            @include breakpoint-380 {
+                width: 200px;
+            }
 
             &__step {
                 box-sizing: border-box;
@@ -43,12 +68,42 @@
                     height: 6px;
                     content: '';
                     background-color: #efefef;
+
+                    @include breakpoint-985 {
+                        width: 132px;
+                    }
+
+                    @include breakpoint-768 {
+                        width: 100px;
+                    }
+
+                    @include breakpoint-640 {
+                        width: 90px;
+                    }
+
+                    @include breakpoint-540 {
+                        width: 60px;
+                    }
+
+                    @include breakpoint-380 {
+                        width: 40px;
+                    }
                 }
 
                 &:before {
-                    color: #2e2e2e;
+                    color: white;
                     position: absolute;
-                    top: 40px;
+                    top: 30px;
+                    font-size: 0.9rem;
+
+                    @include breakpoint-640 {
+                        top: 30px;
+                        font-size: 0.8rem;
+                    }
+
+                    @include breakpoint-380 {
+                        font-size: 0.7rem;
+                    }
                 }
 
                 &:last-child {
@@ -65,15 +120,19 @@
 
                 &:nth-child(2) {
                     &:before {
-                        right: -40px;
-                        content: 'Login/Email';
+                        right: -10px;
+                        content: 'Email';
                     }
                 }
 
                 &:nth-child(3) {
                     &:before {
-                        right: -30px;
+                        right: -20px;
                         content: 'Payment';
+
+                        @include breakpoint-380 {
+                            right: -14px;
+                        }
                     }
                 }
 
@@ -85,22 +144,22 @@
                 }
 
                 &__active {
-                    background-color: #1abc9c;
+                    background-color: color(primary-color);
 
                     &:after {
-                        background-color: #1abc9c;
+                        background-color: color(primary-color);
                     }
 
                     &:before {
-                        color: #1abc9c;
+                        color: color(primary-color);
                     }
                 }
 
                 + &__step {
-                    background-color: #1abc9c;
+                    background-color: color(primary-color);
 
                     &:before {
-                        color: #1abc9c;
+                        color: color(primary-color);
                     }
                 }
 
@@ -212,16 +271,31 @@
         }
 
         &__invoice {
+            height: 100%;
             &__container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                height: 100%;
+
+                @include breakpoint-985 {
+                    flex-direction: column;
+                }
             }
             &__text {
+                &__title {
+                    text-align: center;
+                    @include breakpoint-640 {
+                        font-size: 1.2rem;
+                    }
+                }
                 &__description {
                     display: flex;
                     flex-direction: column;
                     padding: 1rem;
+                    @include breakpoint-640 {
+                        font-size: 0.9rem;
+                    }
                 }
                 &__total {
                     display: flex;
@@ -232,6 +306,10 @@
                     color: white;
                     padding: 1rem;
                     border-radius: 10px;
+
+                    @include breakpoint-490 {
+                        padding: 0.5rem;
+                    }
 
                     &__right {
                         font-family: $font-montserrat;
@@ -246,6 +324,24 @@
                 &__more-info {
                     padding: 1rem;
                     img {
+                        width: 50%;
+                        @include breakpoint-985 {
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+
+            &__document {
+                text-align: center;
+                img {
+                    width: 80%;
+
+                    @include breakpoint-985 {
+                        width: 50%;
+                    }
+
+                    @include breakpoint-490 {
                         width: 50%;
                     }
                 }
@@ -367,6 +463,11 @@
         background-color: rgb(239, 239, 239);
         justify-content: space-between;
         align-items: center;
+
+        @include breakpoint-490 {
+            padding: 0 40px;
+            height: 76px;
+        }
 
         &--one-button {
             justify-content: center;
