@@ -251,7 +251,7 @@
         </div>
     </div>
 
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="modal__content modal__content--payment">
             <div class="checkout-panel">
                 <div class="checkout-panel__body">    
@@ -309,6 +309,69 @@
                     <button class="btn back-btn">Back</button>
                     <button class="btn next-btn">Next Step</button>
                 </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="modal">
+        <div class="modal__content modal__content--privacy">
+            <div class="modal__content__top modal__content__top--privacy">
+                    <div class="checkout-panel__body__progress-bar">
+                            <div class="checkout-panel__body__progress-bar__step checkout-panel__body__progress-bar__step__active"></div>
+                            <div class="checkout-panel__body__progress-bar__step checkout-panel__body__progress-bar__step__active"></div>
+                            <div class="checkout-panel__body__progress-bar__step"></div>
+                            <div class="checkout-panel__body__progress-bar__step"></div>
+                        </div>
+            </div>
+            <div class="modal__content__modal-middle modal__content__modal-middle--privacy" id="modal-middle-privacy">
+                <div class="modal__content__modal-middle__container">
+                    <div class="payment-container">
+                        <div class="checkout-panel__body__payment-method">
+                            <label for="card" class="checkout-panel__body__payment-method__method card">
+                                <div class="checkout-panel__body__payment-method__method__card-logos">
+                                    <img src="https://designmodo.com/demo/checkout-panel/img/visa_logo.png"/>
+                                    <img src="https://designmodo.com/demo/checkout-panel/img/mastercard_logo.png"/>
+                                </div>
+                                <div class="checkout-panel__body__payment-method__method__radio-input">
+                                    <input id="card" type="radio" name="payment">
+                                    Pay AU$20.99 with credit card
+                                </div>
+                            </label>
+                            
+                            <label for="paypal" class="checkout-panel__body__payment-method__method paypal">
+                                <img src="https://designmodo.com/demo/checkout-panel/img/paypal_logo.png"/>
+                                <div class="checkout-panel__body__payment-method__method__radio-input">
+                                    <input id="paypal" type="radio" name="payment">
+                                    Pay AU$20.99 with PayPal
+                                </div>
+                            </label>
+                        </div>
+                        <div class="checkout-panel__body__input-fields">
+                            <div class="checkout-panel__body__input-fields__column-1">
+                                <label for="cardholder">Name</label>
+                                <input type="text" id="cardholder" />
+                                <div class="checkout-panel__body__input-fields__small-inputs">
+                                    <div>
+                                        <label for="date">Valid date</label>
+                                        <input type="text" id="date"/>
+                                    </div>
+                                    <div>
+                                        <label for="verification">CVV / CVC *</label>
+                                        <input type="password" id="verification"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-panel__body__input-fields__column-2">
+                                <label for="cardnumber">Card Number</label>
+                                <input type="password" id="cardnumber"/>
+                                <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content__modal-bottom modal__content__modal-bottom--privacy">
+                <button class="button-filled button-filled__disabled" id="modal-button">Entendido</button>
             </div>
         </div>
     </div>

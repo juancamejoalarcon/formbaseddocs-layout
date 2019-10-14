@@ -220,6 +220,7 @@
         &__input-fields {
             display: flex;
             justify-content: space-evenly;
+            padding-bottom: 2rem;
 
             div[class*='column'] {
                 width: 382px;
@@ -272,6 +273,7 @@
 
         &__invoice {
             height: 100%;
+            padding-top: 2rem;
             &__container {
                 display: flex;
                 justify-content: center;
@@ -350,7 +352,8 @@
 
         &__email {
             // min-height: 100vh;
-            padding-top: 15vh;
+            // padding-top: 15vh;
+            height: 100%;
             display: flex;
             align-items: center;
         

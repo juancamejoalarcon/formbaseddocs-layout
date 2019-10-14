@@ -4318,6 +4318,7 @@ input[type=checkbox] {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-bottom: 2rem;
 }
 
 .checkout-panel__body__input-fields div[class*='column'] {
@@ -4374,6 +4375,7 @@ input[type=checkbox] {
 
 .checkout-panel__body__invoice {
   height: 100%;
+  padding-top: 2rem;
 }
 
 .checkout-panel__body__invoice__container {
@@ -4493,7 +4495,7 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__email {
-  padding-top: 15vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

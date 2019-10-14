@@ -251,7 +251,7 @@
         </div>
     </div>
 
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="modal__content modal__content--payment">
           <div class="checkout-panel">
             <div class="checkout-panel__body">    
@@ -285,6 +285,43 @@
               <button class="btn next-btn">Next Step</button>
             </div>
           </div>
+        </div>
+    </div> -->
+
+    <div class="modal">
+        <div class="modal__content modal__content--privacy">
+            <div class="modal__content__top modal__content__top--privacy">
+                    <div class="checkout-panel__body__progress-bar">
+                            <div class="checkout-panel__body__progress-bar__step checkout-panel__body__progress-bar__step__active"></div>
+                            <div class="checkout-panel__body__progress-bar__step checkout-panel__body__progress-bar__step__active"></div>
+                            <div class="checkout-panel__body__progress-bar__step"></div>
+                            <div class="checkout-panel__body__progress-bar__step"></div>
+                        </div>
+            </div>
+            <div class="modal__content__modal-middle modal__content__modal-middle--privacy" id="modal-middle-privacy">
+                <div class="modal__content__modal-middle__container">
+                    <div class="checkout-panel__body__email">
+                        <div class="checkout-panel__body__email__container">
+                            <h1 class="checkout-panel__body__email__container__title">Dirección de correo para recibir el documento</h1>
+                            <label for="email"></label>
+                            <input type="email" name="email" id="name" placeholder="E-MAIL">
+                            <label class="checkout-panel__body__email__container__message">
+                                ¿Tienes cuenta? <a href="">Logeate</a>
+                            </label>
+                            <div class="checkout-panel__body__email__container__conditions">
+                                <label for="conditions">
+                                    <input type="checkbox" class="filled-in" name="conditions" id="conditions" value="Remember me" />
+                                    <span>Acepto las condiciones generales de venta (leer las CGV)</span>
+                                </label>
+                            </div>
+                            <input type="submit" value="Hacer pedido">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content__modal-bottom modal__content__modal-bottom--privacy">
+                <button class="button-filled button-filled__disabled" id="modal-button">Entendido</button>
+            </div>
         </div>
     </div>
 
