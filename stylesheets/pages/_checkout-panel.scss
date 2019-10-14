@@ -57,7 +57,7 @@
                 margin-bottom: 30px;
                 border: 4px solid #fff;
                 border-radius: 50%;
-                background-color: #efefef;
+                background-color: white;
 
                 &:after {
                     position: absolute;
@@ -67,7 +67,7 @@
                     width: 225px;
                     height: 6px;
                     content: '';
-                    background-color: #efefef;
+                    background-color: white;
 
                     @include breakpoint-985 {
                         width: 132px;

@@ -4129,7 +4129,7 @@ input[type=checkbox] {
   margin-bottom: 30px;
   border: 4px solid #fff;
   border-radius: 50%;
-  background-color: #efefef;
+  background-color: white;
 }
 
 .checkout-panel__body__progress-bar__step:after {
@@ -4140,7 +4140,7 @@ input[type=checkbox] {
   width: 225px;
   height: 6px;
   content: '';
-  background-color: #efefef;
+  background-color: white;
 }
 
 @media only screen and (max-width: 985px) {
