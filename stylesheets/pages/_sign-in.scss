@@ -7,28 +7,20 @@
     top: 1rem;
     left: 1rem;
 
-    &--return {
+    a {
         display: flex;
-        a {
-            color: color(primaryB-color);
-            &:hover {
-                color: color(primary-color);
-            }
-        }
-
-        span {
-            padding-left: 1rem;
+        color: color(primaryB-color);
+        &:hover {
+            color: color(primary-color);
         }
     }
 
     .icon {
-        color: color(primaryB-color);
         transition: all ease .5s;
         font-size: 1.6rem;
-
-        &:hover {
-            color: color(primary-color);
-        }
+    }
+    span {
+        padding-left: 1rem;
     }
 }
 
