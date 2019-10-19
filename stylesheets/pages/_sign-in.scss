@@ -16,6 +16,20 @@
             color: color(primary-color);
         }
     }
+
+    &__return-to-form {
+        display: flex;
+        justify-content: space-between;
+        transition: all ease .5s;
+        width: 135px;
+        color: color(primaryB-color);
+        &:hover {
+            color: color(primary-color);
+            .icon {
+                color: color(primary-color);
+            }
+        }
+    }
 }
 
 .sign-in {

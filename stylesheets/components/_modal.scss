@@ -226,6 +226,11 @@
 
             &__container {
                 height: 100%;
+
+                &--checkout {
+                    height: 100%;
+                    display: flex;
+                }
             }
 
             &__button-panel {

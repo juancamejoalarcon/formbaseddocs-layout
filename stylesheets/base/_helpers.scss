@@ -119,6 +119,10 @@
   color: black !important;
 }
 
+.secondaryC-background-color {
+  background-color: color(secondaryC-color) !important;
+}
+
 .show-spinner {
   display: block !important;
 }
@@ -135,4 +139,14 @@
 .d-flex-and-center {
   display: flex;
   justify-content: center;
+}
+
+.hosted-fields {
+  height: 40px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  color: rgba(46, 46, 46, 0.8);
+  font-size: 16px;
+  padding-right: 40px;
+  padding-left: 16px;
 }
