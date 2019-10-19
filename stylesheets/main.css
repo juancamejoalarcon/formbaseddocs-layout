@@ -6666,15 +6666,25 @@ input[type=checkbox] {
   left: 1rem;
 }
 
-.sign-in-search-button .icon {
+.sign-in-search-button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #4ECDC4;
+}
+
+.sign-in-search-button a:hover {
+  color: #556270;
+}
+
+.sign-in-search-button .icon {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   font-size: 1.6rem;
 }
 
-.sign-in-search-button .icon:hover {
-  color: #556270;
+.sign-in-search-button span {
+  padding-left: 1rem;
 }
 
 .sign-in-search-button__return-to-form {
