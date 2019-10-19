@@ -6677,16 +6677,6 @@ input[type=checkbox] {
   color: #556270;
 }
 
-.sign-in-search-button .icon {
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
-  font-size: 1.6rem;
-}
-
-.sign-in-search-button span {
-  padding-left: 1rem;
-}
-
 .sign-in-search-button__return-to-form {
   display: -webkit-box;
   display: -ms-flexbox;
