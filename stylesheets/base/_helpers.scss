@@ -152,6 +152,18 @@
 }
 
 .braintree-hosted-fields-focused {
+  border-color: #777;
+}
+
+.braintree-hosted-fields-invalid {
+  border-color: tomato;
+}
+
+.braintree-hosted-fields-valid {
+  border-color: limegreen;
+}
+
+.braintree-hosted-fields-focused {
   border-color: #77db77;
   border-bottom: 3px solid #77db77;
 }

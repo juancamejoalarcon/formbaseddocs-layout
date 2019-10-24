@@ -1042,6 +1042,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .braintree-hosted-fields-focused {
+  border-color: #777;
+}
+
+.braintree-hosted-fields-invalid {
+  border-color: tomato;
+}
+
+.braintree-hosted-fields-valid {
+  border-color: limegreen;
+}
+
+.braintree-hosted-fields-focused {
   border-color: #77db77;
   border-bottom: 3px solid #77db77;
 }
