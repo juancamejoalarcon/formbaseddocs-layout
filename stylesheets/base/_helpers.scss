@@ -119,6 +119,10 @@
   color: black !important;
 }
 
+.secondary-color {
+  color: color(secondaryB-color) !important;
+}
+
 .secondaryC-background-color {
   background-color: color(secondaryC-color) !important;
 }
@@ -152,18 +156,19 @@
 }
 
 .braintree-hosted-fields-focused {
-  border-color: #777;
-}
-
-.braintree-hosted-fields-invalid {
-  border-color: tomato;
-}
-
-.braintree-hosted-fields-valid {
-  border-color: limegreen;
-}
-
-.braintree-hosted-fields-focused {
   border-color: #77db77;
   border-bottom: 3px solid #77db77;
 }
+
+.hosted-fields-invalid {
+  border: 1px solid color(secondaryB-color);
+}
+
+// .braintree-hosted-fields-valid {
+//   border-color: limegreen;
+// }
+
+// .braintree-hosted-fields-focused {
+//   border-color: #77db77;
+//   border-bottom: 3px solid #77db77;
+// }
