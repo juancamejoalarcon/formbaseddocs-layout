@@ -381,9 +381,10 @@
     &__top-right-link {
         width: 98%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center; 
         padding: 0.5rem;
+        margin: auto;
 
         @include breakpoint-885 {
             font-size: 0.9rem;
@@ -409,8 +410,12 @@
         }
 
         span {
-            padding-left: 0.3rem;
-            padding-top: 0.2rem;
+            display: flex;
+            align-items: center;
+            .icon {
+                padding-left: 0.3rem;
+                padding-top: 0.2rem;
+            }
         }
     }
 

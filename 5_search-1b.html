@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="/assets/images/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
+                <li class="nav__menu__button"><a href="9_my-forms.html">My forms</a></li>
+                <li class="nav__menu__button"><a href="10_settings.html">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="search-transaction">
+        <div class="search-transaction__container">
+            <label for="transactionId"></label>
+            <input type="text" name="transactionId" id="transactionId" placeholder="Transaction Id">
+            <input type="submit" value="Find">
+            <label class="search-transaction__container__message">Type in the transaction id you got when you finished the form. Check you email.</label>
+        </div>
+    </div>
+<script src="js/ui.js"></script>
+<script>
+
+
+
+const resizeDiv = () => {
+console.log(window.innerHeight);
+const menuHeight = document.querySelector('.nav').offsetHeight;
+// const footerHeight = document.querySelector('.footer').clientHeight
+    document.querySelector('.search-transaction').style.height = 
+(window.innerHeight - menuHeight) + 'px';
+}
+
+resizeDiv();
+
+window.onresize = resizeDiv;
+
+
+</script>
+</body>
+</html>
