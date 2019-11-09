@@ -2551,6 +2551,23 @@ input[type=checkbox] {
           justify-content: space-between;
 }
 
+.modal__content--choose-document-type {
+  width: 100%;
+  height: 100%;
+  border-radius: 0rem;
+  padding: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .modal__content--add-new-question {
   top: 60%;
   left: 20%;
@@ -3052,6 +3069,10 @@ input[type=checkbox] {
   color: #999;
   text-decoration: none;
   cursor: pointer;
+}
+
+.claro .dijitToolbar {
+  background-color: white !important;
 }
 
 .pagination {
@@ -4090,6 +4111,10 @@ input[type=checkbox] {
   }
 }
 
+.checkout-panel__body--choose-document-type {
+  padding: 0px 0px 0;
+}
+
 .checkout-panel__body__progress-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4626,7 +4651,7 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__document-type-selection {
-  height: 90%;
+  height: 100%;
 }
 
 .checkout-panel__body__document-type-selection__container {
@@ -4657,11 +4682,8 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__document-type-selection__button-area__doc-button {
-  border: 3px solid #4ECDC4;
-  border-radius: 1rem;
-  margin-top: 5%;
-  height: 90%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4695,6 +4717,11 @@ input[type=checkbox] {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   font-size: 2.5rem;
+}
+
+.checkout-panel__body__document-type-selection__button-area__doc-button small {
+  width: 80%;
+  text-align: justify;
 }
 
 .checkout-panel__body__success {
@@ -4737,10 +4764,6 @@ input[type=checkbox] {
 
 .checkout-panel__body__success__download .icon-file-pdf-solid {
   padding-left: 0.3rem;
-}
-
-.checkout-panel__body--choose-document-type {
-  padding: 0px 80px 0;
 }
 
 .checkout-panel__footer {
