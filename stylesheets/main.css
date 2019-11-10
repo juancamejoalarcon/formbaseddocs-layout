@@ -3071,10 +3071,6 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
-.claro .dijitToolbar {
-  background-color: white !important;
-}
-
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5201,6 +5197,41 @@ input[type=checkbox] {
   padding: 0.4rem;
 }
 
+.form-creator__fields-area__bottom__preview-button {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  font-family: Montserrat;
+}
+
+@media only screen and (max-width: 885px) {
+  .form-creator__fields-area__bottom__preview-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.form-creator__fields-area__bottom__preview-button:hover {
+  color: #4ECDC4;
+  cursor: pointer;
+}
+
+.form-creator__fields-area__bottom__preview-button span {
+  font-size: 0.7rem;
+}
+
 .form-creator__fields-area__field {
   padding: 0.5rem 0rem 0.5rem 0rem;
   width: 95%;
@@ -5583,6 +5614,14 @@ input[type=checkbox] {
   -ms-grid-columns: 95% 5%;
       grid-template-columns: 95% 5%;
   grid-column-gap: 10px;
+}
+
+@media only screen and (max-width: 885px) {
+  .form-creator__text-area__field__container {
+    display: block;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
 }
 
 .information {

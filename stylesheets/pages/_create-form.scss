@@ -800,6 +800,29 @@
                     padding: 0.4rem;
                 }
             }
+
+            &__preview-button {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.9rem;
+                transition: all .4s ease;
+                font-family: Montserrat;
+
+                @include breakpoint-885 {
+                    display: flex;
+                }
+
+                &:hover {
+                    color: color(primaryB-color);
+                    cursor: pointer;
+                }
+
+                span {
+                    font-size: 0.7rem;
+                }
+            }
         }
 
         &__field {
@@ -1107,6 +1130,11 @@
                 display: grid;
                 grid-template-columns: 95% 5%;
                 grid-column-gap: 10px;
+
+                @include breakpoint-885 {
+                    display: block;
+                    grid-template-columns: none;
+                }
             }
             
             
