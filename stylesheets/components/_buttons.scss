@@ -156,6 +156,11 @@ input:focus + .slider {
         width: 110px;
         height: 35px;
         line-height: 0.8rem;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 25px;
+        display: none;
     }
 }
 
