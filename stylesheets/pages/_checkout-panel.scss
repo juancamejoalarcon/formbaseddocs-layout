@@ -176,6 +176,11 @@
             margin-bottom: 30px;
             justify-content: center;
 
+            @include breakpoint-450 {
+                display: block;
+                margin-bottom: 0px;
+            }
+
             &__method {
                 display: flex;
                 margin: 0.5rem;
@@ -190,6 +195,15 @@
                 justify-content: center;
                 align-items: center;
 
+                @include breakpoint-450 {
+                    width: auto;
+                    height: auto;
+                    padding-top: 0;
+                    img {
+                        display: none;
+                    }
+                }
+
                 &__card-logos {
                     display: flex;
                     width: 150px;
@@ -199,6 +213,10 @@
 
                 &__radio-input {
                     margin-top: 20px;
+
+                    @include breakpoint-450 {
+                        margin-top: 0;
+                    }
 
                     input[type='radio'] {
                         display: inline-block;
@@ -287,6 +305,10 @@
                     width: 182px;
                     @include breakpoint-985 {
                         padding-right: 0.5rem;
+                    }
+
+                    @include breakpoint-450 {
+                        width: auto;
                     }
                 }
             }
@@ -394,6 +416,10 @@
                 align-items: center;
                 text-align: center;
                 width: 90%;
+
+                @include breakpoint-450 {
+                    width: 100%;
+                }
         
                 &__title {
                     font-size: 2rem;
@@ -403,7 +429,7 @@
                         font-size: 1.5rem;
                     }
                     @include breakpoint-490 {
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                     }
                 }
         
@@ -425,7 +451,19 @@
                     }
         
                     @include breakpoint-490 {
-                        font-size: 1.3rem;
+                        font-size: 1rem;
+                        padding-bottom: 0.8rem;
+                    }
+                }
+
+                &__conditions {
+                    @include breakpoint-490 {
+                        text-align: left;
+                        padding-bottom: 1.5rem;
+                        span {
+                            font-size: 0.9rem;
+                            
+                        }
                     }
                 }
             }
@@ -556,6 +594,12 @@
             letter-spacing: 1px;
             border: none;
             border-radius: 23px;
+
+            @include breakpoint-450 {
+                font-size: 14px;
+                width: 118px;
+                height: 40px;
+            }
         }
            
         .back-btn {

@@ -4300,6 +4300,13 @@ input[type=checkbox] {
           justify-content: center;
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__payment-method {
+    display: block;
+    margin-bottom: 0px;
+  }
+}
+
 .checkout-panel__body__payment-method__method {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4324,6 +4331,17 @@ input[type=checkbox] {
           align-items: center;
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__payment-method__method {
+    width: auto;
+    height: auto;
+    padding-top: 0;
+  }
+  .checkout-panel__body__payment-method__method img {
+    display: none;
+  }
+}
+
 .checkout-panel__body__payment-method__method__card-logos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4339,6 +4357,12 @@ input[type=checkbox] {
 
 .checkout-panel__body__payment-method__method__radio-input {
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__payment-method__method__radio-input {
+    margin-top: 0;
+  }
 }
 
 .checkout-panel__body__payment-method__method__radio-input input[type='radio'] {
@@ -4451,6 +4475,12 @@ input[type=checkbox] {
 @media only screen and (max-width: 985px) {
   .checkout-panel__body__input-fields__small-inputs div {
     padding-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__input-fields__small-inputs div {
+    width: auto;
   }
 }
 
@@ -4615,6 +4645,12 @@ input[type=checkbox] {
   width: 90%;
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__email__container {
+    width: 100%;
+  }
+}
+
 .checkout-panel__body__email__container__title {
   font-size: 2rem;
   margin-top: 0;
@@ -4628,7 +4664,7 @@ input[type=checkbox] {
 
 @media only screen and (max-width: 490px) {
   .checkout-panel__body__email__container__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -4656,7 +4692,18 @@ input[type=checkbox] {
 
 @media only screen and (max-width: 490px) {
   .checkout-panel__body__email__container__message {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .checkout-panel__body__email__container__conditions {
+    text-align: left;
+    padding-bottom: 1.5rem;
+  }
+  .checkout-panel__body__email__container__conditions span {
+    font-size: 0.9rem;
   }
 }
 
@@ -4817,6 +4864,14 @@ input[type=checkbox] {
   letter-spacing: 1px;
   border: none;
   border-radius: 23px;
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__footer .btn {
+    font-size: 14px;
+    width: 118px;
+    height: 40px;
+  }
 }
 
 .checkout-panel__footer .back-btn {
