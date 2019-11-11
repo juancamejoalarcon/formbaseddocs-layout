@@ -991,6 +991,10 @@ h1, h2, h3, h4, h5, h6 {
   display: grid !important;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 .comment-d-none {
   display: none !important;
 }
@@ -3672,6 +3676,11 @@ input[type=checkbox] {
 
 .sub-menu__nav__button--current {
   background-color: #8BDFD9;
+}
+
+.sub-menu__nav__button--without-hover:hover {
+  background-color: #4ECDC4;
+  cursor: default;
 }
 
 .sub-menu__nav__button--search-page {

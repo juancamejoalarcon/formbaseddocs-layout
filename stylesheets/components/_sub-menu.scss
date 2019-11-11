@@ -1,83 +1,3 @@
-// #sub-menu {
-
-//     .sub-menu-container {
-
-
-//         .sub-menu-nav {
-
-
-        // .sub-menu-right-button {
-        //     display: flex;
-        //     align-items: center;
-        //     color: white;
-
-        //     .sub-menu-right-button {
-        //         padding-right: 1rem;
-
-        //         @include breakpoint-590 {
-        //             display: none;
-        //         }
-        //     }
-
-        //     @include breakpoint-450 {
-        //         .switch {
-        //             position: relative;
-        //             display: inline-block;
-        //             width: 50px;
-        //             height: 27px;
-
-        //             .slider {
-
-        //                 &:before {
-        //                     position: absolute;
-        //                     content: "";
-        //                     height: 21px;
-        //                     width: 21px;
-        //                     left: 3px;
-        //                     bottom: 3px;
-        //                     background-color: white;
-        //                     -webkit-transition: .4s;
-        //                     transition: .4s;
-        //                 }
-        //             }
-        //         }
-                
-        //         input:checked + .slider:before {
-        //             -webkit-transform: translateX(24px);
-        //             -ms-transform: translateX(24px);
-        //             transform: translateX(24px);
-        //         }
-        //     }
-        // }
-//     }
-
-//     .sub-menu-container-fill-form {
-//         justify-content: center;
-
-//         .likes-views {
-//             position: absolute;
-//             width: 98%;
-//             display: flex;
-//             justify-content: flex-end;
-//             color: white;
-//             font-size: 1.3rem;
-
-//             .likes {
-//                 padding-right: 0.8rem;
-//             }
-
-//             @include breakpoint-490 {
-//                 font-size: 1rem;
-//                 width: 96%;
-//             }
-//         }
-
-//         @include breakpoint-768 {
-//             justify-content: flex-start;
-//         }
-//     }
-// }
-
 .sub-menu {
     background-color: color(primaryB-color);
 
@@ -152,6 +72,13 @@
 
             &--current {
                 background-color: #8BDFD9;
+            }
+
+            &--without-hover {
+                &:hover {
+                    background-color: color(primaryB-color);
+                    cursor: default;
+                }
             }
 
             &--search-page {
