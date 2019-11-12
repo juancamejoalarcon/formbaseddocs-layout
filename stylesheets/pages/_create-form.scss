@@ -1099,6 +1099,10 @@
                 color: color(secondaryC-color);
                 border-color: color(primary-color);
                 font-size: 8rem;
+
+                @include breakpoint-450 {
+                    font-size: 5rem;
+                }
             }
         }
     }

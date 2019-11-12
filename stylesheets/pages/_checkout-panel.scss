@@ -20,6 +20,10 @@
             padding: 25px 40px 0;
         }
 
+        @include breakpoint-450 {
+            padding: 25px 20px 0;
+        }
+
         &--choose-document-type {
             padding: 0px 0px 0;
         }
@@ -352,6 +356,14 @@
                     padding: 1rem;
                     border-radius: 10px;
 
+                    .total-success {
+                        @include breakpoint-450 {
+                            font-weight: lighter;
+                            font-size: 0.9rem;
+                            text-align: left;
+                        }
+                    }
+
                     @include breakpoint-490 {
                         padding: 0.5rem;
                     }
@@ -360,12 +372,17 @@
                         font-family: $font-montserrat;
                         font-weight: bolder;
                         font-size: 1.2rem;
+
+                        @include breakpoint-450 {
+                            padding-right: 0.5rem;
+                        }
                     }
 
                     &__left {
                         font-weight: lighter;
                     }
                 }
+
                 &__more-info {
                     padding: 1rem;
                     display: flex;
@@ -532,17 +549,49 @@
             flex-direction: column;
             justify-content: center;
 
+            @include breakpoint-450 {
+                height: 100%;
+            }
+
+            h2 {
+                padding-bottom: 2rem;
+
+                @include breakpoint-450 {
+                    padding-bottom: 1rem;
+                    font-size: 1.1rem;
+                }
+            }
+
             &__message {
                 font-weight: lighter;
                 font-size: 1.1rem;
                 padding-top: 1rem;
                 padding-bottom: 2rem;
+
+                @include breakpoint-450 {
+                    font-size: 0.9rem;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.8rem;
+                }
             }
 
             &__download {
+                padding-bottom: 1rem;
+
+                @include breakpoint-450 {
+                    padding-bottom: 0.5rem;
+                    h3 {
+                        font-size: 1rem;
+                    }
+                }
+
                 .icon {
                     font-size: 4rem;
                     color: color(primaryB-color);
+
+                    @include breakpoint-450 {
+                        font-size: 2rem;
+                    }
 
                     &:hover {
                         color: color(primary-color);
@@ -552,10 +601,18 @@
 
                 .icon-file-word-solid {
                     padding-right: 0.3rem;
+
+                    @include breakpoint-450 {
+                        padding-right: 0.1rem;
+                    }
                 }
 
                 .icon-file-pdf-solid {
                     padding-left: 0.3rem;
+
+                    @include breakpoint-450 {
+                        padding-left: 0.1rem;
+                    }
                 }
             }
         }

@@ -4121,6 +4121,12 @@ input[type=checkbox] {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body {
+    padding: 25px 20px 0;
+  }
+}
+
 .checkout-panel__body--choose-document-type {
   padding: 0px 0px 0;
 }
@@ -4555,6 +4561,14 @@ input[type=checkbox] {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__invoice__text__total .total-success {
+    font-weight: lighter;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}
+
 @media only screen and (max-width: 490px) {
   .checkout-panel__body__invoice__text__total {
     padding: 0.5rem;
@@ -4565,6 +4579,12 @@ input[type=checkbox] {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__invoice__text__total__right {
+    padding-right: 0.5rem;
+  }
 }
 
 .checkout-panel__body__invoice__text__total__left {
@@ -4798,6 +4818,23 @@ input[type=checkbox] {
           justify-content: center;
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__success {
+    height: 100%;
+  }
+}
+
+.checkout-panel__body__success h2 {
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__success h2 {
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
 .checkout-panel__body__success__message {
   font-weight: lighter;
   font-size: 1.1rem;
@@ -4805,9 +4842,36 @@ input[type=checkbox] {
   padding-bottom: 2rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__success__message {
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+.checkout-panel__body__success__download {
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__success__download {
+    padding-bottom: 0.5rem;
+  }
+  .checkout-panel__body__success__download h3 {
+    font-size: 1rem;
+  }
+}
+
 .checkout-panel__body__success__download .icon {
   font-size: 4rem;
   color: #4ECDC4;
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__success__download .icon {
+    font-size: 2rem;
+  }
 }
 
 .checkout-panel__body__success__download .icon:hover {
@@ -4819,8 +4883,20 @@ input[type=checkbox] {
   padding-right: 0.3rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__success__download .icon-file-word-solid {
+    padding-right: 0.1rem;
+  }
+}
+
 .checkout-panel__body__success__download .icon-file-pdf-solid {
   padding-left: 0.3rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .checkout-panel__body__success__download .icon-file-pdf-solid {
+    padding-left: 0.1rem;
+  }
 }
 
 .checkout-panel__footer {
@@ -5649,6 +5725,12 @@ input[type=checkbox] {
   color: #C7F464;
   border-color: #556270;
   font-size: 8rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .form-creator__fields-area__end-step__check {
+    font-size: 5rem;
+  }
 }
 
 .form-creator__text-area {
