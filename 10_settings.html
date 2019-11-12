@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form-based docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel=”canonical” href=”https://www.formbaseddocs.com” />
+    <meta name="description" content="Form-based docs es una página para el desarrollo de documentas basados en formularios"/>
+    <meta name="keywords" content="Form-based docs, formbaseddocs, Juan Camejo Alarcón, documentos">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="/assets/images/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__menu__button nav__menu__button--current"><a href="5_search.html">Documents</a></li>
+                <li class="nav__menu__button"><a href="7_create-form.html">Create form</a></li>
+                <li class="nav__menu__button"><a href="9_my-forms.html">My forms</a></li>
+                <li class="nav__menu__button"><a href="10_settings.html">settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sub-menu">
+        <div class="sub-menu__container">
+            <ul class="sub-menu__nav sub-menu__nav--my-forms">
+                <li class="sub-menu__nav__button sub-menu__nav__button--my-forms sub-menu__nav__button--current" data-toogle="created-forms">
+                    Created
+                </li>
+                <li class="sub-menu__nav__button sub-menu__nav__button--my-forms" data-toogle="filled-forms">
+                    Filled
+                </li>
+                <li class="sub-menu__nav__button sub-menu__nav__button--my-forms" data-toogle="notifications">
+                    Notifications
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer" style="display: none">
+        <div class="footer__container">
+            <div class="footer__social">
+                <ul class="footer__social__links">
+                    <li>
+                        <a href="www.google.com">
+                            <span class="icon icon-facebook-f-brands"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.google.com">
+                            <span class="icon icon-twitter-brands"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.google.com">
+                            <span class="icon icon-google-plus-g-brands"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__email">
+                <a href="">formbaseddocs@gmail</a>
+            </div>
+            <div class="footer__legal">
+                <ul class="footer__legal__links">
+                    <li>
+                        <a href="">Condiciones de uso</a>
+                    </li>
+                    <li>
+                        <a href="">Nota de privacidad</a>
+                    </li>
+                    <li>
+                        <span>© 2019 Camejo Alarcón abogados</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<script src="js/ui.js"></script>
+<script>
+    const ui = new UI();
+
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
+}
+
+// Event Listeners
+function ready() {
+    const menu = document.querySelector('.sub-menu__nav');
+    menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
+}
+</script>
+</body>
+</html>
