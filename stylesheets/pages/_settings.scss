@@ -4,6 +4,10 @@
 
 .settings {
 
+    hr {
+        border: 1px solid color(primaryB-color);
+    }
+
     &__container {
         max-width: 1300px;
         margin: auto;
@@ -23,10 +27,7 @@
             max-width: 500px;
             margin: auto;
             padding-top: 1rem;
-
-            .button-filled {
-                margin: auto
-            }
+            padding-bottom: 2rem;
         }
 
         &__group {
@@ -53,6 +54,11 @@
                     transition: 200ms linear;
                 }
             }
+        }
+
+        &__button-container {
+            display: flex;
+            justify-content: center;
         }
     }
     &__buttons {

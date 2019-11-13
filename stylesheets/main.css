@@ -7009,6 +7009,10 @@ input[type=checkbox] {
   }
 }
 
+.settings hr {
+  border: 1px solid #4ECDC4;
+}
+
 .settings__container {
   max-width: 1300px;
   margin: auto;
@@ -7025,10 +7029,7 @@ input[type=checkbox] {
   max-width: 500px;
   margin: auto;
   padding-top: 1rem;
-}
-
-.settings__form__container .button-filled {
-  margin: auto;
+  padding-bottom: 2rem;
 }
 
 .settings__form__group {
@@ -7076,6 +7077,15 @@ input[type=checkbox] {
   border: 3px solid #4ECDC4;
   -webkit-transition: 200ms linear;
   transition: 200ms linear;
+}
+
+.settings__form__button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .settings__buttons__container {

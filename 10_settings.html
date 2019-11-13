@@ -68,12 +68,15 @@
                         <input type="text" placeholder="Empresa">
                         <input type="text" placeholder="Contacto">
                     </div>
-                    <button class="button-filled icon icon-save-solid"></button>
+                    <div class="settings__form__button-container">
+                        <button class="button-filled icon icon-save-solid"></button>
+                    </div>
                 </div>
             </div>
+            <hr>
             <div class="settings__buttons">
                 <div class="settings__buttons__container">
-                    <button class="button-filled">
+                    <button class="button-filled trigger">
                         Cambiar contraseña
                     </button>
                     <button class="button-filled ">
@@ -126,6 +129,21 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__content__modal-middle">
+                <div class="modal__content__modal-middle__container">
+                    <input type="password">
+                    <input type="password">
+                </div>
+            </div>
+            <div class="modal__content__modal-bottom">
+                <button class="button-filled button-filled__disabled" id="modal-button">Entendido</button>
+            </div>
+        </div>
+    </div>
+
 <script src="js/ui.js"></script>
 <script>
     const ui = new UI();
@@ -141,6 +159,8 @@ function ready() {
     const menu = document.querySelector('.sub-menu__nav');
     menu.addEventListener('click', ui.subMenuNavigation.bind(ui))
 }
+
+setModal();
 </script>
 </body>
 </html>
