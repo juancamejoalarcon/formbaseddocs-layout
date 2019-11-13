@@ -234,6 +234,15 @@
                 }
             }
 
+            &--change-password {
+                border: none;
+
+                input {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
             &__container {
                 height: 100%;
 

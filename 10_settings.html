@@ -25,15 +25,9 @@
     </nav>
     <div class="sub-menu">
         <div class="sub-menu__container">
-            <ul class="sub-menu__nav sub-menu__nav--my-forms">
-                <li class="sub-menu__nav__button sub-menu__nav__button--my-forms sub-menu__nav__button--current" data-toogle="created-forms">
-                    Created
-                </li>
-                <li class="sub-menu__nav__button sub-menu__nav__button--my-forms" data-toogle="filled-forms">
-                    Filled
-                </li>
-                <li class="sub-menu__nav__button sub-menu__nav__button--my-forms" data-toogle="notifications">
-                    Notifications
+            <ul class="sub-menu__nav sub-menu__nav--my-forms" style="justify-content: center;">
+                <li class="sub-menu__nav__button sub-menu__nav__button--without-hover">
+                    Juan Camejo Alarcón
                 </li>
             </ul>
         </div>
@@ -131,15 +125,15 @@
     </footer>
 
     <div class="modal">
-        <div class="modal__content">
-            <div class="modal__content__modal-middle">
-                <div class="modal__content__modal-middle__container">
-                    <input type="password">
-                    <input type="password">
+        <div class="modal__content" style="padding: 2rem">
+            <div class="modal__content__modal-middle modal__content__modal-middle--change-password">
+                <div class="modal__content__modal-middle__container ">
+                    <input type="password" placeholder="Old password">
+                    <input type="password" placeholder="New Password">
                 </div>
             </div>
             <div class="modal__content__modal-bottom">
-                <button class="button-filled button-filled__disabled" id="modal-button">Entendido</button>
+                <button class="button-filled" id="modal-button">Cambiar</button>
             </div>
         </div>
     </div>

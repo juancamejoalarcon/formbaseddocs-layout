@@ -43,6 +43,8 @@
                 padding: 0.5rem;
                 width: 100%;
                 border: 3px solid color(primary-color);
+                font-weight: lighter;
+                font-size: 0.8rem;
 
                 &::placeholder {
                     transition: 100ms linear;
@@ -68,10 +70,17 @@
             align-items: center;
             padding-top: 2rem;
 
+            @include breakpoint-640 {
+                flex-direction: column;
+            }
+
             button {
                 margin: 0.5rem;
                 width: 100%;
                 max-width: 200px;
+                @include breakpoint-640 {
+                    max-width: 350px;
+                }
             }
         }
     }

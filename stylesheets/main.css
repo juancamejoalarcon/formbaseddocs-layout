@@ -2820,6 +2820,15 @@ input[type=checkbox] {
   height: 100%;
 }
 
+.modal__content__modal-middle--change-password {
+  border: none;
+}
+
+.modal__content__modal-middle--change-password input {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .modal__content__modal-middle__container {
   height: 100%;
 }
@@ -7047,6 +7056,8 @@ input[type=checkbox] {
   padding: 0.5rem;
   width: 100%;
   border: 3px solid #556270;
+  font-weight: lighter;
+  font-size: 0.8rem;
 }
 
 .settings__form__group textarea::-webkit-input-placeholder {
@@ -7101,10 +7112,25 @@ input[type=checkbox] {
   padding-top: 2rem;
 }
 
+@media only screen and (max-width: 640px) {
+  .settings__buttons__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .settings__buttons__container button {
   margin: 0.5rem;
   width: 100%;
   max-width: 200px;
+}
+
+@media only screen and (max-width: 640px) {
+  .settings__buttons__container button {
+    max-width: 350px;
+  }
 }
 
 .sign-in-search-button {
