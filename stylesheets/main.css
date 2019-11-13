@@ -7027,6 +7027,10 @@ input[type=checkbox] {
   padding-top: 1rem;
 }
 
+.settings__form__container .button-filled {
+  margin: auto;
+}
+
 .settings__form__group {
   padding-top: 1rem;
   padding-bottom: 1rem;
