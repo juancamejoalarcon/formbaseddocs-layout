@@ -2496,6 +2496,27 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
+.input-file {
+  overflow: hidden;
+  position: relative;
+}
+
+.input-file:hover {
+  color: #4ECDC4;
+  cursor: pointer;
+}
+
+.input-file [type=file] {
+  cursor: inherit;
+  display: block;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
 .modal {
   position: fixed;
   left: 0;
@@ -6986,6 +7007,90 @@ input[type=checkbox] {
   .search-transaction__container__message {
     font-size: 1.3rem;
   }
+}
+
+.settings__container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.settings__profile-image__container {
+  max-width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.settings__form__container {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.settings__form__group {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.settings__form__group input {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.settings__form__group textarea {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: 3px solid #556270;
+}
+
+.settings__form__group textarea::-webkit-input-placeholder {
+  -webkit-transition: 100ms linear;
+  transition: 100ms linear;
+  color: #4ECDC4;
+}
+
+.settings__form__group textarea:-ms-input-placeholder {
+  -webkit-transition: 100ms linear;
+  transition: 100ms linear;
+  color: #4ECDC4;
+}
+
+.settings__form__group textarea::-ms-input-placeholder {
+  -webkit-transition: 100ms linear;
+  transition: 100ms linear;
+  color: #4ECDC4;
+}
+
+.settings__form__group textarea::placeholder {
+  -webkit-transition: 100ms linear;
+  transition: 100ms linear;
+  color: #4ECDC4;
+}
+
+.settings__form__group textarea:focus {
+  border: 3px solid #4ECDC4;
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+}
+
+.settings__buttons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+.settings__buttons__container button {
+  margin: 0.5rem;
+  width: 100%;
+  max-width: 200px;
 }
 
 .sign-in-search-button {

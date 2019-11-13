@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the settings page.
+// -----------------------------------------------------------------------------
+
+.settings {
+
+    &__container {
+        max-width: 1300px;
+        margin: auto;
+        padding: 2rem;
+    }
+
+    &__profile-image {
+        &__container {
+            max-width: 200px;
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        &__container {
+            max-width: 500px;
+            margin: auto;
+            padding-top: 1rem;
+        }
+
+        &__group {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            input {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            textarea {
+                margin-top: 1rem;
+                padding: 0.5rem;
+                width: 100%;
+                border: 3px solid color(primary-color);
+
+                &::placeholder {
+                    transition: 100ms linear;
+                    color: color(primaryB-color);
+                }
+
+                &:focus {
+                    border: 3px solid color(primaryB-color);
+                    transition: 200ms linear;
+                }
+            }
+        }
+    }
+    &__buttons {
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2rem;
+
+            button {
+                margin: 0.5rem;
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    }
+}

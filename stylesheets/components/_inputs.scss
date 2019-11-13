@@ -52,5 +52,27 @@ input {
         transform: scale(0.8) translateY(-3px);
         cursor: pointer;
     }
+
+}
+
+.input-file {
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        color: color(primaryB-color);
+        cursor: pointer;
+    }
+}
+
+.input-file [type=file] {
+    cursor: inherit;
+    display: block;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
 }
 
