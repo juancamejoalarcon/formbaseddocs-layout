@@ -1227,6 +1227,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem;
 }
 
+.nav__logo:hover {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 640px) {
   .nav__logo {
     width: 50%;
@@ -2548,8 +2552,8 @@ input[type=checkbox] {
 }
 
 .modal__content--privacy {
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   border-radius: 0rem;
   padding: 0rem;
   display: -webkit-box;
@@ -3108,6 +3112,28 @@ input[type=checkbox] {
   color: #999;
   text-decoration: none;
   cursor: pointer;
+}
+
+.download-documents-modal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.download-documents-modal .icon {
+  font-size: 5rem;
+  padding: 0.5rem;
+}
+
+.download-documents-modal .icon:hover {
+  color: #4ECDC4;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .pagination {
@@ -4336,7 +4362,7 @@ input[type=checkbox] {
           justify-content: center;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__payment-method {
     display: block;
     margin-bottom: 0px;
@@ -4367,11 +4393,14 @@ input[type=checkbox] {
           align-items: center;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__payment-method__method {
     width: auto;
     height: auto;
+    max-width: 400px;
     padding-top: 0;
+    margin: auto;
+    margin-top: 0.4rem;
   }
   .checkout-panel__body__payment-method__method img {
     display: none;
@@ -4395,7 +4424,7 @@ input[type=checkbox] {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__payment-method__method__radio-input {
     margin-top: 0;
   }
@@ -4423,7 +4452,6 @@ input[type=checkbox] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 2rem;
 }
 
 @media only screen and (max-width: 985px) {
@@ -4450,6 +4478,12 @@ input[type=checkbox] {
   display: block;
   margin-bottom: 10px;
   color: #b4b4b4;
+}
+
+@media screen and (max-height: 620px) {
+  .checkout-panel__body__input-fields label {
+    margin-bottom: 5px;
+  }
 }
 
 .checkout-panel__body__input-fields .info {
@@ -4480,6 +4514,13 @@ input[type=checkbox] {
   outline: none;
 }
 
+@media screen and (max-height: 620px) {
+  .checkout-panel__body__input-fields input[type='text'],
+  .checkout-panel__body__input-fields input[type='password'] {
+    height: 40px;
+  }
+}
+
 .checkout-panel__body__input-fields input[type='text']:focus,
 .checkout-panel__body__input-fields input[type='password']:focus {
   border-color: #77db77;
@@ -4504,6 +4545,12 @@ input[type=checkbox] {
   }
 }
 
+@media screen and (max-height: 620px) {
+  .checkout-panel__body__input-fields__small-inputs {
+    margin-top: 10px;
+  }
+}
+
 .checkout-panel__body__input-fields__small-inputs div {
   width: 182px;
 }
@@ -4511,6 +4558,7 @@ input[type=checkbox] {
 @media only screen and (max-width: 985px) {
   .checkout-panel__body__input-fields__small-inputs div {
     padding-right: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -4522,7 +4570,6 @@ input[type=checkbox] {
 
 .checkout-panel__body__invoice {
   height: 100%;
-  padding-top: 2rem;
 }
 
 .checkout-panel__body__invoice__container {
@@ -4656,7 +4703,7 @@ input[type=checkbox] {
   width: 80%;
 }
 
-@media only screen and (max-width: 985px) {
+@media screen and (max-width: 985px), screen and (max-height: 620px) {
   .checkout-panel__body__invoice__document img {
     width: 50%;
     display: none;
@@ -4858,7 +4905,7 @@ input[type=checkbox] {
   padding-bottom: 2rem;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__success h2 {
     padding-bottom: 1rem;
     font-size: 1.1rem;
@@ -4872,7 +4919,7 @@ input[type=checkbox] {
   padding-bottom: 2rem;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__success__message {
     font-size: 0.9rem;
     padding-top: 0.5rem;
@@ -4880,11 +4927,7 @@ input[type=checkbox] {
   }
 }
 
-.checkout-panel__body__success__download {
-  padding-bottom: 1rem;
-}
-
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__success__download {
     padding-bottom: 0.5rem;
   }
@@ -4898,7 +4941,7 @@ input[type=checkbox] {
   color: #4ECDC4;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__success__download .icon {
     font-size: 2rem;
   }
@@ -4913,7 +4956,7 @@ input[type=checkbox] {
   padding-right: 0.3rem;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__success__download .icon-file-word-solid {
     padding-right: 0.1rem;
   }
@@ -4923,7 +4966,7 @@ input[type=checkbox] {
   padding-left: 0.3rem;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px), screen and (max-height: 620px) {
   .checkout-panel__body__success__download .icon-file-pdf-solid {
     padding-left: 0.1rem;
   }
@@ -5022,6 +5065,12 @@ input[type=checkbox] {
           justify-content: center;
 }
 
+@media screen and (max-height: 620px) {
+  .hosted-fields {
+    height: 40px;
+  }
+}
+
 .form-creator__container {
   display: -ms-grid;
   display: grid;
@@ -5035,6 +5084,8 @@ input[type=checkbox] {
   .form-creator__container {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
+    -ms-grid-rows: 100% 100%;
+        grid-template-rows: 100% 100%;
   }
 }
 
@@ -5763,6 +5814,18 @@ input[type=checkbox] {
   }
 }
 
+@media screen and (max-height: 620px) {
+  .form-creator__fields-area__end-step__check {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 670px) {
+  .form-creator__fields-area__end-step__check {
+    font-size: 5rem;
+  }
+}
+
 .form-creator__text-area {
   height: 100%;
   width: 100%;
@@ -6012,6 +6075,29 @@ input[type=checkbox] {
 
 .information__section-right__notifications__checkboxes {
   margin-top: 0.8rem;
+}
+
+.cgv__container {
+  padding: 2rem;
+  font-weight: lighter;
+  text-align: justify;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cgv__container h1, .cgv__container h2, .cgv__container h3, .cgv__container h4, .cgv__container h5, .cgv__container h6 {
+  padding-top: 1rem;
+}
+
+.cgv__container p, .cgv__container ul {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.cgv__container ul li {
+  list-style: disc outside none;
+  display: list-item;
+  margin-left: 1.2rem;
 }
 
 .landing-top {

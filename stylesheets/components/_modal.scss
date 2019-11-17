@@ -22,8 +22,8 @@
         border-radius: 0.5rem;
 
         &--privacy {
-            width: 90%;
-            height: 90%;
+            width: 95%;
+            height: 95%;
             border-radius: 0rem;
             padding: 0rem;
             display: flex;
@@ -489,5 +489,22 @@
         color: #999;
         text-decoration: none;
         cursor: pointer;
+    }
+}
+
+.download-documents-modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .icon {
+        font-size: 5rem;
+        padding: 0.5rem;
+
+        &:hover {
+            color: color(primaryB-color);
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
     }
 }

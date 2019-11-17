@@ -552,6 +552,7 @@
 
         @include breakpoint-885 {
             grid-template-columns: 100%;
+            grid-template-rows: 100% 100%;
         }
     }
 
@@ -1101,6 +1102,14 @@
                 font-size: 8rem;
 
                 @include breakpoint-450 {
+                    font-size: 5rem;
+                }
+
+                @media screen and (max-height: 620px) {
+                    display: none;
+                }
+
+                @media screen and (max-height: 670px) {
                     font-size: 5rem;
                 }
             }

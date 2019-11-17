@@ -123,6 +123,10 @@
         max-width: 300px;
         padding: 0.5rem;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @include breakpoint-640 {
             width: 50%;        
             padding-top: 1rem; 
