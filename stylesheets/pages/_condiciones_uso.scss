@@ -1,0 +1,27 @@
+.condiciones {
+    &__container {
+        padding: 2rem;
+        font-weight: lighter;
+        text-align: justify;
+        max-width: 1200px;
+        margin: auto;
+
+        h1, h2, h3, h4, h5, h6 {
+            padding-top: 1rem;
+        }
+
+        p, ul {
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
+        }
+
+        ul {
+
+            li {
+                list-style: disc outside none;
+                display: list-item;
+                margin-left: 1.2rem;
+            }
+        }
+    }
+}
