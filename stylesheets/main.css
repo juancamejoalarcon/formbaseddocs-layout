@@ -1274,7 +1274,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #4ECDC4;
   width: 100%;
   color: white;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 .footer__container {
@@ -6461,6 +6461,9 @@ input[type=checkbox] {
   transition: all ease-out;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+}
+
+.search__results__result__document:hover .search__results__result__document__container__title {
   text-decoration: underline;
 }
 

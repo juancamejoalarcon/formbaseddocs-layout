@@ -132,7 +132,9 @@
                     cursor: pointer;
                     transition: all ease-out;
                     transition-duration: 0.2s;
-                    text-decoration: underline;
+                    .search__results__result__document__container__title {
+                        text-decoration: underline;
+                    }
                 }
 
                 &__container {
