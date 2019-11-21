@@ -393,7 +393,7 @@
         }
 
         @include breakpoint-590 {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
 
         a {
@@ -435,7 +435,7 @@
             }
 
             @include breakpoint-640 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             
@@ -456,9 +456,9 @@
                 font-size: 0.9rem;
             }
 
-            @include breakpoint-640 {
-                font-size: 0.8rem;
-            }
+            // @include breakpoint-640 {
+            //     font-size: 0.8rem;
+            // }
 
         
         }
@@ -550,7 +550,7 @@
             }
 
             @include breakpoint-490 {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
             }
 
             a {
