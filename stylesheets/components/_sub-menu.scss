@@ -61,13 +61,15 @@
             }
 
             @include breakpoint-450 {
-                padding-left: 0.4rem;
-                padding-right: 0.4rem;
-                font-size: 0.8rem;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                font-size: 0.7rem;
             }
 
             @include breakpoint-380 {
-                font-size: 0.6rem;
+                padding-left: 0.4rem;
+                padding-right: 0.4rem;
+                font-size: 0.7rem;
             }
 
             &--current {
