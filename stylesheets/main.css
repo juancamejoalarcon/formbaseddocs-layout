@@ -3718,9 +3718,9 @@ input[type=checkbox] {
 
 @media only screen and (max-width: 450px) {
   .sub-menu__nav__button {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-size: 0.7rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    font-size: 0.8rem;
   }
 }
 
