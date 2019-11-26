@@ -1,0 +1,17 @@
+/* Select Field
+   ========================================================================== */
+.input-select {
+    select { display: none; }
+    select.browser-default { display: block; }
+    
+    select {
+        background-color: rgba(255,255,255,0.9);
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #f2f2f2;
+        border-radius: 2px;
+        height: 3rem;
+    }
+}
+   
+   
