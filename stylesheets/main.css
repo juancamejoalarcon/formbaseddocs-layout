@@ -3518,6 +3518,10 @@ input[type=checkbox] {
 
 /* Select Field
    ========================================================================== */
+.input-select {
+  margin-top: 0.5rem;
+}
+
 .input-select select {
   display: none;
 }
@@ -3529,10 +3533,13 @@ input[type=checkbox] {
 .input-select select {
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
-  padding: 5px;
+  padding: 3px;
   border: 1px solid #f2f2f2;
   border-radius: 2px;
   height: 3rem;
+  color: #556270;
+  font-size: 1rem;
+  font-weight: lighter;
 }
 
 /*!
@@ -3717,6 +3724,7 @@ input[type=checkbox] {
   text-transform: uppercase;
   font-weight: lighter;
   color: white;
+  text-align: center;
 }
 
 .sub-menu__nav__button a {
@@ -5283,6 +5291,10 @@ input[type=checkbox] {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0.2rem;
+}
+
+.form-creator__fields-area__middle__initial-screen__form-title {
+  text-align: center;
 }
 
 .form-creator__fields-area__middle__initial-screen__description {
