@@ -178,7 +178,7 @@ document.querySelector('#privacy-label').addEventListener('click', (e) => {
 
 // Enable checkbox if user has scroll to the bottom of the modal
 document.querySelector('#modal-middle-privacy').addEventListener('scroll', (e) => {
-    if (e.srcElement.scrollHeight - e.srcElement.scrollTop === e.srcElement.clientHeight) {
+    if (e.srcElement.scrollHeight - e.srcElement.scrollTop <= (e.srcElement.clientHeight + 200)) {
         enablePrivacyButton();
         document.querySelector('#privacy-checkbox').disabled = false;
     }
