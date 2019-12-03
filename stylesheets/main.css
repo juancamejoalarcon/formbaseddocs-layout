@@ -5630,6 +5630,12 @@ input[type=checkbox] {
   padding: 2rem 0rem 3rem 0rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .form-creator__fields-area__field__middle {
+    padding: 1rem 0rem 1.5rem 0rem;
+  }
+}
+
 .form-creator__fields-area__field__middle__question-fill-form {
   font-weight: lighter;
   font-size: 1.2rem;
