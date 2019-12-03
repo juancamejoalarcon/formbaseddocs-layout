@@ -2695,6 +2695,16 @@ input[type=checkbox] {
   color: #fff;
   -webkit-box-shadow: 0 4px 6px -6px #222;
   box-shadow: 0 4px 6px -6px #222;
+  text-align: center;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+@media only screen and (max-width: 590px) {
+  .modal__content__top--privacy h2 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
 }
 
 .modal__content__top--payment {
@@ -3533,8 +3543,8 @@ input[type=checkbox] {
 .input-select select {
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
-  padding: 3px;
-  border: 1px solid #f2f2f2;
+  padding: 5px;
+  border: 1px solid #4ECDC4;
   border-radius: 2px;
   height: 3rem;
   color: #556270;
