@@ -595,6 +595,40 @@ Set the font-family content used for the HTML content.
   }
 }
 
+.fade-in {
+  -webkit-animation: fadein 0.8s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+
+/* Opera < 12.1 */
+
 /**
  * Set up a decent box model on the root element
  */
@@ -2297,7 +2331,7 @@ input:focus + .slider {
 }
 
 .indicator-content span {
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.5rem;
 }
 
@@ -3312,6 +3346,7 @@ input[type=checkbox] {
   position: relative;
   width: auto;
   border-radius: 20px;
+  min-width: 10%;
 }
 
 .progress.progress-stacked > span {
