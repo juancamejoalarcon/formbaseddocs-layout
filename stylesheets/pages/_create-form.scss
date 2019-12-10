@@ -678,6 +678,7 @@
 
                     @include breakpoint-450 {
                         font-size: 1.3rem;
+                        line-height: 1.8rem;
                     }
                 }
 
@@ -686,6 +687,7 @@
                     text-align: center;
                     padding: 1rem;
                     @include breakpoint-450 {
+                        padding-top: 0.4rem;
                         padding-bottom: 0.4rem;
                     }
                 }

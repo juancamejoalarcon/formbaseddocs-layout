@@ -5353,6 +5353,7 @@ input[type=checkbox] {
 @media only screen and (max-width: 450px) {
   .form-creator__fields-area__middle__initial-screen__form-title {
     font-size: 1.3rem;
+    line-height: 1.8rem;
   }
 }
 
@@ -5364,6 +5365,7 @@ input[type=checkbox] {
 
 @media only screen and (max-width: 450px) {
   .form-creator__fields-area__middle__initial-screen__description {
+    padding-top: 0.4rem;
     padding-bottom: 0.4rem;
   }
 }
