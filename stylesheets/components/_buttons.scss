@@ -145,6 +145,10 @@ input:focus + .slider {
         width: 200px;
         margin-top:0.8rem;
 
+        @include breakpoint-450 {
+            margin-top:0.4rem;
+        }
+
         &:hover {
             color: white;
             background: color(primary-color);

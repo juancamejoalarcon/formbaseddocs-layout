@@ -686,7 +686,7 @@
                     text-align: center;
                     padding: 1rem;
                     @include breakpoint-450 {
-                        padding: 0.8rem;
+                        padding-bottom: 0.4rem;
                     }
                 }
             }

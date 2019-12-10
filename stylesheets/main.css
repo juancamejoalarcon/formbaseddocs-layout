@@ -1580,6 +1580,12 @@ input:focus + .slider {
   margin-top: 0.8rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .button-filled--start-form {
+    margin-top: 0.4rem;
+  }
+}
+
 .button-filled--start-form:hover {
   color: white;
   background: #556270;
@@ -5358,7 +5364,7 @@ input[type=checkbox] {
 
 @media only screen and (max-width: 450px) {
   .form-creator__fields-area__middle__initial-screen__description {
-    padding: 0.8rem;
+    padding-bottom: 0.4rem;
   }
 }
 
