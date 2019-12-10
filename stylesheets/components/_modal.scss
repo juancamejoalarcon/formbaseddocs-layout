@@ -187,6 +187,10 @@
                 font-weight: lighter;
                 text-align: justify;
 
+                @include breakpoint-450 {
+                    padding: 1rem;
+                }
+
                 p, ul {
                     padding-top: 0.6rem;
                     padding-bottom: 0.6rem;

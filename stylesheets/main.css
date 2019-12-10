@@ -2810,6 +2810,12 @@ input[type=checkbox] {
   text-align: justify;
 }
 
+@media only screen and (max-width: 450px) {
+  .modal__content__modal-middle--privacy {
+    padding: 1rem;
+  }
+}
+
 .modal__content__modal-middle--privacy p, .modal__content__modal-middle--privacy ul {
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
