@@ -5352,7 +5352,7 @@ input[type=checkbox] {
 
 @media only screen and (max-width: 450px) {
   .form-creator__fields-area__middle__initial-screen__form-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.8rem;
   }
 }
