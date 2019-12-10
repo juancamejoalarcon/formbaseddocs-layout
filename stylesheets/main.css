@@ -5356,6 +5356,12 @@ input[type=checkbox] {
   padding: 1rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .form-creator__fields-area__middle__initial-screen__description {
+    padding: 0.8rem;
+  }
+}
+
 .form-creator__fields-area__bottom__container {
   display: -webkit-box;
   display: -ms-flexbox;
