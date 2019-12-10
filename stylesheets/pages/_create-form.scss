@@ -670,10 +670,15 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding: 0.2rem;
 
                 &__form-title {
                     text-align: center;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+
+                    @include breakpoint-450 {
+                        font-size: 1.3rem;
+                    }
                 }
 
                 &__description {
