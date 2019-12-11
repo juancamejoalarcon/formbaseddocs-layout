@@ -2705,6 +2705,15 @@ input[type=checkbox] {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .modal__content--question-indication {
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 80%;
+  }
+}
+
 .modal__content__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2745,6 +2754,33 @@ input[type=checkbox] {
     font-size: 1.3rem;
     line-height: 1.2;
   }
+}
+
+.modal__content__top--indication {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 80% 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #4ECDC4;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
+  text-align: center;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.modal__content__top--indication h3 {
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 .modal__content__top--payment {
@@ -2830,7 +2866,7 @@ input[type=checkbox] {
 .modal__content__modal-middle--question-indication {
   overflow-y: scroll;
   height: 100%;
-  padding: 2rem;
+  padding: 0.5rem;
   font-weight: lighter;
   text-align: justify;
 }
