@@ -4718,6 +4718,10 @@ input[type=checkbox] {
   }
 }
 
+.checkout-panel__body__invoice__text {
+  max-width: 500px;
+}
+
 .checkout-panel__body__invoice__text__title {
   text-align: center;
 }
