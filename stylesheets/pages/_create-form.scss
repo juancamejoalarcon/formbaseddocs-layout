@@ -929,7 +929,7 @@
             &__middle {
                 width: 90%;
                 margin: auto;
-                padding: 2rem 0rem 3rem 0rem;
+                padding: 2rem 0rem 2rem 0rem;
 
                 @include breakpoint-450 {
                     padding: 1rem 0rem 1.5rem 0rem;
@@ -1013,6 +1013,7 @@
             }
 
             &__bottom {
+                min-height: 1rem;
                 padding-left: 0.6rem;
                 padding-bottom: 0.3rem;
                 display: flex;
