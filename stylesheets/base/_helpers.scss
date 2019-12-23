@@ -73,6 +73,20 @@
    background-color: yellow;
 }
 
+.highlight-disapear {
+  border-radius: 3px;
+  animation: highlight 5000ms ease-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color:#CDCDCD;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
 .disabled {
   pointer-events: none;
 }

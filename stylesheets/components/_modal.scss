@@ -192,6 +192,10 @@
         &__modal-middle {
             border-bottom: 3px solid color(primary-color);
 
+            &__container {
+                max-width: 900px;
+                margin: auto;
+            }
 
             textarea {
                 margin: 0rem 0rem 0rem 0rem;

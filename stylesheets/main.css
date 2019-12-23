@@ -990,6 +990,30 @@ h1, h2, h3, h4, h5, h6 {
   background-color: yellow;
 }
 
+.highlight-disapear {
+  border-radius: 3px;
+  -webkit-animation: highlight 5000ms ease-out;
+          animation: highlight 5000ms ease-out;
+}
+
+@-webkit-keyframes highlight {
+  0% {
+    background-color: #CDCDCD;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    background-color: #CDCDCD;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
 .disabled {
   pointer-events: none;
 }
@@ -2820,6 +2844,11 @@ input[type=checkbox] {
 
 .modal__content__modal-middle {
   border-bottom: 3px solid #556270;
+}
+
+.modal__content__modal-middle__container {
+  max-width: 900px;
+  margin: auto;
 }
 
 .modal__content__modal-middle textarea {
