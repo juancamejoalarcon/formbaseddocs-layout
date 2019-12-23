@@ -4550,13 +4550,15 @@ input[type=checkbox] {
   .checkout-panel__body__payment-method__method {
     width: auto;
     height: auto;
+    min-height: 46px;
     max-width: 400px;
     padding-top: 0;
     margin: auto;
     margin-top: 0.4rem;
-  }
-  .checkout-panel__body__payment-method__method img {
-    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -5220,6 +5222,13 @@ input[type=checkbox] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 985px) {
+  .payment-container {
+    max-width: 700px;
+    margin: auto;
+  }
 }
 
 @media screen and (max-height: 620px) {

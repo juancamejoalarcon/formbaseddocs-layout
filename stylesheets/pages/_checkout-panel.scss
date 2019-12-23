@@ -202,13 +202,12 @@
                 @media screen and (max-width: 450px) , screen and (max-height: 620px) {
                     width: auto;
                     height: auto;
+                    min-height: 46px;
                     max-width: 400px;
                     padding-top: 0;
                     margin: auto;
                     margin-top: 0.4rem;
-                    img {
-                        display: none;
-                    }
+                    flex-direction: row-reverse;
                 }
 
                 &__card-logos {
@@ -714,6 +713,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include breakpoint-985 {
+        max-width: 700px;
+        margin: auto;
+    }
 }
 
 .hosted-fields {
