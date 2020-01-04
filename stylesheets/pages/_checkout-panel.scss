@@ -386,7 +386,8 @@
                     &__right {
                         font-family: $font-montserrat;
                         font-weight: bolder;
-                        font-size: 1.2rem;
+                        font-size: 1.1rem;
+                        text-align: left;
 
                         @include breakpoint-450 {
                             padding-right: 0.5rem;
@@ -511,6 +512,10 @@
             &__container {
                 display: flex;
                 height: 100%;
+
+                @include breakpoint-590 {
+                    flex-direction: column;
+                }
             }
 
             &__button-area {
@@ -550,6 +555,12 @@
                         font-family: $font-montserrat;
                         font-weight: bolder;
                         font-size: 2.5rem;
+                        text-align: center;
+                        line-height: 2.8rem;
+
+                        @include breakpoint-450 {
+                            font-size: 2rem;
+                        }
                     }
 
                     small {
@@ -564,7 +575,7 @@
             max-width: 650px;
             margin: auto;
             text-align: center;
-            height: 90%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;

@@ -21,6 +21,7 @@
         padding: 0;
         width: 90%;
         max-width: 1200px;
+        padding-bottom: 5rem;
     }
 
     &__title {
@@ -35,21 +36,44 @@
     }
 
     &__instructions {
-        &__steps {
-            &__step {
-                padding: 1rem;
-                display: flex;
-                align-items: center;
-                flex-direction: row-reverse;
-                justify-content: space-evenly;
+        margin-top: 2rem;
 
-                p {
+        &__subtitle {     
+            padding-top: 2rem;
+            padding-left: 1rem;
+        }
+
+        &__steps {
+            margin-top: 2rem;
+            &__step {
+                display: grid;
+                grid-template-columns: 60% 40%;
+                padding-top: 1rem;
+
+                &--reverse {
+                    grid-template-columns: 40% 60%;
+                }
+
+                &__text {
                     padding: 0.5rem;
-                    max-width: 500px;
+                    display: flex;
+                    align-items: center;
+                    text-align: right;
+                    justify-content: flex-end;
+
+                    &--reverse {
+                        justify-content: flex-start;
+                        text-align: left;
+                    }
+
+                    ul {
+                        padding-left: 0.5rem;
+                    }
                 }
 
                 img {
                     max-width: 500px;
+                    padding: 0.5rem;
                 }
             }
         }
