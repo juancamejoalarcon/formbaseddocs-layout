@@ -4055,6 +4055,12 @@ input[type=checkbox] {
 
 .sub-menu__likes-views__likes {
   padding-right: 0.8rem;
+  z-index: 3;
+}
+
+.sub-menu__likes-views .like-form-button:hover {
+  cursor: pointer;
+  color: #556270;
 }
 
 @media only screen and (max-width: 590px) {

@@ -179,6 +179,14 @@
 
         &__likes {
             padding-right: 0.8rem;
+            z-index: 3;
+        }
+
+        .like-form-button {
+            &:hover {
+                cursor: pointer;
+                color: color(primary-color);
+            }
         }
 
         @include breakpoint-590 {
