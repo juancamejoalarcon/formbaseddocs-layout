@@ -2187,6 +2187,11 @@ input:focus + .slider {
   display: flex;
 }
 
+.comments__comment__top__author h4:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .comments__comment__top__date {
   font-family: 'Montserrat', sans-serif;
   font-weight: regular;
@@ -2263,6 +2268,10 @@ input:focus + .slider {
 .comments__comment__bottom__button:hover {
   color: white;
   background: #556270;
+  cursor: pointer;
+}
+
+.comments__comment__bottom__likes .icon:hover {
   cursor: pointer;
 }
 

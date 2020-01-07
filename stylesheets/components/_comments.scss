@@ -93,6 +93,13 @@
                 font-weight: bolder;
                 font-size: 1.1rem;
                 display: flex;
+
+                h4 {
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
             }
 
             &__date {
@@ -161,6 +168,14 @@
                     color: white;
                     background: color(primary-color);
                     cursor: pointer;
+                }
+            }
+
+            &__likes {
+                .icon {
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 
