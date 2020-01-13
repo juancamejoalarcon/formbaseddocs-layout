@@ -4,6 +4,11 @@
     width: 100%;
     margin:auto;
 
+    &__disabled {
+        padding: 2rem;
+        text-align: center;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
