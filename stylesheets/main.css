@@ -2073,6 +2073,11 @@ input:focus + .slider {
   margin: auto;
 }
 
+.comments__disabled {
+  padding: 2rem;
+  text-align: center;
+}
+
 .comments__container {
   display: -webkit-box;
   display: -ms-flexbox;
