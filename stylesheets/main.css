@@ -5829,6 +5829,38 @@ input[type=checkbox] {
   min-height: 30vh;
 }
 
+.form-creator__fields-area__field__field-area textarea {
+  margin-top: 1rem;
+  border: none;
+  border: 3px solid #556270;
+  font-weight: lighter;
+  width: 100%;
+  font-size: 0.8rem;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  padding: 1rem;
+}
+
+.form-creator__fields-area__field__field-area textarea::-webkit-input-placeholder {
+  color: #4ECDC4;
+}
+
+.form-creator__fields-area__field__field-area textarea:-ms-input-placeholder {
+  color: #4ECDC4;
+}
+
+.form-creator__fields-area__field__field-area textarea::-ms-input-placeholder {
+  color: #4ECDC4;
+}
+
+.form-creator__fields-area__field__field-area textarea::placeholder {
+  color: #4ECDC4;
+}
+
+.form-creator__fields-area__field__field-area textarea:focus {
+  border: 3px solid #4ECDC4;
+}
+
 .form-creator__fields-area__field__top {
   display: -webkit-box;
   display: -ms-flexbox;

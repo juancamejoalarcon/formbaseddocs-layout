@@ -335,6 +335,30 @@
                     flex-direction: column;
                     min-height: 30vh;
                 }
+
+                textarea {
+                    margin-top: 1rem;
+                    border: none;
+                    border: 3px solid color(primary-color);
+                    font-weight: lighter;
+                    width: 100%;
+                    font-size: 0.8rem;
+                    -webkit-transition: all .1s ease;
+                    -moz-transition: all .1s ease;
+                    -ms-transition: all .1s ease;
+                    -o-transition: all .1s ease;
+                    transition: all .1s ease;
+                    padding: 1rem;
+    
+                    &::placeholder {
+                        color: color(primaryB-color);
+                    }
+    
+                    &:focus {
+                        border: 3px solid color(primaryB-color);
+                    }
+                }
+
             }
             &__top {
                 display: flex;
