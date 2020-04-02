@@ -479,7 +479,7 @@
     }
 
     &__block {
-        margin: auto;
+        padding-left: 1rem;
         margin-top: 3rem;
 
         @include breakpoint-1050 {

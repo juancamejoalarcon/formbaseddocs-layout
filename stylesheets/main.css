@@ -7300,7 +7300,7 @@ input[type=checkbox] {
 }
 
 .lawyer-forms__block {
-  margin: auto;
+  padding-left: 1rem;
   margin-top: 3rem;
   /* Tree copied from https://gist.github.com/dylancwood/7368914 */
 }
