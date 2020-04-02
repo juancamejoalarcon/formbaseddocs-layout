@@ -122,7 +122,8 @@
 
                 &:nth-child(1) {
                     &:before {
-                        content: 'Cart';
+                        content: 'Carro';
+                        right: -10px;
                     }
                 }
 
@@ -135,8 +136,8 @@
 
                 &:nth-child(3) {
                     &:before {
-                        right: -20px;
-                        content: 'Payment';
+                        right: -5px;
+                        content: 'Pago';
 
                         @include breakpoint-380 {
                             right: -14px;
@@ -147,7 +148,7 @@
                 &:nth-child(4) {
                     &:before {
                         right: 0;
-                        content: 'Finish';
+                        content: 'Fin';
                     }
                 }
 

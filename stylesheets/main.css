@@ -4546,7 +4546,8 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__progress-bar__step:nth-child(1):before {
-  content: 'Cart';
+  content: 'Carro';
+  right: -10px;
 }
 
 .checkout-panel__body__progress-bar__step:nth-child(2):before {
@@ -4555,8 +4556,8 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__progress-bar__step:nth-child(3):before {
-  right: -20px;
-  content: 'Payment';
+  right: -5px;
+  content: 'Pago';
 }
 
 @media only screen and (max-width: 380px) {
@@ -4567,7 +4568,7 @@ input[type=checkbox] {
 
 .checkout-panel__body__progress-bar__step:nth-child(4):before {
   right: 0;
-  content: 'Finish';
+  content: 'Fin';
 }
 
 .checkout-panel__body__progress-bar__step__active {
