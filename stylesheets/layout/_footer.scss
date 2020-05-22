@@ -41,6 +41,26 @@
         }
     }
 
+    &__contact-link {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        @include breakpoint-450 {
+            margin-top: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: #ffffff;
+
+            &:hover {
+                color: color(primary-color);
+                transition: all ease-out;
+                transition-duration: 0.1s;
+            }
+        }
+    }
+
     &__email {
         border-top: 1px solid #ffffff;
         border-bottom: 1px solid #ffffff;
