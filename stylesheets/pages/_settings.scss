@@ -22,6 +22,17 @@
         }
     }
 
+    &__email {
+        font-weight: lighter;
+        text-align: center;
+        a {
+            font-weight: 500;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
     &__form {
         &__container {
             max-width: 500px;

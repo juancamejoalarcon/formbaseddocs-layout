@@ -91,7 +91,9 @@
                 display: flex;
                 padding-top: 1rem;
                 .button-filled {
-                    margin: auto;
+                    @include breakpoint-640 {
+                        margin: auto;
+                    }
                     height: 35px;
                     width: 190px;
                 }
@@ -258,6 +260,50 @@
         p {
             font-weight: lighter;
             padding-top: 1rem;
+        }
+
+        ul {
+            font-weight: lighter;
+            padding: 1rem;
+            padding-top: 1rem;
+        }
+
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: color(primaryB-color);
+            }
+        }
+
+    }
+
+    &__bottom-link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 100;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        a {
+            padding-bottom: 1rem;
+            background-image: linear-gradient(to bottom, color(primary-color) 33%, transparent 33%, transparent 66%);
+            background-position: 0 1.3em;
+            background-repeat: repeat-x;
+            background-size: 2px 5px;
+            -webkit-transition: all .1s ease;
+            -moz-transition: all .1s ease;
+            -ms-transition: all .1s ease;
+            -o-transition: all .1s ease;
+            transition: all .1s ease;
+            &:hover {
+                background-image: linear-gradient(to bottom, color(primaryB-color) 33%, transparent 33%, transparent 66%);
+                background-position: 0 1.7em;
+                background-repeat: repeat-x;
+                background-size: 2px 5px;
+                color: color(primaryB-color);
+            }
         }
     }
 

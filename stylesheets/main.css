@@ -7536,6 +7536,19 @@ input[type=checkbox] {
   text-align: center;
 }
 
+.settings__email {
+  font-weight: lighter;
+  text-align: center;
+}
+
+.settings__email a {
+  font-weight: 500;
+}
+
+.settings__email a:hover {
+  text-decoration: underline;
+}
+
 .settings__form__container {
   max-width: 500px;
   margin: auto;
@@ -7759,9 +7772,14 @@ input[type=checkbox] {
 }
 
 .blog__header__title__button .button-filled {
-  margin: auto;
   height: 35px;
   width: 190px;
+}
+
+@media only screen and (max-width: 640px) {
+  .blog__header__title__button .button-filled {
+    margin: auto;
+  }
 }
 
 .blog__header__title__author {
@@ -7975,6 +7993,54 @@ input[type=checkbox] {
 .blog__body p {
   font-weight: lighter;
   padding-top: 1rem;
+}
+
+.blog__body ul {
+  font-weight: lighter;
+  padding: 1rem;
+  padding-top: 1rem;
+}
+
+.blog__body a {
+  text-decoration: underline;
+}
+
+.blog__body a:hover {
+  color: #4ECDC4;
+}
+
+.blog__bottom-link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 100;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.blog__bottom-link a {
+  padding-bottom: 1rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(33%, #556270), color-stop(33%, transparent), color-stop(66%, transparent));
+  background-image: linear-gradient(to bottom, #556270 33%, transparent 33%, transparent 66%);
+  background-position: 0 1.3em;
+  background-repeat: repeat-x;
+  background-size: 2px 5px;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+.blog__bottom-link a:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(33%, #4ECDC4), color-stop(33%, transparent), color-stop(66%, transparent));
+  background-image: linear-gradient(to bottom, #4ECDC4 33%, transparent 33%, transparent 66%);
+  background-position: 0 1.7em;
+  background-repeat: repeat-x;
+  background-size: 2px 5px;
+  color: #4ECDC4;
 }
 
 .sign-in-search-button {
