@@ -933,6 +933,14 @@ fieldset {
   content: "\e944";
 }
 
+.icon-envelope-open-text:before {
+  display: block;
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='envelope-open-text' class='svg-inline--fa fa-envelope-open-text fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='rgb(85,98,112)' d='M176 216h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16zm-16 80c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16zm96 121.13c-16.42 0-32.84-5.06-46.86-15.19L0 250.86V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V250.86L302.86 401.94c-14.02 10.12-30.44 15.19-46.86 15.19zm237.61-254.18c-8.85-6.94-17.24-13.47-29.61-22.81V96c0-26.51-21.49-48-48-48h-77.55c-3.04-2.2-5.87-4.26-9.04-6.56C312.6 29.17 279.2-.35 256 0c-23.2-.35-56.59 29.17-73.41 41.44-3.17 2.3-6 4.36-9.04 6.56H96c-26.51 0-48 21.49-48 48v44.14c-12.37 9.33-20.76 15.87-29.61 22.81A47.995 47.995 0 0 0 0 200.72v10.65l96 69.35V96h320v184.72l96-69.35v-10.65c0-14.74-6.78-28.67-18.39-37.77z'%3E%3C/path%3E%3C/svg%3E");
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -4728,6 +4736,10 @@ input[type=checkbox] {
   }
 }
 
+.checkout-panel__body__input-fields small {
+  position: absolute;
+}
+
 .checkout-panel__body__input-fields div[class*='column'] {
   width: 382px;
   margin: 0.5rem;
@@ -4827,8 +4839,11 @@ input[type=checkbox] {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 490px) {
   .checkout-panel__body__input-fields__small-inputs div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     width: auto;
   }
 }
@@ -4850,6 +4865,34 @@ input[type=checkbox] {
   height: 100%;
 }
 
+@media only screen and (max-width: 690px) {
+  .checkout-panel__body__invoice__container {
+    display: block;
+  }
+}
+
+.checkout-panel__body__invoice__container .prepayment__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+@media only screen and (max-width: 985px) {
+  .checkout-panel__body__invoice__container .prepayment__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 985px) {
   .checkout-panel__body__invoice__container {
     -webkit-box-orient: vertical;
@@ -4860,20 +4903,43 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__invoice__text {
-  max-width: 500px;
+  min-width: 600px;
+  max-width: 600px;
 }
 
-.checkout-panel__body__invoice__text__title {
-  text-align: center;
-}
-
-@media only screen and (max-width: 640px) {
-  .checkout-panel__body__invoice__text__title {
-    font-size: 1.2rem;
+@media only screen and (max-width: 690px) {
+  .checkout-panel__body__invoice__text {
+    min-width: auto;
   }
 }
 
-.checkout-panel__body__invoice__text__description {
+.checkout-panel__body__invoice__text__doc {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 690px) {
+  .checkout-panel__body__invoice__text__doc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .checkout-panel__body__invoice__text__doc span {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.checkout-panel__body__invoice__text__doc__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4881,13 +4947,112 @@ input[type=checkbox] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-@media only screen and (max-width: 640px) {
-  .checkout-panel__body__invoice__text__description {
+.checkout-panel__body__invoice__text__doc__title__contract {
+  font-weight: 500;
+}
+
+.checkout-panel__body__invoice__text__doc__title__more {
+  font-size: 0.8rem;
+}
+
+.checkout-panel__body__invoice__text__lawyer {
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 690px) {
+  .checkout-panel__body__invoice__text__lawyer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .checkout-panel__body__invoice__text__lawyer span {
+    text-align: center;
+  }
+  .checkout-panel__body__invoice__text__lawyer div {
+    text-align: center;
+  }
+}
+
+.checkout-panel__body__invoice__text__lawyer__more {
+  padding-left: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkout-panel__body__invoice__text__lawyer__more:hover {
+  color: #4ECDC4;
+}
+
+@media only screen and (max-width: 690px) {
+  .checkout-panel__body__invoice__text__lawyer__more {
+    padding-left: 0;
+  }
+}
+
+.checkout-panel__body__invoice__text__lawyer__precio {
+  font-size: 1rem;
+}
+
+.checkout-panel__body__invoice__text__more-info-lawyer {
+  border-radius: 10px;
+  background-color: #EDFAF9;
+  border-color: #EDFAF9;
+  height: 200px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow: scroll;
+}
+
+.checkout-panel__body__invoice__text__more-info-lawyer__content p {
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 690px) {
+  .checkout-panel__body__invoice__text__more-info-lawyer__content {
     font-size: 0.9rem;
   }
+}
+
+.checkout-panel__body__invoice__text__more-info-lawyer__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -10px;
+}
+
+.checkout-panel__body__invoice__text__more-info-lawyer__close button {
+  background-color: #EDFAF9;
+  border: 0;
+}
+
+.checkout-panel__body__invoice__text__more-info-lawyer__close button:hover {
+  cursor: pointer;
+  color: #4ECDC4;
+}
+
+.checkout-panel__body__invoice__text__more-info-lawyer__close button span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
 }
 
 .checkout-panel__body__invoice__text__total {
@@ -4964,6 +5129,9 @@ input[type=checkbox] {
 }
 
 .checkout-panel__body__invoice__document {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
 }
 
@@ -5363,6 +5531,32 @@ input[type=checkbox] {
   .hosted-fields {
     height: 40px;
   }
+}
+
+.hosted-fields-stripe {
+  height: 50px;
+  padding-right: 40px;
+  padding-left: 16px;
+  padding-top: 13px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+@media screen and (max-height: 620px) {
+  .hosted-fields-stripe {
+    height: 40px;
+  }
+}
+
+.hosted-fields-stripe__focused {
+  border-color: #77db77;
+  border-bottom: 3px solid #77db77;
+}
+
+.hosted-fields-stripe__invalid {
+  border: 1px solid #FF6B6B;
 }
 
 .condiciones__container {
@@ -7195,6 +7389,7 @@ input[type=checkbox] {
 
 .lawyer-forms__container {
   margin: auto;
+  border-top: 1px solid #556270;
 }
 
 .lawyer-forms__header {
@@ -7266,12 +7461,20 @@ input[type=checkbox] {
 .lawyer-forms__title {
   margin: auto;
   text-align: center;
+  height: 350px;
+}
+
+@media only screen and (max-width: 640px) {
+  .lawyer-forms__title {
+    height: 320px;
+  }
 }
 
 .lawyer-forms__title h1 {
   margin: auto;
   width: 90%;
   padding-top: 0.5rem;
+  font-size: 1.7rem;
 }
 
 @media only screen and (max-width: 885px) {
@@ -7305,6 +7508,343 @@ input[type=checkbox] {
   .lawyer-forms__title p {
     font-size: 0.9rem;
   }
+}
+
+.lawyer-forms__title__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+  .lawyer-forms__title__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.lawyer-forms__title__container div {
+  max-width: 50vw;
+}
+
+@media only screen and (max-width: 640px) {
+  .lawyer-forms__title__container div {
+    max-width: none;
+  }
+}
+
+.lawyer-forms__title__finder {
+  width: 460px;
+}
+
+@media only screen and (max-width: 640px) {
+  .lawyer-forms__title__finder {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.lawyer-forms__title__finder .search__button {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .lawyer-forms__title__finder .search__button {
+    margin-top: 0.5rem;
+  }
+}
+
+.lawyer-forms__title__finder .search__button input {
+  background-color: #F1FBFB;
+}
+
+.lawyer-forms__title__finder__predictions {
+  position: absolute;
+  width: 450px;
+  background-color: white;
+  margin-top: 5px;
+  -webkit-box-shadow: 10px 10px 9px -9px rgba(0, 0, 0, 0.42);
+          box-shadow: 10px 10px 9px -9px rgba(0, 0, 0, 0.42);
+  z-index: 9;
+}
+
+@media only screen and (max-width: 450px) {
+  .lawyer-forms__title__finder__predictions {
+    width: 400px;
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .lawyer-forms__title__finder__predictions {
+    max-width: 90vw;
+  }
+}
+
+.lawyer-forms__title__finder__predictions__prediction {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0rem 1rem;
+  line-height: 1.1rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .lawyer-forms__title__finder__predictions__prediction {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .lawyer-forms__title__finder__predictions__prediction {
+    padding: 0rem 1.5rem;
+  }
+}
+
+.lawyer-forms__title__finder__predictions__prediction:hover {
+  cursor: pointer;
+  background-color: #4ECDC4;
+  color: white;
+}
+
+.lawyer-forms__title__finder__predictions__prediction:not(:last-child)::after {
+  content: ' ';
+  width: 86%;
+  position: absolute;
+  border-bottom: 1px solid black;
+  margin-top: 50px;
+}
+
+.lawyer-forms__title__icon {
+  width: 200px;
+  margin-left: -100px;
+}
+
+@media only screen and (max-width: 885px) {
+  .lawyer-forms__title__icon {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .lawyer-forms__title__icon {
+    width: 100px;
+  }
+}
+
+.lawyer-forms__title__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.lawyer-forms__bottom__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.lawyer-forms__bottom--initial-screen {
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2rem;
+}
+
+@media only screen and (max-width: 360px) {
+  .lawyer-forms__bottom--initial-screen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .lawyer-forms__bottom--initial-screen {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 885px) {
+  .lawyer-forms__bottom--initial-screen {
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+.lawyer-forms__bottom__step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.lawyer-forms__bottom__step span {
+  padding: 0.2rem;
+}
+
+.lawyer-forms__bottom__step .icon {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .lawyer-forms__bottom__step .icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .lawyer-forms__bottom__step .icon {
+    display: none;
+  }
+}
+
+.lawyer-forms__bottom__step .icon_lawyer {
+  width: 41px;
+  height: 32px;
+  margin-bottom: 0.3rem;
+  background-repeat: no-repeat;
+  background-size: 2.3rem;
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fas' data-icon='balance-scale-right' class='svg-inline--fa fa-balance-scale-right fa-w-20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23556270' d='M96 464v32c0 8.84 7.16 16 16 16h224c8.84 0 16-7.16 16-16V153.25c4.56-2 8.92-4.35 12.99-7.12l142.05 47.63c8.38 2.81 17.45-1.71 20.26-10.08l10.17-30.34c2.81-8.38-1.71-17.45-10.08-20.26l-128.4-43.05c.42-3.32 1.01-6.6 1.01-10.03 0-44.18-35.82-80-80-80-29.69 0-55.3 16.36-69.11 40.37L132.96.83c-8.38-2.81-17.45 1.71-20.26 10.08l-10.17 30.34c-2.81 8.38 1.71 17.45 10.08 20.26l132 44.26c7.28 21.25 22.96 38.54 43.38 47.47V448H112c-8.84 0-16 7.16-16 16zM0 304c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02c0-15.67 2.08-7.25-85.05-181.51-17.68-35.36-68.22-35.29-85.87 0C-1.32 295.27.02 287.82.02 304H0zm56-16l72-144 72 144H56zm328.02 144H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02c0-15.67 2.08-7.25-85.05-181.51-17.68-35.36-68.22-35.29-85.87 0-86.38 172.78-85.04 165.33-85.04 181.51zM440 416l72-144 72 144H440z'/%3E%3C/svg%3E");
+}
+
+@media only screen and (max-width: 768px) {
+  .lawyer-forms__bottom__step .icon_lawyer {
+    width: 42px;
+    margin-bottom: 0rem;
+    background-size: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .lawyer-forms__bottom__step .icon_lawyer {
+    display: none;
+  }
+}
+
+.lawyer-forms__bottom__step__number {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+@media only screen and (max-width: 768px) {
+  .lawyer-forms__bottom__step__number {
+    font-size: 1rem;
+  }
+}
+
+.lawyer-forms__bottom__step__description {
+  line-height: 1rem;
+  font-weight: lighter;
+  max-width: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+  .lawyer-forms__bottom__step__description {
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    max-width: 110px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .lawyer-forms__bottom__step__description {
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+  }
+}
+
+.lawyer-forms__bottom__arrow-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.lawyer-forms__bottom__arrow-button:hover {
+  color: #4ECDC4;
+  cursor: pointer;
+}
+
+.lawyer-forms__bottom__arrow-button .icon {
+  font-size: 2rem;
+}
+
+.lawyer-forms__bottom__arrow-button__label {
+  padding: 0.4rem;
+}
+
+.lawyer-forms__bottom__preview-button {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  font-family: Montserrat;
+}
+
+@media only screen and (max-width: 885px) {
+  .lawyer-forms__bottom__preview-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.lawyer-forms__bottom__preview-button:hover {
+  color: #4ECDC4;
+  cursor: pointer;
+}
+
+.lawyer-forms__bottom__preview-button span {
+  font-size: 0.7rem;
 }
 
 .lawyer-forms__blocks-container {
@@ -7817,6 +8357,7 @@ input[type=checkbox] {
 .blog__header__title__author img {
   width: 100%;
   max-width: 30px;
+  max-height: 30px;
   border-radius: 25px;
 }
 

@@ -250,49 +250,6 @@
             </div>
         </div>
     </div>
-
-<!--     <div class="modal">
-        <div class="modal__content modal__content--payment">
-          <div class="checkout-panel">
-                <div class="checkout-panel__body__progress-bar">
-                        <div class="checkout-panel__body__progress-bar__step checkout-panel__body__progress-bar__step__active"></div>
-                        <div class="checkout-panel__body__progress-bar__step"></div>
-                        <div class="checkout-panel__body__progress-bar__step"></div>
-                        <div class="checkout-panel__body__progress-bar__step"></div>
-                    </div>
-            <div class="checkout-panel__body">    
-
-                <div class="checkout-panel__body__invoice">
-                    <div class="checkout-panel__body__invoice__container">
-                        <div class="checkout-panel__body__invoice__document">
-                            <img src="/assets/images/checkout-document.png" alt="checkout-image">
-                        </div>
-                        <div class="checkout-panel__body__invoice__text">
-                            <h2 class="checkout-panel__body__invoice__text__title">Contrato de alquiler de vivienda</h2>
-                            <div class="checkout-panel__body__invoice__text__description">
-                                <ul>
-                                    <li>Descarga inmediata en formatos Word y PDF</li>
-                                    <li>3.060 personas ya han comprado este documento</li>
-                                </ul>
-                            </div>
-                            <div class="checkout-panel__body__invoice__text__total">
-                                <span class="checkout-panel__body__invoice__text__total__right">Total:</span>
-                                <span class="checkout-panel__body__invoice__text__total__left">19.90 eur</span>
-                            </div>
-                            <div class="checkout-panel__body__invoice__text__more-info">
-                                <img src="/assets/images/ssl-secure-en.png" alt="secure payment">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>         
-            <div class="checkout-panel__footer">
-              <button class="btn back-btn" style="opacity: 0">Back</button>
-              <button class="btn next-btn">Next Step</button>
-            </div>
-          </div>
-        </div>
-    </div> -->
     <div class="modal">
             <div class="modal__content modal__content--privacy">
                 <div class="modal__content__top modal__content__top--privacy">
@@ -307,30 +264,67 @@
                     <div class="modal__content__modal-middle__container">
                         <div class="checkout-panel__body__invoice">
                             <div class="checkout-panel__body__invoice__container">
-                                <div class="checkout-panel__body__invoice__document">
-                                    <img src="/assets/images/checkout-document.png" alt="checkout-image">
-                                </div>
-                                <div class="checkout-panel__body__invoice__text">
-                                    <h2 class="checkout-panel__body__invoice__text__title">Contrato de alquiler de vivienda</h2>
-                                    <div class="checkout-panel__body__invoice__text__description">
-                                        <ul>
-                                            <li>Descarga inmediata en formatos Word y PDF</li>
-                                            <li>3.060 personas ya han comprado este documento</li>
-                                        </ul>
+
+                                    <div class="checkout-panel__body__invoice__text">
+                                        <div class="checkout-panel__body__invoice__text__doc">
+                                            <div class="checkout-panel__body__invoice__text__doc__title">
+                                                <span class="checkout-panel__body__invoice__text__doc__title__contract">
+                                                    Contrato de arrendamiento de vivienda de uso vacacional
+                                                </span>
+                                                <span class="checkout-panel__body__invoice__text__doc__title__more">
+                                                    Descarga inmediata en formatos Word y PDF
+                                                </span>
+                                            </div>
+                                            <div class="checkout-panel__body__invoice__text__doc__price">
+                                                10 €
+                                            </div>
+                                        </div>
+                                        <div class="checkout-panel__body__invoice__text__lawyer">
+                                            <div class="checkout-panel__body__invoice__text__lawyer__description">
+                                                <label for="rememberme">
+                                                    <input type="checkbox" class="filled-in" name="rememberme" id="rememberme" value="Remember me" checked />
+                                                    <span>Consulta con abogado (30 min)</span>
+                                                </label>
+                                                <div class="checkout-panel__body__invoice__text__lawyer__more">Más información</div>
+                                            </div>
+                                            <div class="checkout-panel__body__invoice__text__lawyer__precio">
+                                                <span>
+                                                    29,00 €
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-panel__body__invoice__text__more-info-lawyer">
+                                            <div class="checkout-panel__body__invoice__text__more-info-lawyer__close">
+                                                <button type="button" class="close" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="checkout-panel__body__invoice__text__more-info-lawyer__content">
+
+                                                <p>El abogado se compromete a trabajar para ti durante 30 minutos. Durante esos 30 minutos hablas con el abogado por teléfono. Le planteas tus preguntas y él te contesta. Tus preguntas
+                                                    pueden referirse a un documento que has rellenado, o a otros temas.</p>
+                                                <p>Si el abogado necesita buscar información complementaria para contestar mejor a tus preguntas, de esos 30 minutos se
+                                                    tomará un tiempo para hacerlo y a continuación te llamará para contestar a tus preguntas.</p>
+                                                <p>El abogado te llamará en 24 horas hábiles tras la recepción del encargo. Por ejemplo, si realizas el encargo el
+                                                    martes a las 15:00, te llamará el miércoles a las 15:00. Si realizas el encargo el viernes a las 15:00, te llamará
+                                                    el lunes a las 15:00 pues ni el sábado ni el domingo son laborables. Si no llega a ponerse en contacto contigo, te enviará un correo electrónico para concertar una cita telefónica cuando
+                                                    mejor te convenga.</p>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-panel__body__invoice__text__total">
+                                            <span class="checkout-panel__body__invoice__text__total__right">Total:</span>
+                                            <span class="checkout-panel__body__invoice__text__total__left">19.90 eur</span>
+                                        </div>
+                                        <div class="checkout-panel__body__invoice__text__more-info">
+                                            <span>
+                                                <img src="/assets/images/ssl-secure-en.png" alt="secure payment">
+                                            </span>
+                                            <span>
+                                                <img src="https://s3.amazonaws.com/braintree-badges/braintree-badge-light.png"/>
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="checkout-panel__body__invoice__text__total">
-                                        <span class="checkout-panel__body__invoice__text__total__right">Total:</span>
-                                        <span class="checkout-panel__body__invoice__text__total__left">19.90 eur</span>
-                                    </div>
-                                    <div class="checkout-panel__body__invoice__text__more-info">
-                                        <span>
-                                            <img src="/assets/images/ssl-secure-en.png" alt="secure payment">
-                                        </span>
-                                        <span>
-                                            <img src="https://s3.amazonaws.com/braintree-badges/braintree-badge-light.png"/>
-                                        </span>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

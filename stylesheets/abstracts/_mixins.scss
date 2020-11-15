@@ -2,6 +2,12 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+@mixin breakpoint-360 {
+    @media only screen and (max-width: #{$breakpoint-360}) {
+        @content;
+    }
+}
+
 @mixin breakpoint-380 {
     @media only screen and (max-width: #{$breakpoint-380}) {
         @content;

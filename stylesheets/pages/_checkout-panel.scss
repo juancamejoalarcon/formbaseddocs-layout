@@ -252,6 +252,10 @@
                 flex-direction: column;
             }
 
+            small {
+                position: absolute;
+            }
+
             div[class*='column'] {
                 width: 382px;
                 margin: 0.5rem;
@@ -327,7 +331,8 @@
                         margin-right: 0.5rem;
                     }
 
-                    @include breakpoint-450 {
+                    @include breakpoint-490 {
+                        flex: 1;
                         width: auto;
                     }
                 }
@@ -341,25 +346,137 @@
                 justify-content: center;
                 align-items: center;
                 height: 100%;
+                @include breakpoint-690 {
+                    display: block;
+                }
+
+                .prepayment__wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    @include breakpoint-985 {
+                        flex-direction: column;
+                    }
+                }
 
                 @include breakpoint-985 {
                     flex-direction: column;
                 }
             }
             &__text {
-                max-width: 500px;
-                &__title {
-                    text-align: center;
-                    @include breakpoint-640 {
-                        font-size: 1.2rem;
+                min-width: 600px;
+                max-width: 600px;
+                @include breakpoint-690 {
+                    min-width: auto;
+                }
+                // flex: 3;
+                // &__title {
+                //     text-align: center;
+                //     @include breakpoint-640 {
+                //         font-size: 1.2rem;
+                //     }
+                // }
+                // &__description {
+                //     display: flex;
+                //     flex-direction: column;
+                //     padding: 1rem;
+                //     @include breakpoint-640 {
+                //         font-size: 0.9rem;
+                //     }
+                // }
+                &__doc {
+                    padding: 0.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include breakpoint-690 {
+                        flex-direction: column;
+                        span {
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+
+                    &__title {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        &__contract {
+                            font-weight: 500
+                        } 
+                        &__more {
+                            font-size: 0.8rem;
+                        }
                     }
                 }
-                &__description {
+
+                &__lawyer {
+                    padding: 0.5rem;
+                    padding-bottom: 1rem;
+                    font-size: 0.8rem;
                     display: flex;
-                    flex-direction: column;
+                    justify-content: space-between;
+
+                    @include breakpoint-690 {
+                        flex-direction: column;
+                        span {
+                            text-align: center;
+                        }
+                        div {
+                            text-align: center;
+                        }
+                    }
+                    &__more {
+                        padding-left: 2rem;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        &:hover {
+                            color: color(primaryB-color);
+                        }
+                        @include breakpoint-690 {
+                            padding-left: 0;
+                        }
+                    }
+                    &__precio {
+                        font-size: 1rem;
+                    }
+                }
+                &__more-info-lawyer {
+                    border-radius: 10px;
+                    background-color: #EDFAF9;
+                    border-color: #EDFAF9;
+                    height: 200px;
                     padding: 1rem;
-                    @include breakpoint-640 {
-                        font-size: 0.9rem;
+                    margin-bottom: 1rem;
+                    overflow: scroll;
+                    &__content {
+                        p {
+                            padding-bottom: 0;
+                        }
+                        @include breakpoint-690 {
+                            font-size: 0.9rem;
+                        }
+                    }
+                    &__close {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-top: -10px;
+                        button {
+                            background-color: #EDFAF9;
+                            border: 0;
+                            &:hover {
+                                cursor: pointer;
+                                color: #4ECDC4;
+                            }
+                            span {
+                                font-size: 1.5rem;
+                                font-weight: 700;
+                                line-height: 1;
+                                text-shadow: 0 1px 0 #fff;
+                                opacity: .5;
+                            }
+                        }
                     }
                 }
                 &__total {
@@ -417,6 +534,7 @@
             }
 
             &__document {
+                flex: 1;
                 text-align: center;
                 img {
                     -webkit-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.75);
@@ -735,5 +853,26 @@
 .hosted-fields {
     @media screen and (max-height: 620px) {
         height: 40px;
+    }
+}
+
+.hosted-fields-stripe {
+    height: 50px;
+    padding-right: 40px;
+    padding-left: 16px;
+    padding-top: 13px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    transition: all ease .3s;
+    @media screen and (max-height: 620px) {
+        height: 40px;
+    }
+    &__focused {
+        border-color: rgb(119, 219, 119);
+        border-bottom: 3px solid rgb(119, 219, 119);
+    }
+
+    &__invalid {
+        border: 1px solid color(secondaryB-color);
     }
 }
